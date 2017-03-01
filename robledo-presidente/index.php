@@ -52,12 +52,12 @@ get_header(); ?>
 	<!--/div--><!-- #primary -->
   <div class="container-fluid" id="main">
     <div class="section mb-5 text-center" id="infografia">
-      <img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/infografia.png" class="img-fluid">
+      <img src="wp-content/themes/robledo-presidente/img/infografia.png" class="img-fluid">
     </div>
     <div class="section">
       <div class="row mb-5 justify-content-center">
         <div class="col-md-8 text-center">
-          <img class="img-fluid" src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/banner1-billetes.jpg">
+          <img class="img-fluid" src="wp-content/themes/robledo-presidente/img/banner1-billetes.jpg">
         </div>
       </div>
     </div>
@@ -65,7 +65,7 @@ get_header(); ?>
       <h2><span>primera plana</span></h2>
       <div class="row highlights">
         <div class="col-md-5">
-          <a href="http://jorgerobledo.com/el-arbitro-esta-comprado/" class="card card-inverse" style="background-image: url(http://localhost/wordpress/wp-content/themes/robledo-presidente/img/posts/odebrecht.png)">
+          <a href="http://jorgerobledo.com/el-arbitro-esta-comprado/" class="card card-inverse" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/odebrecht.png)">
             <div class="card-img-overlay">
               <div class="card-content bottom">
                 <h4 class="card-title">El árbitro está comprado</h4>
@@ -84,7 +84,7 @@ get_header(); ?>
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
-          <a href="post.html" class="card card-inverse" style="background-image: url(http://localhost/wordpress/wp-content/themes/robledo-presidente/img/posts/Rio.jpg)">
+          <a href="post.html" class="card card-inverse" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/Rio.jpg)">
             <div class="card-img-overlay">
               <h4 class="card-title">Multiplican los pobres pero no los peces</h4>
               <p class="card-text">Sobre cómo el gobierno maltrata a los pescadores artesanales</p>
@@ -130,14 +130,14 @@ get_header(); ?>
         <div class="col-md-9 text-center">
           <div class="link">
             <a href="/voluntarios">
-              <img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/voluntarios.png" class="img-fluid">
+              <img src="wp-content/themes/robledo-presidente/img/voluntarios.png" class="img-fluid">
               <h3>Sea Voluntario</h3>
             </a>
           </div>
           <p class="px-4">Ellos tienen el dinero, pero nosotros tenemos la gente. Si todos quienes visitan este sitio se unen a nuestro proyecto, sin duda vamos a enrutar de nuevo a Colombia.</p>
         </div>
         <div class="col-md-3" id="colombia-container">
-          <img id="colombia" src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/map.png" alt="" usemap="#colombia-regions" class="img-fluid">
+          <img id="colombia" src="wp-content/themes/robledo-presidente/img/map.png" alt="" usemap="#colombia-regions" class="img-fluid">
           <map name="colombia-regions" id="colombia-regions">
             <area data-key="north" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="3,2,5,76,13,129,84,132,81,170,109,171,132,150,160,179,186,154,185,113,253,104,262,1" />
             <area data-key="center" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="84,135,54,142,35,189,57,289,3,366,68,406,142,319,151,323,148,347,189,357,189,334,268,310,293,313,309,289,376,272,386,201,366,196,319,204,311,184,292,177,261,174,232,179,220,133,208,113,189,149,159,181,105,172,80,172,86,136" />
@@ -148,7 +148,7 @@ get_header(); ?>
     </div>
     <div class="section">
       <h2><span>al minuto</span></h2>
-      <img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/tw.png">
+      <img src="wp-content/themes/robledo-presidente/img/tw.png">
     </div>
     <div class="section">
       <h2><span>videoteca</span></h2>      
@@ -160,7 +160,7 @@ get_header(); ?>
         </div>
       </div>
       <div class="row px-3">
-        <img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/yt.png">
+        <img src="wp-content/themes/robledo-presidente/img/yt.png">
       </div>          
     </div>
     <div class="section news">
@@ -168,7 +168,7 @@ get_header(); ?>
       <div class="row">
         <div class="col-md-4">
           <a href="http://jorgerobledo.com/la-prueba-reina/" class="card bg-primary">
-            <div class="card-image-header" style="background-image: url(http://localhost/wordpress/wp-content/themes/robledo-presidente/img/posts/la-prueba-reina.jpg)">
+            <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/la-prueba-reina.jpg)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
                   <h4 class="card-title">La prueba reina</h4>
@@ -181,7 +181,7 @@ get_header(); ?>
         </div>
         <div class="col-md-4">
           <a href="http://jorgerobledo.com/brutos-por-siempre/" class="card">
-            <div class="card-image-header" style="background-image: url(http://localhost/wordpress/wp-content/themes/robledo-presidente/img/posts/brutos-por-siempre.jpg)">
+            <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/brutos-por-siempre.jpg)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
                   <h4 class="card-title">Brutos por siempre</h4>
@@ -194,7 +194,7 @@ get_header(); ?>
         </div>
         <div class="col-md-4">
           <div class="card card-inverse bg-secondary">
-            <div class="card-image-header" style="background-image: url(http://localhost/wordpress/wp-content/themes/robledo-presidente/img/posts/impuestos.png)">
+            <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/impuestos.png)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
                   <h4 class="card-title">¿Que los impuestos los paguen los pobres?</h4>
@@ -207,7 +207,7 @@ get_header(); ?>
         </div>
         <div class="col-md-4">
           <a href="http://jorgerobledo.com/no-estamos-solos/" class="card">
-            <div class="card-image-header" style="background-image: url(http://localhost/wordpress/wp-content/themes/robledo-presidente/img/posts/no-estamos-solos.jpg)">
+            <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/no-estamos-solos.jpg)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
                   <h4 class="card-title">¿No estamos solos?</h4>
@@ -220,7 +220,7 @@ get_header(); ?>
         </div>
         <div class="col-md-4">
           <a href="http://jorgerobledo.com/bogota-peor-para-todos/" class="card card-inverse bg-tertiary">
-            <div class="card-image-header" style="background-image: url(http://localhost/wordpress/wp-content/themes/robledo-presidente/img/posts/bogota-peor-para-todos.png)">
+            <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/bogota-peor-para-todos.png)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
                   <h4 class="card-title">Bogotá peor para todos</h4>
@@ -233,7 +233,7 @@ get_header(); ?>
         </div>
         <div class="col-md-4">
           <a href="http://jorgerobledo.com/la-peor-cifra-de-la-decada/" class="card">
-            <div class="card-image-header" style="background-image: url(http://localhost/wordpress/wp-content/themes/robledo-presidente/img/posts/lapeorcifradedecada.jpg)">
+            <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/lapeorcifradedecada.jpg)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
                   <h4 class="card-title">¡La peor cifra de la década!</h4>

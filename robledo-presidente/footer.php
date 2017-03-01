@@ -72,10 +72,10 @@
         <div class="col text-center pt-3">Hecho con <i class="fa fa-heart text-tertiary" aria-hidden="true"></i> por voluntarios</div>
       </div>
     </footer>
-    <script src="http://localhost/wordpress/wp-content/themes/robledo-presidente/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
-    <script src="http://localhost/wordpress/wp-content/themes/robledo-presidente/lib/bootstrap/dist/js/boostrap.min.js" type="text/javascript"></script>
-    <script src="http://localhost/wordpress/wp-content/themes/robledo-presidente/lib/ImageMapster/dist/jquery.imagemapster.js" type="text/javascript"></script>
-    <script src="http://localhost/wordpress/wp-content/themes/robledo-presidente/js/home.js" type="text/javascript"></script>    
+    <script src="wp-content/themes/robledo-presidente/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="wp-content/themes/robledo-presidente/lib/bootstrap/dist/js/boostrap.min.js" type="text/javascript"></script>
+    <script src="wp-content/themes/robledo-presidente/lib/ImageMapster/dist/jquery.imagemapster.js" type="text/javascript"></script>
+    <script src="wp-content/themes/robledo-presidente/js/home.js" type="text/javascript"></script>    
 
 <?php wp_footer(); ?>
 

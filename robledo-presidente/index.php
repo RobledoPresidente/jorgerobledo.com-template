@@ -65,7 +65,7 @@ get_header(); ?>
       <h2><span>primera plana</span></h2>
       <div class="row highlights">
         <div class="col-md-5">
-          <a href="http://jorgerobledo.com/el-arbitro-esta-comprado/" class="card card-inverse" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/odebrecht.png)">
+          <a href="index.php/2017/03/01/el-arbitro-esta-comprado/" class="card card-inverse" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/odebrecht.png)">
             <div class="card-img-overlay">
               <div class="card-content bottom">
                 <h4 class="card-title">El árbitro está comprado</h4>

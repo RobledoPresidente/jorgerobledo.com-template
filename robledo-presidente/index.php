@@ -55,23 +55,27 @@ get_header(); ?>
       <img src="wp-content/themes/robledo-presidente/img/infografia.png" class="img-fluid">
     </div>
     <div class="section">
-      <div class="row mb-5 justify-content-center">
-        <div class="col-md-8 text-center">
-          <img class="img-fluid" src="wp-content/themes/robledo-presidente/img/banner1-billetes.jpg">
+      <div class="row mb-5 especial">
+        <div class="col text-center">
+          <div id="scratchcard" class="scratchpad"></div>
         </div>
       </div>
     </div>
     <div class="section">
       <h2><span>primera plana</span></h2>
       <div class="row highlights">
+        <!--TODO: Deben quedar en el orden correctom ¿No se puede llamar directamente como deme el post o los post con X categoría?-->
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <?php if ( in_category( 'cat1' ) ) : ?>
             <div class="col-md-5">
+              <!--TODO: poner imagen destacada del post en el background-->
               <a href="<?php the_permalink(); ?>" class="card card-inverse" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/odebrecht.png)">
                 <div class="card-img-overlay">
                   <div class="card-content bottom">
                     <h4 class="card-title"><?php the_title(); ?></h4>
+                    <!--TODO: acá debe ir el custom field Abstract-->
                     <p class="card-text"><?php the_excerpt(); ?></p>
+                    <!--TODO: acá debe ir  hace cuánto se publicó-->
                     <p class="card-text"><small class="text-muted">Hace 2 días</small></p>
                   </div>
                 </div>
@@ -82,7 +86,8 @@ get_header(); ?>
               <div class="card card-inverse card-primary">
                 <div class="card-content middle text-center">
                   <h4 class="card-title text-uppercase"><?php the_title(); ?></h4>
-                  <h5 class="card-title"><?php the_excerpt(); ?></h5>
+                  <!--TODO: acá debe ir el custom field Hashtag-->
+                  <h5 class="card-title">#RobledoPresidente2018</h5>
                 </div>
               </div>
             </div>
@@ -91,70 +96,41 @@ get_header(); ?>
               <a href="post.html" class="card card-inverse" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/Rio.jpg)">
                 <div class="card-img-overlay">
                   <h4 class="card-title"><?php the_title(); ?></h4>
+                  <!--TODO: acá debe ir el custom field Abstract-->
                   <p class="card-text"><?php the_excerpt(); ?></p>
+                  <!--TODO: acá debe ir  hace cuánto se publicó-->
                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
               </a>
             </div>
-          <?php else : ?>
-            <div class="post">
           <?php endif; ?>
-        <?php endwhile; else : ?>
-          <div class="col-md-5">
-            <a href="http://localhost/wordpress/index.php/2017/03/01/el-arbitro-esta-comprado/" class="card card-inverse" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/odebrecht.png)">
-              <div class="card-img-overlay">
-                <div class="card-content bottom">
-                  <h4 class="card-title">El árbitro está comprado</h4>
-                  <p class="card-text">Fiscalía vs. Odebrecht, un partido arreglado en contra de los colombianos</p>
-                  <p class="card-text"><small class="text-muted">Hace 2 días</small></p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-6 col-md-4 no-gutters">
-            <div class="card card-inverse card-primary">
-              <div class="card-content middle text-center">
-                <h4 class="card-title text-uppercase">Estamos mamados de tanta corrupción</h4>
-                <h5 class="card-title">#EstoyMamadoDe</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-md-3">
-            <a href="post.html" class="card card-inverse" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/Rio.jpg)">
-              <div class="card-img-overlay">
-                <h4 class="card-title">Multiplican los pobres pero no los peces</h4>
-                <p class="card-text">Sobre cómo el gobierno maltrata a los pescadores artesanales</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </a>
-          </div>
-        <?php endif; ?>
+        <?php endwhile; endif;?>
       </div>
-      <div class="row pt-5">
+    </div>
+    <div class="section">
+      <h2><span>participe</span></h2>
+      <div class="row">
         <div class="col-sm-6">
           <div class="card">
-            <div class="card-block">
+            <div>
               <h3>El Termómetro</h3>
-              <div class="card-block">
-                <p>¿Cree usted que el fiscal Nestro H. Martínez debe apartarse del caso de Odebrecht?</p>
-                <div class="pl-3 text-uppercase font-weight-bold font-secondary">
-                  <p>Sí</p>
-                  <p>No</p>
-                </div>
+              <!--TODO: Acá debe ir espacio para un widget del plugin de encuestas-->
+              <div>
+                <div id="qp_all996896" style="width:100%;"><link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'><STYLE>#qp_main996896 .qp_btna:hover input {background: rgb(0, 53, 95)!important} #qp_all996896 {max-width:815px; margin:0 auto;}</STYLE><div id="qp_main996896" fp='984f4af0-42' results=0 cmt=0 style="border-radius: 0px;margin: 0px auto;padding: 0.43em 0.79em;background: rgb(255, 255, 255);font-family: 'Open Sans', sans-serif, Arial;color: rgb(0, 0, 0);border: 0px none rgb(219, 217, 217);max-width: 815px;box-sizing: border-box;font-weight: bold"><div style="font-size: 1.2em;background-color: rgb(0, 53, 95);color: rgb(255, 255, 255);font-family: 'Open Sans', sans-serif, Arial"><div style="padding: 0.8em;line-height: 1.3em">¿Cree usted que el fiscal Nestro H. Martínez debe apartarse del caso de Odebrecht?</div></div><form id="qp_form996896" action="//www.poll-maker.com/results996896x984f4af0-42" method="post" target="_blank" style="display: inline;margin: 0px;padding: 0px"><div style="padding: 0px"><input type=hidden name="qp_d996896" value="42793.9512152752-42793.9512140011"><div style="color: rgb(107, 107, 107);font-family: 'Open Sans', sans-serif, Arial;font-size: 1.1em;line-height: 1.5;padding: 13px 8px 11px;margin: 10px 0px;clear: both" class="qp_a" onClick="var c=this.getElementsByTagName('INPUT')[0]; if((!event.target?event.srcElement:event.target).tagName!='INPUT'){c.checked=(c.type=='radio'?true:!c.checked)};var i=this.parentNode.parentNode.parentNode.getElementsByTagName('INPUT');for(var k=0;k!=i.length;k=k+1){i[k].parentNode.parentNode.setAttribute('sel',i[k].checked?1:0)}"><span style="display: block;padding-left: 30px;cursor: inherit"><input style="float: left;width: 20px;margin-left: -25px;margin-top: 2px;padding: 0px;height: 20px;-webkit-appearance:radio;" name="qp_v996896" type="radio" value="1" />Sí</span></div><div style="color: rgb(107, 107, 107);font-family: 'Open Sans', sans-serif, Arial;font-size: 1.1em;line-height: 1.5;padding: 13px 8px 11px;margin: 10px 0px;clear: both" class="qp_a" onClick="var c=this.getElementsByTagName('INPUT')[0]; if((!event.target?event.srcElement:event.target).tagName!='INPUT'){c.checked=(c.type=='radio'?true:!c.checked)};var i=this.parentNode.parentNode.parentNode.getElementsByTagName('INPUT');for(var k=0;k!=i.length;k=k+1){i[k].parentNode.parentNode.setAttribute('sel',i[k].checked?1:0)}"><span style="display: block;padding-left: 30px;cursor: inherit"><input style="float: left;width: 20px;margin-left: -25px;margin-top: 2px;padding: 0px;height: 20px;-webkit-appearance:radio;" name="qp_v996896" type="radio" value="2" />No</span></div></div><div style="padding-left: 0px;clear: both;text-align: left;margin: 1em auto"><a style="box-sizing: border-box;padding-right: 5px;text-decoration: none" class="qp_btna" href="#"><input name="qp_b996896" style="min-width: 7.8em;padding: 0.5em;background-color: rgb(11, 121, 211);font-family: 'Open Sans', sans-serif, Arial;font-size: 16px;color: rgb(255, 255, 255);cursor: pointer;border: 0px;-webkit-appearance: none;border-radius: 0px" type="submit" btype="v" value="Votar" /></a><a style="box-sizing: border-box;padding-left: 5px;text-decoration: none" class="qp_btna" href="#"><input name="qp_b996896" style="min-width: 7.8em;padding: 0.5em;background-color: rgb(11, 121, 211);font-family: 'Open Sans', sans-serif, Arial;font-size: 16px;color: rgb(255, 255, 255);cursor: pointer;border: 0px;-webkit-appearance: none;border-radius: 0px" type="submit" btype="r" value="Resultados" /></a></div><a id="qp_a996896" style="float:right;font-family:Arial;font-size:10px;color:rgb(0,0,0);text-decoration:none" href="http://www.poll-maker.com">Poll Maker</a></form><div style="display:none"><div id="qp_rp996896" style="font-size: 14px;width: 5ex;text-align: right;overflow: hidden;position: absolute;right: 5px;height: 1.5em;line-height: 1.5em"></div><div id="qp_rv996896" style="font-size: 14px;line-height: 1.5em;width: 0%;text-align: right;color: rgb(255, 255, 255);box-sizing: border-box;padding-right: 3px"></div><div id="qp_rb996896" style="font-size: 14px;line-height: 1.5em;color: rgb(255, 255, 255);display: block"></div><div id="qp_rva996896" style="background: rgb(0, 111, 185);border-color: rgb(0, 111, 185)"></div><div id="qp_rvb996896" style="background: rgb(22, 52, 99);border-color: rgb(22, 52, 99)"></div><div id="qp_rvc996896" style="background: rgb(91, 207, 252);border-color: rgb(20, 129, 171)"></div></div></div></div><script src="//scripts.poll-maker.com/3012/scpolls.js" language="javascript"></script>
               </div>
             </div>
           </div>
         </div>
         <div class="col-sm-6 p-2">
-          <div class="card card-calm">
+          <div class="card bg-calm">
             <div class="card-block">
-              <h3>#EstoyMamadoDe... <span class="badge badge-pill bg-secondary">¡Nuevo!</span></h3>
+              <h3><span id="hashtag"></span>... <span class="badge badge-pill bg-secondary">¡Nuevo!</span></h3>
               <div class="card-block">
                 <div class="form-group">
-                  <textarea class="form-control" rows="2"></textarea>
+                  <textarea id="meme-text" class="form-control" rows="2" placeholder="Comparta sus pensamientos ahora que Robledo es el PRIMER candidato presidencial :)"></textarea>
                 </div>
-                <button class="btn btn-secondary"><i class="fa fa-twitter" aria-hidden="true"></i> Trinar</button>
-                <button class="btn btn-tertiary"><i class="fa fa-camera-retro" aria-hidden="true"></i> Haga su meme</button>
+                <button class="btn btn-secondary" id="share-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Trinar</button>
+                <button class="btn btn-tertiary" id="meme"><i class="fa fa-camera-retro" aria-hidden="true"></i> Haga su meme</button>
               </div>
             </div>
           </div>
@@ -171,7 +147,7 @@ get_header(); ?>
               <h3>Sea Voluntario</h3>
             </a>
           </div>
-          <p class="px-4">Ellos tienen el dinero, pero nosotros tenemos la gente. Si todos quienes visitan este sitio se unen a nuestro proyecto, sin duda vamos a enrutar de nuevo a Colombia.</p>
+          <h4 class="px-4">Llegó la hora de transformar a Colombia. Vincúlese a este gran cambio.</h4>
         </div>
         <div class="col-md-3" id="colombia-container">
           <img id="colombia" src="wp-content/themes/robledo-presidente/img/map.png" alt="" usemap="#colombia-regions" class="img-fluid">
@@ -183,25 +159,64 @@ get_header(); ?>
         </div>
       </div>
     </div>
-    <div class="section">
-      <h2><span>al minuto</span></h2>
-      <img src="wp-content/themes/robledo-presidente/img/tw.png">
+    <div class="section" id="feed">
+      <h2><span><i class="fa fa-twitter" aria-hidden="true"></i> twitter a la mano</span></h2>
+      <div class="text-center p-3">
+        Transmisiones en vivo en Periscope:
+        <script>window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)?w:(n=t.createElement(e),n.id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)},w)}(document,"script","twitter-wjs")</script><a href="https://www.periscope.tv/jerobledo" class="periscope-on-air" data-size="large">@JERobledo</a>
+        <div id="periscope"></div>
+      </div>
+      <div class="card-columns"></div>
+      <div class="text-center">
+        <a class="btn btn-primary more" href="javascriot:none"><i class="fa fa-plus" aria-hidden="true"></i> Cargar más...</a>
+        <a class="btn btn-secondary" href="https://twitter.com/JERobledo/"><i class="fa fa-twitter" aria-hidden="true"></i> Ir a Twitter...</a>
+      </div>
     </div>
-    <div class="section">
+    <div class="section video">
+      <!--TODO: esto debe mostrar 4 videos destacados y ordenados con descripción, plugin?-->
       <h2><span>videoteca</span></h2>      
-      <div class="row px-3">
-        <div class="col-md-12 p-3 bg-inverse">
+      <div class="row px-3 bg-inverse ">
+        <div class="col-md-8 p-4">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/qu5VBQkXY3k" allowfullscreen=""></iframe>
           </div>
         </div>
+        <div class="col-md-4 pt-4 pb-4 pr-4 highlight">
+          <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
+          <h4>Robledo y Peláez, Homenaje</h5>
+          <p>Esta amena charla se dio en el marco del homenaje que amigos y familiares le hicieron a Robledo por ser elegido por 5ta ocasión consecutiva como el mejor senador de Colombia por el 'Panel de Opinión' elaborado por Cifras & Conceptos. El "doctor" Peláez logra un divertida entrevista, donde el senador y precandidato presidencial habla sobre su trayectoria, su familia y los deseos de ser Presidente de Colombia.</p>
+        </div>
       </div>
-      <div class="row px-3">
-        <img src="wp-content/themes/robledo-presidente/img/yt.png">
+      <div class="row px-3 pt-3">
+        <div class="col pb-3">        
+          <div class="card bg-calm"> 
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/FqAkM4V5Xsc" allowfullscreen=""></iframe>
+            </div>
+            <div class="card-text p-3">Aquí hay una batalla enorme entre el tapen tapen agenciada por poderes políticos y económicos enormes y quienes queremos que la verdad avance en nuestro país. Los colombianos tenemos que cerrar filas para detener esta vagabunderia y salvar el país</div>
+          </div>
+        </div>
+        <div class="col pb-3">
+          <div class="card bg-calm">    
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/kCmO8P_egL8" allowfullscreen=""></iframe>
+            </div>
+            <div class="card-text p-3">Debate en la universidad Javeriana con el profesor Malcom Deas, donde planteo la importancia que tiene la la indignación de los colombianos como motivación para cambiar el país. La gente tiene la capacidad y el derecho de cambiar y cambiar a sus dirigentes.</div>
+          </div>
+        </div>
+        <div class="col pb-3">
+          <div class="card bg-calm">            
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/QqfTauOVatE" allowfullscreen=""></iframe>
+            </div>
+            <div class="card-text p-3">El 16 de febrero se realizó en las instalaciones de la Comisión Quinta del Senado la audiencia pública Salvemos la pesca artesanal por iniciativa de Robledo</div>
+          </div>
+        </div>
       </div>          
     </div>
     <div class="section news">
       <h2><span>noticias</span></h2>
+      <!--TODO: Acá se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
       <div class="row">
         <div class="col-md-4">
           <a href="http://jorgerobledo.com/la-prueba-reina/" class="card bg-primary">
@@ -217,7 +232,7 @@ get_header(); ?>
           </a>
         </div>
         <div class="col-md-4">
-          <a href="http://jorgerobledo.com/brutos-por-siempre/" class="card">
+          <a href="http://jorgerobledo.com/brutos-por-siempre/" class="card bg-calm">
             <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/brutos-por-siempre.jpg)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
@@ -243,7 +258,7 @@ get_header(); ?>
           </div>
         </div>
         <div class="col-md-4">
-          <a href="http://jorgerobledo.com/no-estamos-solos/" class="card">
+          <a href="http://jorgerobledo.com/no-estamos-solos/" class="card bg-calm">
             <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/no-estamos-solos.jpg)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
@@ -269,7 +284,7 @@ get_header(); ?>
           </a>
         </div>
         <div class="col-md-4">
-          <a href="http://jorgerobledo.com/la-peor-cifra-de-la-decada/" class="card">
+          <a href="http://jorgerobledo.com/la-peor-cifra-de-la-decada/" class="card bg-calm">
             <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/lapeorcifradedecada.jpg)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
@@ -303,6 +318,22 @@ get_header(); ?>
         </div>
       </div>
     </div>
+    <script src="wp-content/themes/robledo-presidente/js/jquery.min.js" type="text/javascript"></script>
+    <script src="wp-content/themes/robledo-presidente/js/tether.min.js" type="text/javascript"></script>
+    <script src="wp-content/themes/robledo-presidente/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="wp-content/themes/robledo-presidente/js/jquery.imagemapster.min.js" type="text/javascript"></script>
+    <script src="wp-content/themes/robledo-presidente/js/wScratchPad.js" type="text/javascript"></script>
+    <script type="text/javascript" src="wp-content/themes/robledo-presidente/js/codebird.js"></script>
+    <script src="wp-content/themes/robledo-presidente/js/spin.min.js"></script>
+    <script src="wp-content/themes/robledo-presidente/js/jquery.spin.js"></script>
+    <script src="wp-content/themes/robledo-presidente/js/header.js" type="text/javascript"></script>  
+    <script src="wp-content/themes/robledo-presidente/js/home.js" type="text/javascript"></script>   
+    <script src="wp-content/themes/robledo-presidente/js/twitter.js" type="text/javascript"></script> 
+    <script src="wp-content/themes/robledo-presidente/js/twitterFetcher_min.js" type="text/javascript"></script>
+    <!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'es'}
+    </script>
 <?php
 /*get_sidebar();*/
 get_footer();

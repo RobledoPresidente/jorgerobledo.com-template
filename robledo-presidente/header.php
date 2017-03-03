@@ -58,7 +58,7 @@
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="http://localhost/wordpress/wp-content/themes/robledo-presidente/style.css" rel="stylesheet" type="text/css">
+  <link href="wp-content/themes/robledo-presidente/style.css" rel="stylesheet" type="text/css">
   <link rel="profile" href="http://gmpg.org/xfn/11"-->
 
   <?php wp_head(); ?>
@@ -78,13 +78,13 @@
   <!--Header-->
   <header>
     <div id="header-img">
-      <a href="/"><img class="biglogo" src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/logo.png"></a>
+      <a href="/"><img class="biglogo" src="wp-content/themes/robledo-presidente/img/logo.png"></a>
     </div>
     <nav class="navbar navbar-toggleable-md navbar-light">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/logo-s.png"></a>
+      <a class="navbar-brand" href="#"><img src="wp-content/themes/robledo-presidente/img/logo-s.png"></a>
 
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav m-auto main-menu">
@@ -106,31 +106,31 @@
         </ul>
         <ul class="navbar-nav social">
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/social-facebook.png"></a>
+            <a class="nav-link" href="#"><img src="wp-content/themes/robledo-presidente/img/social-facebook.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/social-twitter.png"></a>
+            <a class="nav-link" href="#"><img src="wp-content/themes/robledo-presidente/img/social-twitter.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/social-instagram.png"></a>
+            <a class="nav-link" href="#"><img src="wp-content/themes/robledo-presidente/img/social-instagram.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/social-snapchat.png"></a>
+            <a class="nav-link" href="#"><img src="wp-content/themes/robledo-presidente/img/social-snapchat.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/social-whatsapp.png"></a>
+            <a class="nav-link" href="#"><img src="wp-content/themes/robledo-presidente/img/social-whatsapp.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/social-youtube.png"></a>
+            <a class="nav-link" href="#"><img src="wp-content/themes/robledo-presidente/img/social-youtube.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/social-soundcloud.png"></a>
+            <a class="nav-link" href="#"><img src="wp-content/themes/robledo-presidente/img/social-soundcloud.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/social-google+.png"></a>
+            <a class="nav-link" href="#"><img src="wp-content/themes/robledo-presidente/img/social-google+.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="http://localhost/wordpress/wp-content/themes/robledo-presidente/img/social-linkedin.png"></a>
+            <a class="nav-link" href="#"><img src="wp-content/themes/robledo-presidente/img/social-linkedin.png"></a>
           </li>
         </ul>
       </div>

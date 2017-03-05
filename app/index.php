@@ -52,7 +52,7 @@ get_header(); ?>
 	<!--/div--><!-- #primary -->
   <div class="container-fluid" id="main">
     <div class="section mb-5 text-center" id="infografia">
-      <img src="wp-content/themes/robledo-presidente/img/infografia.png" class="img-fluid">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/infografia.png" class="img-fluid">
     </div>
     <div class="section">
       <div class="row mb-5 especial">
@@ -155,14 +155,14 @@ get_header(); ?>
         <div class="col-md-9 text-center">
           <div class="link">
             <a href="/voluntarios">
-              <img src="wp-content/themes/robledo-presidente/img/voluntarios.png" class="img-fluid">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/voluntarios.png" class="img-fluid">
               <h3>Sea Voluntario</h3>
             </a>
           </div>
           <h4 class="px-4">Llegó la hora de transformar a Colombia. Vincúlese a este gran cambio.</h4>
         </div>
         <div class="col-md-3" id="colombia-container">
-          <img id="colombia" src="wp-content/themes/robledo-presidente/img/map.png" alt="" usemap="#colombia-regions" class="img-fluid">
+          <img id="colombia" src="<?php echo get_template_directory_uri(); ?>/img/map.png" alt="" usemap="#colombia-regions" class="img-fluid">
           <map name="colombia-regions" id="colombia-regions">
             <area data-key="north" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="3,2,5,76,13,129,84,132,81,170,109,171,132,150,160,179,186,154,185,113,253,104,262,1" />
             <area data-key="center" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="84,135,54,142,35,189,57,289,3,366,68,406,142,319,151,323,148,347,189,357,189,334,268,310,293,313,309,289,376,272,386,201,366,196,319,204,311,184,292,177,261,174,232,179,220,133,208,113,189,149,159,181,105,172,80,172,86,136" />
@@ -274,18 +274,11 @@ get_header(); ?>
         </div>
       </div>
     </div>
-    <script src="wp-content/themes/robledo-presidente/js/jquery.min.js" type="text/javascript"></script>
-    <script src="wp-content/themes/robledo-presidente/js/tether.min.js" type="text/javascript"></script>
-    <script src="wp-content/themes/robledo-presidente/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="wp-content/themes/robledo-presidente/js/jquery.imagemapster.min.js" type="text/javascript"></script>
-    <script src="wp-content/themes/robledo-presidente/js/wScratchPad.js" type="text/javascript"></script>
-    <script type="text/javascript" src="wp-content/themes/robledo-presidente/js/codebird.js"></script>
-    <script src="wp-content/themes/robledo-presidente/js/spin.min.js"></script>
-    <script src="wp-content/themes/robledo-presidente/js/jquery.spin.js"></script>
-    <script src="wp-content/themes/robledo-presidente/js/header.js" type="text/javascript"></script>  
-    <script src="wp-content/themes/robledo-presidente/js/home.js" type="text/javascript"></script>   
-    <script src="wp-content/themes/robledo-presidente/js/twitter.js" type="text/javascript"></script> 
-    <script src="wp-content/themes/robledo-presidente/js/twitterFetcher_min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.imagemapster.min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/wScratchPad.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/home.js" type="text/javascript"></script>   
+    <script src="<?php echo get_template_directory_uri(); ?>/js/twitter.js" type="text/javascript"></script> 
+    <script src="<?php echo get_template_directory_uri(); ?>/js/twitterFetcher_min.js" type="text/javascript"></script>
     <!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->
     <script src="https://apis.google.com/js/platform.js" async defer>
       {lang: 'es'}

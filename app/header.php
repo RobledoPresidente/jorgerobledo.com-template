@@ -52,28 +52,34 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-  <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
-  <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="<?php echo get_template_directory_uri(); ?>/css/style.min.css" rel="stylesheet" type="text/css">
-  <link rel="profile" href="http://gmpg.org/xfn/11"-->
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/codebird.js"></script>
-  <script>
-      var cb = new Codebird;        
-      cb.setConsumerKey("m3QT1gSSXb5mENHuYClFHUVFE", "wHtgKSFmeBtF1LVQ78DioPLrEfxFmbR5Oxtzi4P0XFqQi0w7gf");
-      //cb.setUseProxy(false);
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo get_template_directory_uri(); ?>/css/style.min.css" rel="stylesheet" type="text/css">
+    <link rel="profile" href="http://gmpg.org/xfn/11"-->
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/codebird.js"></script>
+    <script>
+        var cb = new Codebird;        
+        cb.setConsumerKey("m3QT1gSSXb5mENHuYClFHUVFE", "wHtgKSFmeBtF1LVQ78DioPLrEfxFmbR5Oxtzi4P0XFqQi0w7gf");
+        //cb.setUseProxy(false);
+    </script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/tether.min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/spin.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.spin.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/header.js" type="text/javascript"></script>  
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-46114492-2', 'auto');
+    ga('send', 'pageview');
+
   </script>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-46114492-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
   <?php wp_head(); ?>
 </head>
@@ -92,13 +98,13 @@
   <!--Header-->
   <header>
     <div id="header-img">
-      <a href="/"><img class="biglogo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
+      <a href="<?php echo get_home_url(); ?>"><img class="biglogo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
     </div>
     <nav class="navbar navbar-toggleable-md navbar-light">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-s.png"></a>
+      <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-s.png"></a>
 
       <div class="collapse navbar-collapse">        
         <!--TODO: Los items de este menú deben ser un Menú de wordpress, aun no tan priopritario ahora-->

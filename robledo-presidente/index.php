@@ -64,47 +64,59 @@ get_header(); ?>
     <div class="section">
       <h2><span>primera plana</span></h2>
       <div class="row highlights">
-        <!--TODO: Deben quedar en el orden correctom ¿No se puede llamar directamente como deme el post o los post con X categoría?-->
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <?php if ( in_category( 'cat1' ) ) : ?>
-            <div class="col-md-5">
-              <!--TODO: poner imagen destacada del post en el background-->
-              <a href="<?php the_permalink(); ?>" class="card card-inverse" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/odebrecht.png)">
-                <div class="card-img-overlay">
-                  <div class="card-content bottom">
-                    <h4 class="card-title"><?php the_title(); ?></h4>
-                    <!--TODO: acá debe ir el custom field Abstract-->
-                    <p class="card-text"><?php the_excerpt(); ?></p>
-                    <!--TODO: acá debe ir  hace cuánto se publicó-->
-                    <p class="card-text"><small class="text-muted">Hace 2 días</small></p>
-                  </div>
+        <?php $query = new WP_Query (array(
+          'category_name' => 'primera-plana-1',
+          'orderby' => 'modified',
+          'order' => 'DESC',
+          'posts_per_page' => 1
+        )); ?>
+        <?php if ( $query->have_posts() ) : $query->the_post(); ?>
+          <div class="col-md-5">
+            <a href="<?php the_permalink(); ?>" class="card card-inverse" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
+              <div class="card-img-overlay">
+                <div class="card-content bottom">
+                  <h4 class="card-title"><?php the_title(); ?></h4>
+                  <p class="card-text"><?php echo get_the_excerpt(); ?></p>
+                  <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></p>
                 </div>
-              </a>
-            </div>
-          <?php elseif ( in_category( 'cat2' ) ) : ?>
+              </div>
+            </a>
+          </div>
+        <?php endif; ?>
+        <?php $query = new WP_Query (array(
+          'category_name' => 'primera-plana-2',
+          'orderby' => 'modified',
+          'order' => 'DESC',
+          'posts_per_page' => 1
+        )); ?>
+        <?php if ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="col-sm-6 col-md-4 no-gutters">
               <div class="card card-inverse card-primary">
                 <div class="card-content middle text-center">
                   <h4 class="card-title text-uppercase"><?php the_title(); ?></h4>
                   <!--TODO: acá debe ir el custom field Hashtag-->
-                  <h5 class="card-title">#RobledoPresidente2018</h5>
+                  <h5 class="card-title"><?php $custom = get_post_custom(); echo $custom['hashtag'][0]; ?></h5>
                 </div>
               </div>
             </div>
-          <?php elseif ( in_category( 'cat3' ) ) : ?>
+        <?php endif; ?>
+        <?php $query = new WP_Query (array(
+          'category_name' => 'primera-plana-3',
+          'orderby' => 'modified',
+          'order' => 'DESC',
+          'posts_per_page' => 1
+        )); ?>
+        <?php if ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="col-sm-6 col-md-3">
-              <a href="post.html" class="card card-inverse" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/Rio.jpg)">
+              <a href="post.html" class="card card-inverse" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
                 <div class="card-img-overlay">
                   <h4 class="card-title"><?php the_title(); ?></h4>
-                  <!--TODO: acá debe ir el custom field Abstract-->
-                  <p class="card-text"><?php the_excerpt(); ?></p>
-                  <!--TODO: acá debe ir  hace cuánto se publicó-->
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <p class="card-text"><?php echo get_the_excerpt(); ?></p>
+                  <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></p>
                 </div>
               </a>
             </div>
-          <?php endif; ?>
-        <?php endwhile; endif;?>
+        <?php endif; ?>
       </div>
     </div>
     <div class="section">
@@ -217,85 +229,29 @@ get_header(); ?>
     <div class="section news">
       <h2><span>noticias</span></h2>
       <!--TODO: Acá se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
-      <div class="row">
+      <div class="row">      
+        <?php $query = new WP_Query (array(
+          'category_name' => 'noticias-home',
+          'orderby' => 'modified',
+          'order' => 'DESC',
+          'posts_per_page' => 6
+        )); ?>
+        <?php $i = 0; ?>
+        <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
         <div class="col-md-4">
-          <a href="http://jorgerobledo.com/la-prueba-reina/" class="card bg-primary">
-            <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/la-prueba-reina.jpg)">
+          <a href="http://jorgerobledo.com/la-prueba-reina/" class="card <?php echo ($i == 0 ? 'bg-primary' : ($i == 2 ? 'card-inverse bg-secondary' : ($i == 4 ? 'card-inverse bg-tertiary' : 'bg-calm'))) ?>">
+            <div class="card-image-header" style="background-image: url(<?php the_post_thumbnail_url( 'medium' ) ?>)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
-                  <h4 class="card-title">La prueba reina</h4>
-                  <p class="card-text"><small class="text-muted">Hace 2 días</small></p>
+                  <h4 class="card-title"><?php the_title() ?></h4>
+                  <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></p>
                 </div>
               </div>
             </div>
-            <div class="card-text p-3">Martínez Neira está impedido para ser Fiscal en Odebrecht</div>
+            <div class="card-text p-3"><?php echo get_the_excerpt(); ?></div>
           </a>
         </div>
-        <div class="col-md-4">
-          <a href="http://jorgerobledo.com/brutos-por-siempre/" class="card bg-calm">
-            <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/brutos-por-siempre.jpg)">
-              <div class="card-img-overlay">
-                <div class="card-content bottom">
-                  <h4 class="card-title">Brutos por siempre</h4>
-                  <p class="card-text"><small class="text-muted">Hace 2 días</small></p>
-                </div>
-              </div>
-            </div>
-            <div class="card-text p-3">Santos le quita recursos a la ciencia</div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-inverse bg-secondary">
-            <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/impuestos.png)">
-              <div class="card-img-overlay">
-                <div class="card-content bottom">
-                  <h4 class="card-title">¿Que los impuestos los paguen los pobres?</h4>
-                  <p class="card-text"><small class="text-muted">Hace 2 días</small></p>
-                </div>
-              </div>
-            </div>
-            <div class="card-text p-3">Sobre una Reforma Tributaria que despluma a los colombianos.</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <a href="http://jorgerobledo.com/no-estamos-solos/" class="card bg-calm">
-            <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/no-estamos-solos.jpg)">
-              <div class="card-img-overlay">
-                <div class="card-content bottom">
-                  <h4 class="card-title">¿No estamos solos?</h4>
-                  <p class="card-text"><small class="text-muted">Hace 2 días</small></p>
-                </div>
-              </div>
-            </div>
-            <div class="card-text p-3">¿Existirá vida en otros planetas?</div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="http://jorgerobledo.com/bogota-peor-para-todos/" class="card card-inverse bg-tertiary">
-            <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/bogota-peor-para-todos.png)">
-              <div class="card-img-overlay">
-                <div class="card-content bottom">
-                  <h4 class="card-title">Bogotá peor para todos</h4>
-                  <p class="card-text"><small class="text-muted">Hace 2 días</small></p>
-                </div>
-              </div>
-            </div>
-            <div class="card-text p-3">Peñalosa, el Alcalde técnico</div>
-          </a>
-        </div>
-        <div class="col-md-4">
-          <a href="http://jorgerobledo.com/la-peor-cifra-de-la-decada/" class="card bg-calm">
-            <div class="card-image-header" style="background-image: url(wp-content/themes/robledo-presidente/img/posts/lapeorcifradedecada.jpg)">
-              <div class="card-img-overlay">
-                <div class="card-content bottom">
-                  <h4 class="card-title">¡La peor cifra de la década!</h4>
-                  <p class="card-text"><small class="text-muted">Hace 2 días</small></p>
-                </div>
-              </div>
-            </div>
-            <div class="card-text p-3">Una economía al servicio de los bancos</div>
-          </a>
-        </div>
+        <?php $i++; endwhile; endif;?>
       </div>
       <div class="section">
         <h2><span>en redes</span></h2>

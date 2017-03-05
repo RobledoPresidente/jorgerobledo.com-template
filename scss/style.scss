@@ -207,7 +207,7 @@ body {
     &.sticky {
         padding-top: 8vw;
 
-        header {
+        > header {
             transition: all 0.4s ease;
              border-bottom: 1px solid $brand-calm;
 
@@ -272,7 +272,7 @@ a {
     }
 }
 
-header {
+body > header {
     position: fixed;
     top: 0;
     left: 0;
@@ -607,6 +607,18 @@ footer {
     }
 }
 
+//Wordpress
+img.alignleft {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+img.alignright {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
 @include media-breakpoint-down(sm) {
 
     .navbar-nav.social {
@@ -640,7 +652,7 @@ footer {
         &.sticky {
             padding-top: 76vw;
 
-            header { 
+            > header { 
                 position: absolute;
                 
                 .navbar-brand img {
@@ -650,7 +662,7 @@ footer {
         }
     }
 
-    header { 
+    > header { 
 
         #header-img {
             height: 100vw;

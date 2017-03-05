@@ -36,7 +36,7 @@ get_header(); ?>
 	    <div class="container-fluid" id="main">
 	        <div class="section">
 	            <h2><span>entrada</span></h2>
-				<header class="row mb-5">
+				<header class="row mb-3">
 					<div class="col-md-6 hidden-lg-up">
 						<img class="img-fluid img-thumbnail" src="<?php the_post_thumbnail_url( 'medium_large' ) ?>" alt="Generic placeholder image">
 					</div>

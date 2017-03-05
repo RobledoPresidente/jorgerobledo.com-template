@@ -56,9 +56,9 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="wp-content/themes/robledo-presidente/css/style.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo get_template_directory_uri(); ?>/css/style.min.css" rel="stylesheet" type="text/css">
   <link rel="profile" href="http://gmpg.org/xfn/11"-->
-  <script type="text/javascript" src="wp-content/themes/robledo-presidente/js/codebird.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/codebird.js"></script>
   <script>
       var cb = new Codebird;        
       cb.setConsumerKey("m3QT1gSSXb5mENHuYClFHUVFE", "wHtgKSFmeBtF1LVQ78DioPLrEfxFmbR5Oxtzi4P0XFqQi0w7gf");
@@ -92,13 +92,13 @@
   <!--Header-->
   <header>
     <div id="header-img">
-      <a href="/"><img class="biglogo" src="wp-content/themes/robledo-presidente/img/logo.png"></a>
+      <a href="/"><img class="biglogo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
     </div>
     <nav class="navbar navbar-toggleable-md navbar-light">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="wp-content/themes/robledo-presidente/img/logo-s.png"></a>
+      <a class="navbar-brand" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/logo-s.png"></a>
 
       <div class="collapse navbar-collapse">        
         <!--TODO: Los items de este menú deben ser un Menú de wordpress, aun no tan priopritario ahora-->
@@ -118,31 +118,31 @@
         </ul>
         <ul class="navbar-nav social">
           <li class="nav-item">
-            <a class="nav-link" href="https://es-la.facebook.com/jorge.robledo.castillo/"><img src="wp-content/themes/robledo-presidente/img/social-facebook.png"></a>
+            <a class="nav-link" href="https://es-la.facebook.com/jorge.robledo.castillo/"><img src="<?php echo get_template_directory_uri(); ?>/img/social-facebook.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/jerobledo?lang=es"><img src="wp-content/themes/robledo-presidente/img/social-twitter.png"></a>
+            <a class="nav-link" href="https://twitter.com/jerobledo?lang=es"><img src="<?php echo get_template_directory_uri(); ?>/img/social-twitter.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/jorgerobledo2018/"><img src="wp-content/themes/robledo-presidente/img/social-instagram.png"></a>
+            <a class="nav-link" href="https://www.instagram.com/jorgerobledo2018/"><img src="<?php echo get_template_directory_uri(); ?>/img/social-instagram.png"></a>
           </li>
           <!--<li class="nav-item">
-            <a class="nav-link" href="#"><img src="wp-content/themes/robledo-presidente/img/social-snapchat.png"></a>
+            <a class="nav-link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-snapchat.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><img src="wp-content/themes/robledo-presidente/img/social-whatsapp.png"></a>
+            <a class="nav-link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-whatsapp.png"></a>
           </li>-->
           <li class="nav-item">
-            <a class="nav-link" href="https://www.youtube.com/user/ROBLEDOTELEVISION"><img src="wp-content/themes/robledo-presidente/img/social-youtube.png"></a>
+            <a class="nav-link" href="https://www.youtube.com/user/ROBLEDOTELEVISION"><img src="<?php echo get_template_directory_uri(); ?>/img/social-youtube.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://soundcloud.com/prensa-jorge-enrique-robledo"><img src="wp-content/themes/robledo-presidente/img/social-soundcloud.png"></a>
+            <a class="nav-link" href="https://soundcloud.com/prensa-jorge-enrique-robledo"><img src="<?php echo get_template_directory_uri(); ?>/img/social-soundcloud.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://plus.google.com/100711622690849831280"><img src="wp-content/themes/robledo-presidente/img/social-google+.png"></a>
+            <a class="nav-link" href="https://plus.google.com/100711622690849831280"><img src="<?php echo get_template_directory_uri(); ?>/img/social-google+.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.linkedin.com/in/jorge-robledo/"><img src="wp-content/themes/robledo-presidente/img/social-linkedin.png"></a>
+            <a class="nav-link" href="https://www.linkedin.com/in/jorge-robledo/"><img src="<?php echo get_template_directory_uri(); ?>/img/social-linkedin.png"></a>
           </li>
         </ul>
       </div>

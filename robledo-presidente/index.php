@@ -91,13 +91,13 @@ get_header(); ?>
         )); ?>
         <?php if ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="col-sm-6 col-md-4 no-gutters">
-              <div class="card card-inverse card-primary">
+              <a href="<?php the_permalink(); ?>" class="card card-inverse card-primary">
                 <div class="card-content middle text-center">
                   <h4 class="card-title text-uppercase"><?php the_title(); ?></h4>
                   <!--TODO: acá debe ir el custom field Hashtag-->
                   <h5 class="card-title"><?php $custom = get_post_custom(); echo $custom['hashtag'][0]; ?></h5>
                 </div>
-              </div>
+              </a>
             </div>
         <?php endif; ?>
         <?php $query = new WP_Query (array(
@@ -108,7 +108,7 @@ get_header(); ?>
         )); ?>
         <?php if ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="col-sm-6 col-md-3">
-              <a href="post.html" class="card card-inverse" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
+              <a href="<?php the_permalink(); ?>" class="card card-inverse" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
                 <div class="card-img-overlay">
                   <h4 class="card-title"><?php the_title(); ?></h4>
                   <p class="card-text"><?php echo get_the_excerpt(); ?></p>
@@ -239,7 +239,7 @@ get_header(); ?>
         <?php $i = 0; ?>
         <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
         <div class="col-md-4">
-          <a href="http://jorgerobledo.com/la-prueba-reina/" class="card <?php echo ($i == 0 ? 'bg-primary' : ($i == 2 ? 'card-inverse bg-secondary' : ($i == 4 ? 'card-inverse bg-tertiary' : 'bg-calm'))) ?>">
+          <a href="<?php the_permalink(); ?>" class="card <?php echo ($i == 0 ? 'bg-primary' : ($i == 2 ? 'card-inverse bg-secondary' : ($i == 4 ? 'card-inverse bg-tertiary' : 'bg-calm'))) ?>">
             <div class="card-image-header" style="background-image: url(<?php the_post_thumbnail_url( 'medium' ) ?>)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">

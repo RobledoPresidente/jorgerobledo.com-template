@@ -69,7 +69,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/spin.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.spin.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/header.js" type="text/javascript"></script>  
+    <script src="<?php echo get_template_directory_uri(); ?>/js/header.js" type="text/javascript"></script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

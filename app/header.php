@@ -55,7 +55,6 @@
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="<?php echo get_template_directory_uri(); ?>/css/style.min.css" rel="stylesheet" type="text/css">
     <link rel="profile" href="http://gmpg.org/xfn/11"-->
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/codebird.js"></script>
@@ -64,11 +63,11 @@
         cb.setConsumerKey("m3QT1gSSXb5mENHuYClFHUVFE", "wHtgKSFmeBtF1LVQ78DioPLrEfxFmbR5Oxtzi4P0XFqQi0w7gf");
         //cb.setUseProxy(false);
     </script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js" type="text/javascript"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/tether.min.js" type="text/javascript"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/spin.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.spin.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/tether/dist/js/tether.min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/spin.js/spin.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/spin.js/jquery.spin.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/header.js" type="text/javascript"></script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

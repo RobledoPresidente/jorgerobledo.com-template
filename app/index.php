@@ -274,8 +274,8 @@ get_header(); ?>
         </div>
       </div>
     </div>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.imagemapster.min.js" type="text/javascript"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/wScratchPad.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/ImageMapster/dist/jquery.imagemapster.min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/wScratchPad/wScratchPad.min.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/home.js" type="text/javascript"></script>   
     <script src="<?php echo get_template_directory_uri(); ?>/js/twitter.js" type="text/javascript"></script> 
     <script src="<?php echo get_template_directory_uri(); ?>/js/twitterFetcher_min.js" type="text/javascript"></script>

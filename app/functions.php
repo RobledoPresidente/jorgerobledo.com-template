@@ -90,9 +90,9 @@ add_action( 'after_setup_theme', 'robledo_presidente_content_width', 0 );
  */
 function robledo_presidente_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'robledo-presidente' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'robledo-presidente' ),
+		'name'          => esc_html__( 'El Termómetro', 'robledo-presidente' ),
+		'id'            => 'el-termometro',
+		'description'   => esc_html__( 'Agregue una encuesta aquí desde el plugin WP-Polls.', 'robledo-presidente' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

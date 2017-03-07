@@ -608,15 +608,18 @@ footer {
 }
 
 //Wordpress
+img.alignnone, img.aligncenter, img.alignleft, img.alignright {
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
 img.alignleft {
     float: left;
     margin-right: 20px;
-    margin-bottom: 20px;
 }
 img.alignright {
     float: right;
     margin-left: 20px;
-    margin-bottom: 20px;
 }
 
 @include media-breakpoint-down(sm) {

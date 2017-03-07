@@ -11,6 +11,6 @@
     "bootstrap": "v4.0.0-alpha.6",
     "components-font-awesome": "^4.7.0",
     "ImageMapster": "imagemapster#*",
-    "wScratchPad": "https://github.com/RobledoPresidente/wScratchPad.git#^2.2.2"
+    "wScratchPad": "https://github.com/RobledoPresidente/wScratchPad.git#^2.2.3"
   }
 }

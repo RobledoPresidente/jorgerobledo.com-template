@@ -256,11 +256,17 @@ body {
                         padding: 0 1vw;
                     }
 
+                    &:hover, &.active {
+
+                        a.nav-link {
+                            font-family: 'aaux_nextultra';
+                        }
+                    }
+
                     &:first-child {
 
                         a.nav-link {
                             border-left: none;
-                            font-family: 'aaux_nextultra';
                         }
                     }
                 }

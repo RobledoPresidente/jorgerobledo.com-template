@@ -109,7 +109,10 @@
         <!--TODO: Los items de este menú deben ser un Menú de wordpress, aun no tan priopritario ahora-->
         <ul class="navbar-nav m-auto main-menu">
           <li class="nav-item active">
-            <a class="nav-link" href="biografia.pdf" target="_blank">conózcalo <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?php echo get_home_url(); ?>" target="_blank">inicio <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="biografia.pdf" target="_blank">conózcalo</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo get_home_url(); ?>/index.php/biblioteca">biblioteca</a>

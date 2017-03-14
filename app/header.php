@@ -115,7 +115,7 @@
             <a class="nav-link" href="biografia.pdf" target="_blank">conózcalo</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo get_home_url(); ?>/index.php/biblioteca">biblioteca</a>
+            <a class="nav-link" href="<?php echo get_home_url(); ?>/biblioteca">biblioteca</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="prensa.html">prensa</a>

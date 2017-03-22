@@ -39,6 +39,8 @@
                 <a href="https://soundcloud.com/prensa-jorge-enrique-robledo" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Audios <span class="badge bg-secondary badge-pill">+300</span></a>
                 <a href="http://jorgerobledo.com/category/robledo/que-piensa/debates/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Debates <span class="badge bg-secondary badge-pill">+150</span></a>
                 <a href="http://jorgerobledo.com/category/robledo/que-piensa/articulo-quincenal/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Artículos <span class="badge bg-secondary badge-pill">+1300</span></a>
+                <a href="<?php echo get_home_url(); ?>/index.php/category/noticias-home" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Noticias <span class="badge bg-secondary badge-pill">+1300</span></a>
+              </div>
               </div>
             </div>
             <div class="col-md-2">

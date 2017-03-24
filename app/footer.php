@@ -35,20 +35,20 @@
               <!--TODO: Los enlaces de Boletines, debates y articulo quincenal deben ser enlaces a la categoría y deben tene rel contador de artículos en esa categoría (lo del contador puede o no ser)-->
               <div class="list-group">
                 <a href="https://www.youtube.com/user/ROBLEDOTELEVISION" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Videos <span class="badge bg-secondary badge-pill">+1000</span></a>
-                <a href="http://jorgerobledo.com/category/robledo/boletin-de-prensa/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Boletines <span class="badge bg-secondary badge-pill">+1000</span></a>
+                <a href="<?php echo get_home_url(); ?>/category/boletines" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Boletines <span class="badge bg-secondary badge-pill">+1000</span></a>
                 <a href="https://soundcloud.com/prensa-jorge-enrique-robledo" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Audios <span class="badge bg-secondary badge-pill">+300</span></a>
-                <a href="http://jorgerobledo.com/category/robledo/que-piensa/debates/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Debates <span class="badge bg-secondary badge-pill">+150</span></a>
-                <a href="http://jorgerobledo.com/category/robledo/que-piensa/articulo-quincenal/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Artículos <span class="badge bg-secondary badge-pill">+1300</span></a>
-                <a href="<?php echo get_home_url(); ?>/index.php/category/noticias-home" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Noticias <span class="badge bg-secondary badge-pill">+1300</span></a>
+                <a href="<?php echo get_home_url(); ?>/category/debates/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Debates <span class="badge bg-secondary badge-pill">+150</span></a>
+                <a href="<?php echo get_home_url(); ?>/category/articulo-quincenal/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Artículos <span class="badge bg-secondary badge-pill">+1300</span></a>
+                <a href="<?php echo get_home_url(); ?>/category/noticias-home/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Noticias <span class="badge bg-secondary badge-pill">+1300</span></a>
               </div>
               </div>
             </div>
             <div class="col-md-2">
               <h2><a href="prensa.html">prensa</a></h2>
               <div class="list-group">
-                <a href="http://jorgerobledo.com/category/robledo/que-piensa/articulo-quincenal/" class="list-group-item list-group-item-action bg-inverse border-0">Artículo quincenal</a>
+                <a href="<?php echo get_home_url(); ?>/category/articulo-quincenal/" class="list-group-item list-group-item-action bg-inverse border-0">Artículo quincenal</a>
                 <a href="prensa-kit.html" class="list-group-item list-group-item-action bg-inverse border-0">Kit de prensa</a>
-                <a href="http://jorgerobledo.com/category/robledo/boletin-de-prensa/" class="list-group-item list-group-item-action bg-inverse border-0">Boletines</a>
+                <a href="<?php echo get_home_url(); ?>/category/boletines" class="list-group-item list-group-item-action bg-inverse border-0">Boletines</a>
               </div>
             </div>
             <div class="col-md-2">

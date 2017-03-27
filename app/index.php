@@ -198,18 +198,25 @@ get_header(); ?>
     <div class="container">
       <div class="section">
         <h2 class="video"><i class="fa fa-video-camera" aria-hidden="true"></i> Videoteca</h2>   
-      <div class="row px-3 bg-inverse ">
-        <div class="col-md-8 p-4">
+      <div class="row bg-inverse ">
+        <div class="col-lg-8">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/qu5VBQkXY3k" allowfullscreen=""></iframe>
           </div>
         </div>
-        <div class="col-md-4 pt-4 pb-4 pr-4 highlight">
-          <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
+        <div class="col-lg-4">
+          <div class="hidden-md-down">
+            <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
+          </div>
+          <div class="hidden-lg-up pt-3">
+            <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
+          </div>
           <div class="highlight-caption text-center">
               <h4>Robledo y Peláez - Homenaje al senador Robledo, 5 veces elegido mejor senador de Colombia</h5>
-                <p>El "doctor" Peláez logra un divertida entrevista, donde el senador y precandidato presidencial hablan sobre
-                  su trayectoria, su familia y los deseos de ser Presidente de Colombia.</p>          
+                <p class="hidden-md-down">
+                  El "doctor" Peláez logra un divertida entrevista, donde el senador y precandidato presidencial hablan sobre
+                  su trayectoria, su familia y los deseos de ser Presidente de Colombia.
+                </p>          
                 <div class="share" data-url="http://www.youtube.com/watch?v=qu5VBQkXY3k" data-title="Robledo y Peláez - Homenaje al senador Robledo, 5 veces elegido mejor senador de Colombia">
                   <ul>
                     <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>

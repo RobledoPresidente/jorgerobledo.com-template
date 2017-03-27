@@ -260,8 +260,6 @@ textarea.form-control {
 
         .highlight-caption {
             margin-top: 1rem;
-            padding-top: 2rem;
-            border-top: 1px solid $brand-calm;
         }
     }
 }
@@ -665,7 +663,8 @@ h4, h5 {
                     font-family: $font-secondary;
                     text-transform: uppercase;
                     line-height: 50px;
-                    font-size: 32px;
+                    font-size: 31px;
+                    margin: 0;
 
                     @include media-breakpoint-down(md) {                    
                         font-size: 25px;

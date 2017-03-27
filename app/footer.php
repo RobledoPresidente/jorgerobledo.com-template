@@ -41,7 +41,6 @@
                 <a href="<?php echo get_home_url(); ?>/category/articulo-quincenal/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Artículos <span class="badge bg-secondary badge-pill">+1300</span></a>
                 <a href="<?php echo get_home_url(); ?>/category/noticias-home/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Noticias <span class="badge bg-secondary badge-pill">+1300</span></a>
               </div>
-              </div>
             </div>
             <div class="col-md-2">
               <h2><a href="prensa.html">prensa</a></h2>

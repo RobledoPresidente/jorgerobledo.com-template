@@ -50,10 +50,9 @@ get_header(); ?>
 
 		</main--><!-- #main -->
 	<!--/div--><!-- #primary -->
-  <div class="container-fluid" id="main">
-    <div class="section mb-5 text-center" id="infografia">
-      <img src="<?php echo get_template_directory_uri(); ?>/img/infografia.png" class="img-fluid">
-    </div>
+  <div class="container" id="main">
+  </div>
+  <div class="container">
     <div class="section">
       <div class="row mb-5 especial">
         <div class="col text-center">
@@ -62,7 +61,7 @@ get_header(); ?>
       </div>
     </div>
     <div class="section">
-      <h2><span>primera plana</span></h2>
+      <h2 class="colored"><!--<i class="fa fa-font" aria-hidden="true"></i> -->Primera plana</h2>
       <div class="row highlights">
         <?php $query = new WP_Query (array(
           'category_name' => 'primera-plana-1',
@@ -75,13 +74,31 @@ get_header(); ?>
             <a href="<?php the_permalink(); ?>" class="card card-inverse" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
-                  <h4 class="card-title"><?php the_title(); ?></h4>
+                  <h3 class="card-title"><?php the_title(); ?></h3>
                   <p class="card-text"><?php echo get_the_excerpt(); ?></p>
                   <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></p>
                 </div>
               </div>
             </a>
           </div>
+        <?php endif; ?>
+        <?php $query = new WP_Query (array(
+          'category_name' => 'primera-plana-3',
+          'orderby' => 'modified',
+          'order' => 'DESC',
+          'posts_per_page' => 1
+        )); ?>
+        <?php if ( $query->have_posts() ) : $query->the_post(); ?>
+            <div class="col-sm-6 col-md-3 no-gutters">
+              <a href="<?php the_permalink(); ?>" class="card card-inverse card-primary">
+                <div class="card-content top">
+                  <h3 class="card-title"><?php the_title(); ?></h3>
+                  <p class="card-text"><?php echo get_the_excerpt(); ?></p>
+                  <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></p>
+                  <img class="img-fluid" src="<?php the_post_thumbnail_url( 'medium_large' ) ?>">
+                </div>
+              </a>
+            </div>
         <?php endif; ?>
         <?php $query = new WP_Query (array(
           'category_name' => 'primera-plana-2',
@@ -91,36 +108,30 @@ get_header(); ?>
         )); ?>
         <?php if ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="col-sm-6 col-md-4 no-gutters">
-              <a href="<?php the_permalink(); ?>" class="card card-inverse card-primary">
+              <a href="<?php the_permalink(); ?>" class="card">
                 <div class="card-content middle text-center">
-                  <h4 class="card-title text-uppercase"><?php the_title(); ?></h4>
-                  <!--TODO: acá debe ir el custom field Hashtag-->
-                  <h5 class="card-title"><?php $custom = get_post_custom(); echo $custom['hashtag'][0]; ?></h5>
-                </div>
-              </a>
-            </div>
-        <?php endif; ?>
-        <?php $query = new WP_Query (array(
-          'category_name' => 'primera-plana-3',
-          'orderby' => 'modified',
-          'order' => 'DESC',
-          'posts_per_page' => 1
-        )); ?>
-        <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-            <div class="col-sm-6 col-md-3">
-              <a href="<?php the_permalink(); ?>" class="card card-inverse" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
-                <div class="card-img-overlay">
-                  <h4 class="card-title"><?php the_title(); ?></h4>
-                  <p class="card-text"><?php echo get_the_excerpt(); ?></p>
-                  <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></p>
+                  <h3 class="card-title text-uppercase"><?php the_title(); ?></h3>
+                  <h4 class="card-title"><?php $custom = get_post_custom(); echo $custom['hashtag'][0]; ?></h4>
+                  <div class="share">
+                    <ul>
+                      <li class="share-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                      <li class="share-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                      <li class="share-google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+                      <li class="share-mail"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                      <li class="share-whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
+                    </ul>
+                  </div>
                 </div>
               </a>
             </div>
         <?php endif; ?>
       </div>
     </div>
-    <div class="section">
-      <h2><span>participe</span></h2>
+  </div>
+  <div class="bg-calm">
+    <div class="container">
+      <div class="section">
+        <h2><!--<i class="fa fa-users" aria-hidden="true"></i> -->Participe</h2>
       <div class="row">
         <div class="col-sm-6">
           <div class="card">
@@ -137,7 +148,7 @@ get_header(); ?>
         <div class="col-sm-6 p-2">
           <div class="card bg-calm">
             <div class="card-block">
-              <h3><span id="hashtag"></span>... <span class="badge badge-pill bg-secondary">¡Nuevo!</span></h3>
+              <h3><span id="hashtag"></span> ... <span class="badge badge-pill bg-secondary">¡Nuevo!</span></h3>
               <div class="card-block">
                 <div class="form-group">
                   <textarea id="meme-text" class="form-control" rows="2" placeholder="Comparta sus pensamientos ahora que Robledo es el PRIMER candidato presidencial :)"></textarea>
@@ -150,8 +161,11 @@ get_header(); ?>
         </div>
       </div>
     </div>
+    </div>
+  </div>
+  <div class="container">
     <div class="section" id="volunteers">
-      <h2><span>voluntarios</span></h2>
+      <h2><!--<i class="fa fa-hand-peace-o" aria-hidden="true"></i> -->Voluntarios</h2>
       <div class="row">
         <div class="col-md-9 text-center">
           <div class="link">
@@ -160,7 +174,7 @@ get_header(); ?>
               <h3>Sea Voluntario</h3>
             </a>
           </div>
-          <h4 class="px-4">Llegó la hora de transformar a Colombia. Vincúlese a este gran cambio.</h4>
+          <p class="px-4">Llegó la hora de transformar a Colombia. Vincúlese a este gran cambio.</p>
         </div>
         <div class="col-md-3" id="colombia-container">
           <img id="colombia" src="<?php echo get_template_directory_uri(); ?>/img/map.png" alt="" usemap="#colombia-regions" class="img-fluid">
@@ -173,7 +187,7 @@ get_header(); ?>
       </div>
     </div>
     <div class="section" id="feed">
-      <h2><span><i class="fa fa-twitter" aria-hidden="true"></i> twitter a la mano</span></h2>
+      <h2 class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter a la mano</h2>
       <div class="text-center p-3">
         Transmisiones en vivo en Periscope:
         <script>window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)?w:(n=t.createElement(e),n.id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)},w)}(document,"script","twitter-wjs")</script><a href="https://www.periscope.tv/jerobledo" class="periscope-on-air" data-size="large">@JERobledo</a>
@@ -185,9 +199,12 @@ get_header(); ?>
         <a class="btn btn-secondary" href="https://twitter.com/JERobledo/"><i class="fa fa-twitter" aria-hidden="true"></i> Ir a Twitter...</a>
       </div>
     </div>
-    <div class="section video">
-      <!--TODO: esto debe mostrar 4 videos destacados y ordenados con descripción, plugin?-->
-      <h2><span>videoteca</span></h2>      
+  </div>
+    <!--TODO: esto debe mostrar 4 videos destacados y ordenados con descripción, plugin?-->
+  <div class="bg-inverse">
+    <div class="container">
+      <div class="section">
+        <h2 class="video"><i class="fa fa-video-camera" aria-hidden="true"></i> Videoteca</h2>   
       <div class="row px-3 bg-inverse ">
         <div class="col-md-8 p-4">
           <div class="embed-responsive embed-responsive-16by9">
@@ -196,39 +213,60 @@ get_header(); ?>
         </div>
         <div class="col-md-4 pt-4 pb-4 pr-4 highlight">
           <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
-          <h4>Robledo y Peláez, Homenaje</h5>
-          <p>Esta amena charla se dio en el marco del homenaje que amigos y familiares le hicieron a Robledo por ser elegido por 5ta ocasión consecutiva como el mejor senador de Colombia por el 'Panel de Opinión' elaborado por Cifras & Conceptos. El "doctor" Peláez logra un divertida entrevista, donde el senador y precandidato presidencial habla sobre su trayectoria, su familia y los deseos de ser Presidente de Colombia.</p>
+          <div class="highlight-caption text-center">
+              <h4>Robledo y Peláez - Homenaje al senador Robledo, 5 veces elegido mejor senador de Colombia</h5>
+                <p>El "doctor" Peláez logra un divertida entrevista, donde el senador y precandidato presidencial hablan sobre
+                  su trayectoria, su familia y los deseos de ser Presidente de Colombia.</p>          
+                  <div class="share">
+                    <ul>
+                      <li class="share-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                      <li class="share-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                      <li class="share-google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+                      <li class="share-mail"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                      <li class="share-whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
+                    </ul>
+                  </div>
+            </div>
         </div>
       </div>
-      <div class="row px-3 pt-3">
-        <div class="col pb-3">        
-          <div class="card bg-calm"> 
+      <div class="row pt-4">
+          <div class="col-md-4">
+            <div class="card card-inverse">
             <div class="embed-responsive embed-responsive-16by9">
               <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/FqAkM4V5Xsc" allowfullscreen=""></iframe>
             </div>
-            <div class="card-text p-3">Aquí hay una batalla enorme entre el tapen tapen agenciada por poderes políticos y económicos enormes y quienes queremos que la verdad avance en nuestro país. Los colombianos tenemos que cerrar filas para detener esta vagabunderia y salvar el país</div>
+              <div class="card-text pt-3">
+                <h5>¿Qué esperar de la investigación por el escándalo de Odebrecht?</h5>
+              </div>
           </div>
         </div>
-        <div class="col pb-3">
-          <div class="card bg-calm">    
+          <div class="col-md-4">
+            <div class="card card-inverse"> 
             <div class="embed-responsive embed-responsive-16by9">
               <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/kCmO8P_egL8" allowfullscreen=""></iframe>
             </div>
-            <div class="card-text p-3">Debate en la universidad Javeriana con el profesor Malcom Deas, donde planteo la importancia que tiene la la indignación de los colombianos como motivación para cambiar el país. La gente tiene la capacidad y el derecho de cambiar y cambiar a sus dirigentes.</div>
+              <div class="card-text pt-3">
+                <h5>¿Conviene al país la indignación contra el Establecimiento?</h5>
+              </div>
           </div>
         </div>
-        <div class="col pb-3">
-          <div class="card bg-calm">            
+          <div class="col-md-4">
+            <div class="card card-inverse">          
             <div class="embed-responsive embed-responsive-16by9">
               <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/QqfTauOVatE" allowfullscreen=""></iframe>
             </div>
-            <div class="card-text p-3">El 16 de febrero se realizó en las instalaciones de la Comisión Quinta del Senado la audiencia pública Salvemos la pesca artesanal por iniciativa de Robledo</div>
+              <div class="card-text pt-3">
+                <h5>Salvemos la pesca artesanal: Audiencia Pública del senador Jorge Robledo</h5>
+              </div>
           </div>
         </div>
       </div>          
     </div>
+  </div>
+  </div>
+  <div class="container">
     <div class="section news">
-      <h2><span>noticias</span></h2>
+      <h2 class="colored"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Noticias</h2>
       <!--TODO: Acá se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
       <div class="row">      
         <?php $query = new WP_Query (array(
@@ -240,22 +278,22 @@ get_header(); ?>
         <?php $i = 0; ?>
         <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
         <div class="col-md-4">
-          <a href="<?php the_permalink(); ?>" class="card <?php echo ($i == 0 ? 'bg-primary' : ($i == 2 ? 'card-inverse bg-secondary' : ($i == 4 ? 'card-inverse bg-tertiary' : 'bg-calm'))) ?>">
+          <a href="<?php the_permalink(); ?>" class="card">
             <div class="card-image-header" style="background-image: url(<?php the_post_thumbnail_url( 'medium' ) ?>)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
                   <h4 class="card-title"><?php the_title() ?></h4>
-                  <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></p>
                 </div>
               </div>
             </div>
-            <div class="card-text p-3"><?php echo get_the_excerpt(); ?></div>
+            <div class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></div>
+            <div class="card-text"><?php echo get_the_excerpt(); ?></div>
           </a>
         </div>
         <?php $i++; endwhile; endif;?>
       </div>
-      <div class="section">
-        <h2><span>en redes</span></h2>
+    <div class="section">
+      <h2 class="colored"><i class="fa fa-share-alt" aria-hidden="true"></i> En redes</h2>
         <div class="row">
           <div class="col">
             <div class="fb-page" data-href="https://www.facebook.com/jorge.robledo.castillo" data-height="450" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/jorge.robledo.castillo" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jorge.robledo.castillo">Jorge Enrique Robledo Castillo</a></blockquote></div>
@@ -275,11 +313,13 @@ get_header(); ?>
         </div>
       </div>
     </div>
+    </div>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/ImageMapster/dist/jquery.imagemapster.min.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/wScratchPad/wScratchPad.min.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/home.js" type="text/javascript"></script>   
     <script src="<?php echo get_template_directory_uri(); ?>/js/twitter.js" type="text/javascript"></script> 
     <script src="<?php echo get_template_directory_uri(); ?>/js/twitterFetcher_min.js" type="text/javascript"></script>
+
     <!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->
     <script src="https://apis.google.com/js/platform.js" async defer>
       {lang: 'es'}

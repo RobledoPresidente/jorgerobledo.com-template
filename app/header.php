@@ -55,10 +55,14 @@
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="<?php echo get_template_directory_uri(); ?>/css/style.min.css" rel="stylesheet" type="text/css">
     <link rel="profile" href="http://gmpg.org/xfn/11"-->
+
+    <?php wp_head(); ?>
+    <link href="<?php echo get_template_directory_uri(); ?>/css/style.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/codebird.js"></script>
     <script>
+        var themeDirectory = '<?php echo get_template_directory_uri(); ?>';
+
         var cb = new Codebird;        
         cb.setConsumerKey("m3QT1gSSXb5mENHuYClFHUVFE", "wHtgKSFmeBtF1LVQ78DioPLrEfxFmbR5Oxtzi4P0XFqQi0w7gf");
         //cb.setUseProxy(false);
@@ -79,8 +83,6 @@
     ga('send', 'pageview');
 
   </script>
-
-  <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -98,8 +100,9 @@
   <header>
     <div id="header-img">
       <a href="<?php echo get_home_url(); ?>"><img class="biglogo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
-    </div>
-    <nav class="navbar navbar-toggleable-md navbar-light">
+    </div>    
+    <div class="top-colors"></div>
+    <nav class="container navbar navbar-toggleable-md navbar-light">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -108,8 +111,8 @@
       <div class="collapse navbar-collapse">        
         <!--TODO: Los items de este menú deben ser un Menú de wordpress, aun no tan priopritario ahora-->
         <ul class="navbar-nav m-auto main-menu">
-          <li class="nav-item active">
-            <a class="nav-link" href="<?php echo get_home_url(); ?>" target="_blank">inicio <span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo get_home_url(); ?>">inicio <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="biografia.pdf" target="_blank">conózcalo</a>
@@ -122,6 +125,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://jorgerobledo.com/voluntarios">voluntarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://jorgerobledo.com/voluntarios">contáctenos</a>
           </li>
         </ul>
         <ul class="navbar-nav social">

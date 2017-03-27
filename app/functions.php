@@ -105,7 +105,9 @@ add_action( 'widgets_init', 'robledo_presidente_widgets_init' );
  * Enqueue scripts and styles.
  */
 function robledo_presidente_scripts() {
-	wp_enqueue_style( 'robledo-presidente-style', get_stylesheet_uri() );
+	//wp_enqueue_style( 'robledo-presidente-style', get_stylesheet_uri() );
+
+	wp_deregister_script( 'jquery' );
 
 	wp_enqueue_script( 'robledo-presidente-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

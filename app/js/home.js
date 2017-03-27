@@ -14,7 +14,7 @@ $(function () {
                 altImageOpacity: 1,
                 fillOpacity: 1,
                 fillColor: 'ffffff',
-                altImage: 'wp-content/themes/robledo-presidente/img/map-highlight.png',
+                altImage: themeDirectory + '/img/map-highlight.png',
                 fadeDuration: 100
             },
                 mapKey: 'data-key',
@@ -93,9 +93,9 @@ $(function () {
 
     $('#scratchcard').wScratchPad({
         size: $(window).width() / 30,
-        bg: 'wp-content/themes/robledo-presidente/img/especial-odebrecht.png',
-        fg: 'wp-content/themes/robledo-presidente/img/especial-raspe.png',
-        'cursor': 'url("wp-content/themes/robledo-presidente/img/coin.png") 5 5, default',
+        bg: themeDirectory + '/img/especial-odebrecht.png',
+        fg: themeDirectory + '/img/especial-raspe.png',
+        'cursor': 'url("' + themeDirectory + '/img/coin.png") 5 5, default',
         scratchMove: function (e, percent) {
 
             if (percent > 95) {
@@ -125,7 +125,7 @@ function handleTweets(tweets) {
     while (n < x) {
 
         if (tweets[n].image)
-            row.append('<div class="card' + (tweets[n].author.indexOf('https://twitter.com/JERobledo') < 0 ? ' rt' : '') + '"><div class="card-image-header" style="background-image: url(' + tweets[n].image + ')"><div class="card-img-overlay"><div class="user">' + tweets[n].author + '</div><div class="tweet">' + tweets[n].tweet + '</div><p class="timePosted"><a href="' + tweets[n].permalinkURL + '">' + tweets[n].time + '</div></div></div>')
+            row.append('<div class="card p-0 media-bg" style="background-image: url(' + tweets[n].image + ')"><div class="p-3"><div class="user">' + tweets[n].author + '</div><div class="tweet">' + tweets[n].tweet + '</div><p class="timePosted"><a href="' + tweets[n].permalinkURL + '">' + tweets[n].time + '</div></div></div>')
         else {
 
             var content; 

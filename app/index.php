@@ -62,7 +62,7 @@ get_header(); ?>
     </div>
     <div class="section">
       <h2 class="colored"><!--<i class="fa fa-font" aria-hidden="true"></i> -->Primera plana</h2>
-      <div class="row highlights">
+      <div class="row highlights justify-content-center">
         <?php $query = new WP_Query (array(
           'category_name' => 'primera-plana-1',
           'orderby' => 'modified',
@@ -89,13 +89,12 @@ get_header(); ?>
           'posts_per_page' => 1
         )); ?>
         <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-            <div class="col-sm-6 col-md-3 no-gutters">
+            <div class="col-md-6 col-lg-3 no-gutters">
               <a href="<?php the_permalink(); ?>" class="card card-inverse card-primary">
                 <div class="card-content top">
                   <h3 class="card-title"><?php the_title(); ?></h3>
                   <p class="card-text"><?php echo get_the_excerpt(); ?></p>
                   <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></p>
-                  <img class="img-fluid" src="<?php the_post_thumbnail_url( 'medium_large' ) ?>">
                 </div>
               </a>
             </div>
@@ -107,18 +106,18 @@ get_header(); ?>
           'posts_per_page' => 1
         )); ?>
         <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-            <div class="col-sm-6 col-md-4 no-gutters">
+            <div class="col-lg-4">
               <a href="<?php the_permalink(); ?>" class="card">
                 <div class="card-content middle text-center">
                   <h3 class="card-title text-uppercase"><?php the_title(); ?></h3>
                   <h4 class="card-title"><?php $custom = get_post_custom(); echo $custom['hashtag'][0]; ?></h4>
-                  <div class="share">
+                  <div class="share" data-url="<?php the_permalink(); ?>" data-title="<?php the_title(); ?>">
                     <ul>
-                      <li class="share-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
-                      <li class="share-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                      <li class="share-google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
-                      <li class="share-mail"><i class="fa fa-envelope" aria-hidden="true"></i></li>
-                      <li class="share-whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
+                      <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                      <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                      <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+                      <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                      <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
                     </ul>
                   </div>
                 </div>
@@ -128,7 +127,7 @@ get_header(); ?>
       </div>
     </div>
   </div>
-  <div class="bg-calm mt-5">
+  <div class="bg-calm mt-4">
     <div class="container">
       <div class="section">
         <h2><!--<i class="fa fa-users" aria-hidden="true"></i> -->Participe</h2>
@@ -185,12 +184,8 @@ get_header(); ?>
       </div>
     </div>
     <div class="section" id="feed">
-      <h2 class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter a la mano</h2>
-      <div class="text-center p-3">
-        Transmisiones en vivo en Periscope:
-        <script>window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)?w:(n=t.createElement(e),n.id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)},w)}(document,"script","twitter-wjs")</script><a href="https://www.periscope.tv/jerobledo" class="periscope-on-air" data-size="large">@JERobledo</a>
-        <div id="periscope"></div>
-      </div>
+      <h2 class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter <script>window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)?w:(n=t.createElement(e),n.id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)},w)}(document,"script","twitter-wjs")</script><a href="https://www.periscope.tv/jerobledo" class="periscope-on-air" data-size="large">@JERobledo</a>
+        <div id="periscope"></div></h2>
       <div class="card-columns"></div>
       <div class="text-center">
         <a class="btn btn-primary more" href="javascriot:none"><i class="fa fa-plus" aria-hidden="true"></i> Cargar más...</a>
@@ -215,15 +210,15 @@ get_header(); ?>
               <h4>Robledo y Peláez - Homenaje al senador Robledo, 5 veces elegido mejor senador de Colombia</h5>
                 <p>El "doctor" Peláez logra un divertida entrevista, donde el senador y precandidato presidencial hablan sobre
                   su trayectoria, su familia y los deseos de ser Presidente de Colombia.</p>          
-                  <div class="share">
-                    <ul>
-                      <li class="share-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
-                      <li class="share-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                      <li class="share-google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
-                      <li class="share-mail"><i class="fa fa-envelope" aria-hidden="true"></i></li>
-                      <li class="share-whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
-                    </ul>
-                  </div>
+                <div class="share" data-url="http://www.youtube.com/watch?v=qu5VBQkXY3k" data-title="Robledo y Peláez - Homenaje al senador Robledo, 5 veces elegido mejor senador de Colombia">
+                  <ul>
+                    <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                    <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                    <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+                    <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                    <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
+                  </ul>
+                </div>
             </div>
         </div>
       </div>

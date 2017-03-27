@@ -212,6 +212,10 @@ textarea.form-control {
 
             &.share-whatsapp {
                 color: #09d261;
+
+                @include media-breakpoint-up(lg) {
+                    display: none;
+                }
             }
         }
     }
@@ -510,14 +514,14 @@ h4, h5 {
         padding: 15px;
 
         .card {
-            height: 400px;
+            min-height: 300px;
         }
 
         &:first-child {
 
             .card-title {
-                font-size: 60px;
-                line-height: 50px;
+                font-size: 50px;
+                line-height: 42px;
             }
         }
 
@@ -550,7 +554,7 @@ h4, h5 {
             .card {
 
                 h3.card-title {
-                    font-size:45px;
+                    font-size:40px;
                     font-family: $font-secondary;
                     color: #333;
                 }
@@ -585,7 +589,7 @@ h4, h5 {
     font-family: 'aaux_next_regularregular' !important;
 
     > div > div {
-        background-color: white !important;
+        background-color: transparent !important;
         color: black !important;
         font-family: 'aaux_next_regularregular' !important;
     }

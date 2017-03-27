@@ -128,13 +128,13 @@ get_header(); ?>
       </div>
     </div>
   </div>
-  <div class="bg-calm">
+  <div class="bg-calm mt-5">
     <div class="container">
       <div class="section">
         <h2><!--<i class="fa fa-users" aria-hidden="true"></i> -->Participe</h2>
       <div class="row">
         <div class="col-sm-6">
-          <div class="card">
+          <div class="card bg-calm">
             <div>
               <h3>El Termómetro</h3>
               <!--TODO: Acá debe ir espacio para un widget del plugin de encuestas-->
@@ -145,17 +145,15 @@ get_header(); ?>
             </div>
           </div>
         </div>
-        <div class="col-sm-6 p-2">
+        <div class="col-sm-6">
           <div class="card bg-calm">
+            <h3><span id="hashtag"></span> ... <span class="badge badge-pill bg-secondary">¡Nuevo!</span></h3>
             <div class="card-block">
-              <h3><span id="hashtag"></span> ... <span class="badge badge-pill bg-secondary">¡Nuevo!</span></h3>
-              <div class="card-block">
-                <div class="form-group">
-                  <textarea id="meme-text" class="form-control" rows="2" placeholder="Comparta sus pensamientos ahora que Robledo es el PRIMER candidato presidencial :)"></textarea>
-                </div>
-                <button class="btn btn-secondary" id="share-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Trinar</button>
-                <button class="btn btn-tertiary" id="meme"><i class="fa fa-camera-retro" aria-hidden="true"></i> Haga su meme</button>
+              <div class="form-group">
+                <textarea id="meme-text" class="form-control" rows="2" placeholder="Comparta sus pensamientos ahora que Robledo es el PRIMER candidato presidencial :)"></textarea>
               </div>
+              <button class="btn btn-secondary" id="share-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Trinar</button>
+              <button class="btn btn-tertiary" id="meme"><i class="fa fa-camera-retro" aria-hidden="true"></i> Haga su meme</button>
             </div>
           </div>
         </div>

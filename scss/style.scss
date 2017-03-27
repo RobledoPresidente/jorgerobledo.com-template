@@ -269,7 +269,7 @@ textarea.form-control {
 .btn {
     cursor: pointer;
     font-family: 'aaux_nextsemibold';
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 5px;
     margin-right: 5px;
 
@@ -313,6 +313,10 @@ textarea.form-control {
 body {
     font-family: 'aaux_next_regularregular';
     padding-top: 11vw;
+
+    button,input,optgroup,select,textarea {
+        font-family: 'aaux_next_regularregular';
+    }
     
     > header {
         background-color: white;
@@ -765,6 +769,21 @@ img.alignleft {
 img.alignright {
     float: right;
     margin-left: 20px;
+}
+
+//WP-Poll
+.widget_polls-widget {
+
+    .wp-polls-ul {
+
+        li:first-child {
+
+            .pollbar {
+                background: $brand-primary;
+                border-color: $brand-primary;
+            }
+        }
+    }
 }
 
 @include media-breakpoint-down(sm) {

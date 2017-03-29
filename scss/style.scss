@@ -774,6 +774,18 @@ img.alignright {
     margin-left: 20px;
 }
 
+#primary {
+    #main {
+        article {
+            footer {
+                a {
+                    color: $brand-primary;
+                }
+            }
+        }
+    }
+}
+
 //WP-Poll
 .widget_polls-widget {
 

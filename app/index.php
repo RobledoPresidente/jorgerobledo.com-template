@@ -111,7 +111,7 @@ get_header(); ?>
                 <div class="card-content middle text-center">
                   <h3 class="card-title text-uppercase"><?php the_title(); ?></h3>
                   <h4 class="card-title"><?php $custom = get_post_custom(); echo $custom['hashtag'][0]; ?></h4>
-                  <div class="share" data-url="<?php the_permalink(); ?>" data-title="<?php the_title(); ?>">
+                  <div class="share" data-url="<?php the_permalink(); ?>" data-title="<?php the_title(); ?> <?php echo $custom['hashtag'][0]; ?>">
                     <ul>
                       <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
                       <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>

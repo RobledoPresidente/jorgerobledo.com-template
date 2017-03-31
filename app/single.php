@@ -33,18 +33,17 @@ get_header(); ?>
 	<?php
 	while ( have_posts() ) : the_post(); ?>
 	    
-	    <div class="container-fluid" id="main">
+	    <div class="container" id="main">
 	        <div class="section">
-	            <h2><span>entrada</span></h2>
 				<header class="row mb-3">
-					<div class="col-md-6 hidden-lg-up">
+					<div class="col-md-5 hidden-lg-up">
 						<img class="img-fluid img-thumbnail" src="<?php the_post_thumbnail_url( 'medium_large' ) ?>" alt="Generic placeholder image">
 					</div>
-					<div class="col-md-6 text-right hidden-md-down">
+					<div class="col-md-5 text-right hidden-md-down">
 						<img class="img-fluid img-thumbnail" src="<?php the_post_thumbnail_url( 'medium_large' ) ?>" alt="Generic placeholder image">
 					</div>
-					<div class="col-md-6">
-						<h2 class="mt-0 display-3"><?php the_title(); ?></h2>
+					<div class="col-md-7">
+						<h2 class="mt-0 display-4" id="page-title-origin"><?php the_title(); ?></h2>
 						<blockquote class="blockquote">
 							<p class="mb-0"><?php echo get_the_excerpt(); ?></p>
 						</blockquote>

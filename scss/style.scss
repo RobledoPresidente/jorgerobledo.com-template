@@ -103,8 +103,12 @@ textarea.form-control {
     }
 }
 
-.list-group-item-action.bg-inverse {
-    color: $brand-calm;
+.list-group-item {
+    padding: .2rem 1.25rem;
+
+    .list-group-item-action.bg-inverse {
+        color: $brand-calm;
+    }
 }
 
 .bg-calm {
@@ -142,7 +146,7 @@ textarea.form-control {
     > h2 {
         padding-top: 1rem;
         font-family: 'aaux_nextbold';
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
 
         &:after {
             content: '';
@@ -194,7 +198,7 @@ textarea.form-control {
 
         li {
             display: table-cell;
-            padding: 1rem;
+            padding: .8rem 1rem;
             cursor: pointer;
             color: #333;
 
@@ -307,6 +311,12 @@ textarea.form-control {
         &:hover {
             background-color: #a80900;
         }
+    }
+
+    &.btn-white-border {
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
     }
 }
 
@@ -506,7 +516,7 @@ h4, h5 {
 }
 
 .scratchpad {
-    height: 25vw;
+    height: 15vw;
     background-image: url(../img/especial-bg.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -526,7 +536,7 @@ h4, h5 {
 }
 
 #main {
-    margin-top: 6vw;
+    margin-top: 2vw;
 }
 
 #infografia {
@@ -660,6 +670,36 @@ h4, h5 {
     }
 }
 
+#bio {
+    background-image: url(../img/header-bio.jpg);
+    background-position: center center;
+    background-size: cover;
+
+    blockquote {
+        font-size: 2rem;
+        font-family: 'aaux_nextbold';
+        color: white;
+        text-align: center;
+
+        &:before {
+            content: '“';
+            font-family: 'Spirax', cursive;
+            font-size: 10rem;
+            color: #f1f1f1;
+            position: absolute;
+            left: -1rem;
+            top: -1rem;
+            transform: rotate(-3deg);
+        }
+
+        cite {
+            font-size: 1rem;
+            font-family: 'aaux_nextlight';
+            display: block;
+        }
+    }
+}
+
 #volunteers {
 
     .link {
@@ -674,6 +714,10 @@ h4, h5 {
         text-transform: uppercase;
         font-size: 6vw;
         font-family: 'aaux_nextmedium';
+
+        @include media-breakpoint-up(xl) {
+            font-size: 4vw;
+        }
     }
 }
 

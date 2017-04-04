@@ -54,14 +54,12 @@ get_header(); ?>
   </div>
   <div class="container">
     <div class="section">
-      <div class="row mb-5 especial">
+      <h2 class="colored"><!--<i class="fa fa-font" aria-hidden="true"></i> -->Primera plana</h2>
+      <div class="row highlights justify-content-center">
         <div class="col text-center">
           <div id="scratchcard" class="scratchpad"></div>
         </div>
       </div>
-    </div>
-    <div class="section">
-      <h2 class="colored"><!--<i class="fa fa-font" aria-hidden="true"></i> -->Primera plana</h2>
       <div class="row highlights justify-content-center">
         <?php $query = new WP_Query (array(
           'category_name' => 'primera-plana-1',
@@ -70,7 +68,7 @@ get_header(); ?>
           'posts_per_page' => 1
         )); ?>
         <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-          <div class="col-md-5">
+          <div class="col-md-6 col-lg-5">
             <a href="<?php the_permalink(); ?>" class="card card-inverse" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
@@ -127,7 +125,31 @@ get_header(); ?>
       </div>
     </div>
   </div>
-  <div class="bg-calm mt-4">
+  <div class="bg-calm mt-4 bg-inverse" id="bio">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 p-4 pt-5">
+          <blockquote>
+            Los países sólo cambian cuando cambian sus gentes y ellos se deciden a cambiar a sus dirigentes
+            <cite>Jorge Enrique Robledo</cite>
+            <button class="btn btn-white-border m-2 mt-3">Conózcalo</button>
+          </blockquote>
+          <div class="row justify-content-center">
+            <div class="share" data-url="http://jorgerobledo.co/boletin-prensa.html" data-title="Con millones de voluntarios vamos a ganar la Presidencia: Robledo">
+              <ul>
+                <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+                <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-calm">
     <div class="container">
       <div class="section">
         <h2><!--<i class="fa fa-users" aria-hidden="true"></i> -->Participe</h2>
@@ -160,11 +182,11 @@ get_header(); ?>
     </div>
     </div>
   </div>
-  <div class="container">
-    <div class="section" id="volunteers">
-      <h2><!--<i class="fa fa-hand-peace-o" aria-hidden="true"></i> -->Voluntarios</h2>
-      <div class="row">
-        <div class="col-md-9 text-center">
+  <div class="container">    
+    <div class="row">
+      <div class="col-md-8">
+        <div class="section" id="volunteers">
+          <h2><!--<i class="fa fa-hand-peace-o" aria-hidden="true"></i> -->Voluntarios</h2>
           <div class="link">
             <a href="/voluntarios">
               <img src="<?php echo get_template_directory_uri(); ?>/img/voluntarios.png" class="img-fluid">
@@ -173,7 +195,10 @@ get_header(); ?>
           </div>
           <p class="px-4">Llegó la hora de transformar a Colombia. Vincúlese a este gran cambio.</p>
         </div>
-        <div class="col-md-3" id="colombia-container">
+      </div>
+      <div class="col-md-4" id="colombia-container">
+        <div class="section">
+          <h2>#EstePaísSíTieneArreglo</h2>
           <img id="colombia" src="<?php echo get_template_directory_uri(); ?>/img/map.png" alt="" usemap="#colombia-regions" class="img-fluid">
           <map name="colombia-regions" id="colombia-regions">
             <area data-key="north" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="3,2,5,76,13,129,84,132,81,170,109,171,132,150,160,179,186,154,185,113,253,104,262,1" />
@@ -184,8 +209,11 @@ get_header(); ?>
       </div>
     </div>
     <div class="section" id="feed">
-      <h2 class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter <script>window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)?w:(n=t.createElement(e),n.id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)},w)}(document,"script","twitter-wjs")</script><a href="https://www.periscope.tv/jerobledo" class="periscope-on-air" data-size="large">@JERobledo</a>
-        <div id="periscope"></div></h2>
+      <h2 class="twitter">
+        <i class="fa fa-twitter" aria-hidden="true"></i> Twitter
+        <script>window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)?w:(n=t.createElement(e),n.id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)},w)}(document,"script","twitter-wjs")</script><a href="https://www.periscope.tv/jerobledo" class="periscope-on-air" data-size="large">@JERobledo</a>
+        <div id="periscope"></div>
+      </h2>
       <div class="card-columns"></div>
       <div class="text-center">
         <a class="btn btn-primary more" href="javascriot:none"><i class="fa fa-plus" aria-hidden="true"></i> Cargar más...</a>

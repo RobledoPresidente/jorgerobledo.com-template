@@ -115,19 +115,19 @@
             <a class="nav-link" href="<?php echo get_home_url(); ?>">inicio <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="biografia.pdf" target="_blank">conózcalo</a>
+            <a class="nav-link" href="conozcalo" target="_blank">conózcalo</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo get_home_url(); ?>/biblioteca">biblioteca</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="prensa.html">prensa</a>
+            <a class="nav-link" href="prensa">prensa</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://jorgerobledo.com/voluntarios">voluntarios</a>
+            <a class="nav-link" href="voluntarios">voluntarios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://jorgerobledo.com/voluntarios">contáctenos</a>
+            <a class="nav-link" href="contactenos">contáctenos</a>
           </li>
         </ul>
         <ul class="navbar-nav social">

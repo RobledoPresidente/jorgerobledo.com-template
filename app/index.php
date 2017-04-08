@@ -164,7 +164,7 @@ get_header(); ?>
         </div>
         <div class="col-sm-6">
           <div class="card bg-calm">
-            <h3><!--span id="hashtag"></span--><?php echo get_theme_mod( 'rp_custom_hashtag' ); ?> ... <span class="badge badge-pill bg-secondary">¡Nuevo!</span></h3>
+            <h3><?php echo get_theme_mod( 'rp_custom_hashtag', 'default_value' ); ?> ... <span class="badge badge-pill bg-secondary">¡Nuevo!</span></h3>
             <div class="card-block">
               <div class="form-group">
                 <textarea id="meme-text" class="form-control" rows="2" placeholder="Comparta sus pensamientos ahora que Robledo es el PRIMER candidato presidencial :)"></textarea>

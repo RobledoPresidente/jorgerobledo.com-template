@@ -14,25 +14,30 @@ function robledo_presidente_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	$wp_customize->add_section( 'rp_custom_hashtag_section', array(
-		'title' => __( 'Hashtag' ),
-		'description' => __( 'Agregue hashtag aquí' ),
-		'active_callback' => 'is_front_page',
-		'priority' => 9,
-	) );
-	$wp_customize->add_setting( 'rp_custom_hashtag', array(
-		'type' => 'theme_mod',
-		'default' => '#RobledoPresidente2018',
-	) );
-	$wp_customize->add_control( 'rp_custom_hasthag', array(
-		'type' => 'text',
-		'section' => 'rp_custom_hashtag_section',
-		'label' => __( 'rp_custom_hashtag_section' ),
-		'description' => __( 'Hashtag con el tema destacado de actualidad.' ),
-		'input_attrs' => array(
-			'placeholder' => __( '#RobledoPresidente2018' ),
-		),
-	) );
+
+	class RP_Customize_Textarea_Control extends WP_Customize_Control {
+  		public $type = 'textarea';
+  		public function render_content() {
+?>
+
+<label>
+	<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+	<textarea rows="5" style="width:100%;" <?php $this->link(); ?>><?php echo esc_textarea( $this->value() ); ?></textarea>
+</label>
+
+<?php
+  		}
+	}
+
+	$wp_customize->add_setting('rp_custom_hashtag', array('default' => '#RobledoPresidente2018',));
+	$wp_customize->add_control(new RP_Customize_Textarea_Control($wp_customize, 'rp_custom_hashtag', array(
+		'label' => 'Escriba aquí el hashtag con el tema destacado de actualidad:',
+		'section' => 'content',
+		'settings' => 'rp_custom_hashtag',
+	)));
+	$wp_customize->add_section('content' , array(
+		'title' => __('Hashtag','robledo-presidente'),
+	));
 }
 add_action( 'customize_register', 'robledo_presidente_customize_register' );
 

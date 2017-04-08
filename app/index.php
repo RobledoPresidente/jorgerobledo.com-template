@@ -11,347 +11,365 @@
  *
  * @package robledo-presidente
  */
+get_header();
+?>
 
-get_header(); ?>
+<!--div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main"-->
 
-	<!--div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main"-->
+<!--?php
+if ( have_posts() ) :
 
-		<!--?php
-		if ( have_posts() ) :
+        if ( is_home() && ! is_front_page() ) : ?>
+                <header>
+                        <h1 class="page-title screen-reader-text"--><!--?php single_post_title(); ?></h1>
+                </header-->
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"--><!--?php single_post_title(); ?></h1>
-				</header-->
+<!--?php
+endif;
 
-			<!--?php
-			endif;
+/* Start the Loop */
+while ( have_posts() ) : the_post();
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+        /*
+         * Include the Post-Format-specific template for the content.
+         * If you want to override this in a child theme, then include a file
+         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+         */
+        get_template_part( 'template-parts/content', get_post_format() );
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+endwhile;
 
-			endwhile;
+the_posts_navigation();
 
-			the_posts_navigation();
+else :
 
-		else :
+get_template_part( 'template-parts/content', 'none' );
 
-			get_template_part( 'template-parts/content', 'none' );
+endif; ?>
 
-		endif; ?>
-
-		</main--><!-- #main -->
-	<!--/div--><!-- #primary -->
-  <div class="container" id="main">
-  </div>
-  <div class="container">
+</main--><!-- #main -->
+<!--/div--><!-- #primary -->
+<div class="container" id="main">
+</div>
+<div class="container">
     <div class="section">
       <h2 class="colored"><!--<i class="fa fa-font" aria-hidden="true"></i> -->Primera plana</h2>
-      <div class="row highlights justify-content-center">
-        <div class="col text-center">
-          <div id="scratchcard" class="scratchpad"></div>
+        <div class="row highlights justify-content-center">
+            <div class="col text-center">
+                <div id="scratchcard" class="scratchpad"></div>
+            </div>
         </div>
-      </div>
-      <div class="row highlights justify-content-center">
-        <?php $query = new WP_Query (array(
-          'category_name' => 'primera-plana-1',
-          'orderby' => 'modified',
-          'order' => 'DESC',
-          'posts_per_page' => 1
-        )); ?>
-        <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-          <div class="col-md-6 col-lg-5">
-            <a href="<?php the_permalink(); ?>" class="card card-inverse" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
-              <div class="card-img-overlay">
-                <div class="card-content bottom">
-                  <h3 class="card-title"><?php the_title(); ?></h3>
-                  <p class="card-text"><?php echo get_the_excerpt(); ?></p>
-                  <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></p>
+        <div class="row highlights justify-content-center">
+            <?php
+            $query = new WP_Query(array(
+                'category_name' => 'primera-plana-1',
+                'orderby' => 'modified',
+                'order' => 'DESC',
+                'posts_per_page' => 1
+            ));
+            ?>
+<?php if ($query->have_posts()) : $query->the_post(); ?>
+                <div class="col-md-6 col-lg-5">
+                    <a href="<?php the_permalink(); ?>" class="card card-inverse" style="background-image: url(<?php the_post_thumbnail_url('medium_large') ?>)">
+                        <div class="card-img-overlay">
+                            <div class="card-content bottom">
+                                <h3 class="card-title"><?php the_title(); ?></h3>
+                                <p class="card-text"><?php echo get_the_excerpt(); ?></p>
+                                <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff(get_the_time('U'), current_time('timestamp')); ?></small></p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-              </div>
-            </a>
-          </div>
-        <?php endif; ?>
-        <?php $query = new WP_Query (array(
-          'category_name' => 'primera-plana-3',
-          'orderby' => 'modified',
-          'order' => 'DESC',
-          'posts_per_page' => 1
-        )); ?>
-        <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-            <div class="col-md-6 col-lg-3 no-gutters">
-              <a href="<?php the_permalink(); ?>" class="card card-inverse card-primary">
-                <div class="card-content top">
-                  <h3 class="card-title"><?php the_title(); ?></h3>
-                  <p class="card-text"><?php echo get_the_excerpt(); ?></p>
-                  <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></p>
+            <?php endif; ?>
+            <?php
+            $query = new WP_Query(array(
+                'category_name' => 'primera-plana-3',
+                'orderby' => 'modified',
+                'order' => 'DESC',
+                'posts_per_page' => 1
+            ));
+            ?>
+<?php if ($query->have_posts()) : $query->the_post(); ?>
+                <div class="col-md-6 col-lg-3 no-gutters">
+                    <a href="<?php the_permalink(); ?>" class="card card-inverse card-primary">
+                        <div class="card-content top">
+                            <h3 class="card-title"><?php the_title(); ?></h3>
+                            <p class="card-text"><?php echo get_the_excerpt(); ?></p>
+                            <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff(get_the_time('U'), current_time('timestamp')); ?></small></p>
+                        </div>
+                    </a>
                 </div>
-              </a>
-            </div>
-        <?php endif; ?>
-        <?php $query = new WP_Query (array(
-          'category_name' => 'primera-plana-2',
-          'orderby' => 'modified',
-          'order' => 'DESC',
-          'posts_per_page' => 1
-        )); ?>
-        <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-            <div class="col-lg-4">
-              <a href="<?php the_permalink(); ?>" class="card">
-                <div class="card-content middle text-center">
-                  <h3 class="card-title text-uppercase"><?php the_title(); ?></h3>
-                  <h4 class="card-title"><?php $custom = get_post_custom(); echo $custom['hashtag'][0]; ?></h4>
-                  <div class="share" data-url="<?php the_permalink(); ?>" data-title="<?php the_title(); ?> <?php echo $custom['hashtag'][0]; ?>">
-                    <ul>
-                      <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
-                      <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                      <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
-                      <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
-                      <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
-                    </ul>
-                  </div>
+            <?php endif; ?>
+            <?php
+            $query = new WP_Query(array(
+                'category_name' => 'primera-plana-2',
+                'orderby' => 'modified',
+                'order' => 'DESC',
+                'posts_per_page' => 1
+            ));
+            ?>
+<?php if ($query->have_posts()) : $query->the_post(); ?>
+                <div class="col-lg-4">
+                    <a href="<?php the_permalink(); ?>" class="card">
+                        <div class="card-content middle text-center">
+                            <h3 class="card-title text-uppercase"><?php the_title(); ?></h3>
+                            <h4 class="card-title"><?php $custom = get_post_custom();
+    echo $custom['hashtag'][0]; ?></h4>
+                            <div class="share" data-url="<?php the_permalink(); ?>" data-title="<?php the_title(); ?> <?php echo $custom['hashtag'][0]; ?>">
+                                <ul>
+                                    <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                                    <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                                    <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+                                    <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                                    <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-              </a>
-            </div>
-        <?php endif; ?>
-      </div>
+<?php endif; ?>
+        </div>
     </div>
-  </div>
-  <div class="bg-calm mt-4 bg-inverse" id="bio">
+</div>
+<div class="bg-calm mt-4 bg-inverse" id="bio">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 p-4 pt-5">
-          <blockquote>
-            Los países sólo cambian cuando cambian sus gentes y ellos se deciden a cambiar a sus dirigentes
-            <cite>Jorge Enrique Robledo</cite>
-            <button class="btn btn-white-border m-2 mt-3">Conózcalo</button>
-          </blockquote>
-          <div class="row justify-content-center">
-            <div class="share" data-url="http://jorgerobledo.co/boletin-prensa.html" data-title="Con millones de voluntarios vamos a ganar la Presidencia: Robledo">
-              <ul>
-                <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
-                <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
-                <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
-                <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
-              </ul>
+        <div class="row">
+            <div class="col-md-6 p-4 pt-5">
+                <blockquote>
+                    Los países sólo cambian cuando cambian sus gentes y ellos se deciden a cambiar a sus dirigentes
+                    <cite>Jorge Enrique Robledo</cite>
+                    <button class="btn btn-white-border m-2 mt-3">Conózcalo</button>
+                </blockquote>
+                <div class="row justify-content-center">
+                    <div class="share" data-url="http://jorgerobledo.co/boletin-prensa.html" data-title="Con millones de voluntarios vamos a ganar la Presidencia: Robledo">
+                        <ul>
+                            <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                            <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                            <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+                            <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                            <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div class="bg-calm">
+</div>
+<div class="bg-calm">
     <div class="container">
-      <div class="section">
-        <h2><!--<i class="fa fa-users" aria-hidden="true"></i> -->Participe</h2>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card bg-calm">
-            <div>
-              <h3>El Termómetro</h3>
-              <!--TODO: Acá debe ir espacio para un widget del plugin de encuestas-->
-              <!--div>
-                <div id="qp_all996896" style="width:100%;"><link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'><STYLE>#qp_main996896 .qp_btna:hover input {background: rgb(0, 53, 95)!important} #qp_all996896 {max-width:815px; margin:0 auto;}</STYLE><div id="qp_main996896" fp='984f4af0-42' results=0 cmt=0 style="border-radius: 0px;margin: 0px auto;padding: 0.43em 0.79em;background: rgb(255, 255, 255);font-family: 'Open Sans', sans-serif, Arial;color: rgb(0, 0, 0);border: 0px none rgb(219, 217, 217);max-width: 815px;box-sizing: border-box;font-weight: bold"><div style="font-size: 1.2em;background-color: rgb(0, 53, 95);color: rgb(255, 255, 255);font-family: 'Open Sans', sans-serif, Arial"><div style="padding: 0.8em;line-height: 1.3em">¿Cree usted que el fiscal Nestro H. Martínez debe apartarse del caso de Odebrecht?</div></div><form id="qp_form996896" action="//www.poll-maker.com/results996896x984f4af0-42" method="post" target="_blank" style="display: inline;margin: 0px;padding: 0px"><div style="padding: 0px"><input type=hidden name="qp_d996896" value="42793.9512152752-42793.9512140011"><div style="color: rgb(107, 107, 107);font-family: 'Open Sans', sans-serif, Arial;font-size: 1.1em;line-height: 1.5;padding: 13px 8px 11px;margin: 10px 0px;clear: both" class="qp_a" onClick="var c=this.getElementsByTagName('INPUT')[0]; if((!event.target?event.srcElement:event.target).tagName!='INPUT'){c.checked=(c.type=='radio'?true:!c.checked)};var i=this.parentNode.parentNode.parentNode.getElementsByTagName('INPUT');for(var k=0;k!=i.length;k=k+1){i[k].parentNode.parentNode.setAttribute('sel',i[k].checked?1:0)}"><span style="display: block;padding-left: 30px;cursor: inherit"><input style="float: left;width: 20px;margin-left: -25px;margin-top: 2px;padding: 0px;height: 20px;-webkit-appearance:radio;" name="qp_v996896" type="radio" value="1" />Sí</span></div><div style="color: rgb(107, 107, 107);font-family: 'Open Sans', sans-serif, Arial;font-size: 1.1em;line-height: 1.5;padding: 13px 8px 11px;margin: 10px 0px;clear: both" class="qp_a" onClick="var c=this.getElementsByTagName('INPUT')[0]; if((!event.target?event.srcElement:event.target).tagName!='INPUT'){c.checked=(c.type=='radio'?true:!c.checked)};var i=this.parentNode.parentNode.parentNode.getElementsByTagName('INPUT');for(var k=0;k!=i.length;k=k+1){i[k].parentNode.parentNode.setAttribute('sel',i[k].checked?1:0)}"><span style="display: block;padding-left: 30px;cursor: inherit"><input style="float: left;width: 20px;margin-left: -25px;margin-top: 2px;padding: 0px;height: 20px;-webkit-appearance:radio;" name="qp_v996896" type="radio" value="2" />No</span></div></div><div style="padding-left: 0px;clear: both;text-align: left;margin: 1em auto"><a style="box-sizing: border-box;padding-right: 5px;text-decoration: none" class="qp_btna" href="#"><input name="qp_b996896" style="min-width: 7.8em;padding: 0.5em;background-color: rgb(11, 121, 211);font-family: 'Open Sans', sans-serif, Arial;font-size: 16px;color: rgb(255, 255, 255);cursor: pointer;border: 0px;-webkit-appearance: none;border-radius: 0px" type="submit" btype="v" value="Votar" /></a><a style="box-sizing: border-box;padding-left: 5px;text-decoration: none" class="qp_btna" href="#"><input name="qp_b996896" style="min-width: 7.8em;padding: 0.5em;background-color: rgb(11, 121, 211);font-family: 'Open Sans', sans-serif, Arial;font-size: 16px;color: rgb(255, 255, 255);cursor: pointer;border: 0px;-webkit-appearance: none;border-radius: 0px" type="submit" btype="r" value="Resultados" /></a></div><a id="qp_a996896" style="float:right;font-family:Arial;font-size:10px;color:rgb(0,0,0);text-decoration:none" href="http://www.poll-maker.com">Poll Maker</a></form><div style="display:none"><div id="qp_rp996896" style="font-size: 14px;width: 5ex;text-align: right;overflow: hidden;position: absolute;right: 5px;height: 1.5em;line-height: 1.5em"></div><div id="qp_rv996896" style="font-size: 14px;line-height: 1.5em;width: 0%;text-align: right;color: rgb(255, 255, 255);box-sizing: border-box;padding-right: 3px"></div><div id="qp_rb996896" style="font-size: 14px;line-height: 1.5em;color: rgb(255, 255, 255);display: block"></div><div id="qp_rva996896" style="background: rgb(0, 111, 185);border-color: rgb(0, 111, 185)"></div><div id="qp_rvb996896" style="background: rgb(22, 52, 99);border-color: rgb(22, 52, 99)"></div><div id="qp_rvc996896" style="background: rgb(91, 207, 252);border-color: rgb(20, 129, 171)"></div></div></div></div><script src="//scripts.poll-maker.com/3012/scpolls.js" language="javascript"></script>
-              </div-->
-              <?php get_sidebar( 'el-termometro' ); ?>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card bg-calm">
-            <h3><span id="hashtag"></span> ... <span class="badge badge-pill bg-secondary">¡Nuevo!</span></h3>
-            <div class="card-block">
-              <div class="form-group">
-                <textarea id="meme-text" class="form-control" rows="2" placeholder="Comparta sus pensamientos ahora que Robledo es el PRIMER candidato presidencial :)"></textarea>
-              </div>
-              <button class="btn btn-secondary" id="share-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Trinar</button>
-              <button class="btn btn-tertiary" id="meme"><i class="fa fa-camera-retro" aria-hidden="true"></i> Haga su meme</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  </div>
-  <div class="container">    
-    <div class="row">
-      <div class="col-md-8">
-        <div class="section" id="volunteers">
-          <h2><!--<i class="fa fa-hand-peace-o" aria-hidden="true"></i> -->Voluntarios</h2>
-          <div class="link">
-            <a href="/voluntarios">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/voluntarios.png" class="img-fluid">
-              <h3>Sea Voluntario</h3>
-            </a>
-          </div>
-          <p class="px-4">Llegó la hora de transformar a Colombia. Vincúlese a este gran cambio.</p>
-        </div>
-      </div>
-      <div class="col-md-4" id="colombia-container">
         <div class="section">
-          <h2>#EstePaísSíTieneArreglo</h2>
-          <img id="colombia" src="<?php echo get_template_directory_uri(); ?>/img/map.png" alt="" usemap="#colombia-regions" class="img-fluid">
-          <map name="colombia-regions" id="colombia-regions">
-            <area data-key="north" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="3,2,5,76,13,129,84,132,81,170,109,171,132,150,160,179,186,154,185,113,253,104,262,1" />
-            <area data-key="center" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="84,135,54,142,35,189,57,289,3,366,68,406,142,319,151,323,148,347,189,357,189,334,268,310,293,313,309,289,376,272,386,201,366,196,319,204,311,184,292,177,261,174,232,179,220,133,208,113,189,149,159,181,105,172,80,172,86,136" />
-            <area data-key="south" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="74,410,142,324,146,325,146,355,187,362,193,336,263,316,293,320,313,295,379,276,398,353,359,458,307,526,283,527,299,488,233,493,203,483,127,486" />
-          </map>
+          <h2><!--<i class="fa fa-users" aria-hidden="true"></i> -->Participe</h2>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card bg-calm">
+                        <div>
+                            <h3>El Termómetro</h3>
+                            <!--TODO: Acá debe ir espacio para un widget del plugin de encuestas-->
+                            <!--div>
+                              <div id="qp_all996896" style="width:100%;"><link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'><STYLE>#qp_main996896 .qp_btna:hover input {background: rgb(0, 53, 95)!important} #qp_all996896 {max-width:815px; margin:0 auto;}</STYLE><div id="qp_main996896" fp='984f4af0-42' results=0 cmt=0 style="border-radius: 0px;margin: 0px auto;padding: 0.43em 0.79em;background: rgb(255, 255, 255);font-family: 'Open Sans', sans-serif, Arial;color: rgb(0, 0, 0);border: 0px none rgb(219, 217, 217);max-width: 815px;box-sizing: border-box;font-weight: bold"><div style="font-size: 1.2em;background-color: rgb(0, 53, 95);color: rgb(255, 255, 255);font-family: 'Open Sans', sans-serif, Arial"><div style="padding: 0.8em;line-height: 1.3em">¿Cree usted que el fiscal Nestro H. Martínez debe apartarse del caso de Odebrecht?</div></div><form id="qp_form996896" action="//www.poll-maker.com/results996896x984f4af0-42" method="post" target="_blank" style="display: inline;margin: 0px;padding: 0px"><div style="padding: 0px"><input type=hidden name="qp_d996896" value="42793.9512152752-42793.9512140011"><div style="color: rgb(107, 107, 107);font-family: 'Open Sans', sans-serif, Arial;font-size: 1.1em;line-height: 1.5;padding: 13px 8px 11px;margin: 10px 0px;clear: both" class="qp_a" onClick="var c=this.getElementsByTagName('INPUT')[0]; if((!event.target?event.srcElement:event.target).tagName!='INPUT'){c.checked=(c.type=='radio'?true:!c.checked)};var i=this.parentNode.parentNode.parentNode.getElementsByTagName('INPUT');for(var k=0;k!=i.length;k=k+1){i[k].parentNode.parentNode.setAttribute('sel',i[k].checked?1:0)}"><span style="display: block;padding-left: 30px;cursor: inherit"><input style="float: left;width: 20px;margin-left: -25px;margin-top: 2px;padding: 0px;height: 20px;-webkit-appearance:radio;" name="qp_v996896" type="radio" value="1" />Sí</span></div><div style="color: rgb(107, 107, 107);font-family: 'Open Sans', sans-serif, Arial;font-size: 1.1em;line-height: 1.5;padding: 13px 8px 11px;margin: 10px 0px;clear: both" class="qp_a" onClick="var c=this.getElementsByTagName('INPUT')[0]; if((!event.target?event.srcElement:event.target).tagName!='INPUT'){c.checked=(c.type=='radio'?true:!c.checked)};var i=this.parentNode.parentNode.parentNode.getElementsByTagName('INPUT');for(var k=0;k!=i.length;k=k+1){i[k].parentNode.parentNode.setAttribute('sel',i[k].checked?1:0)}"><span style="display: block;padding-left: 30px;cursor: inherit"><input style="float: left;width: 20px;margin-left: -25px;margin-top: 2px;padding: 0px;height: 20px;-webkit-appearance:radio;" name="qp_v996896" type="radio" value="2" />No</span></div></div><div style="padding-left: 0px;clear: both;text-align: left;margin: 1em auto"><a style="box-sizing: border-box;padding-right: 5px;text-decoration: none" class="qp_btna" href="#"><input name="qp_b996896" style="min-width: 7.8em;padding: 0.5em;background-color: rgb(11, 121, 211);font-family: 'Open Sans', sans-serif, Arial;font-size: 16px;color: rgb(255, 255, 255);cursor: pointer;border: 0px;-webkit-appearance: none;border-radius: 0px" type="submit" btype="v" value="Votar" /></a><a style="box-sizing: border-box;padding-left: 5px;text-decoration: none" class="qp_btna" href="#"><input name="qp_b996896" style="min-width: 7.8em;padding: 0.5em;background-color: rgb(11, 121, 211);font-family: 'Open Sans', sans-serif, Arial;font-size: 16px;color: rgb(255, 255, 255);cursor: pointer;border: 0px;-webkit-appearance: none;border-radius: 0px" type="submit" btype="r" value="Resultados" /></a></div><a id="qp_a996896" style="float:right;font-family:Arial;font-size:10px;color:rgb(0,0,0);text-decoration:none" href="http://www.poll-maker.com">Poll Maker</a></form><div style="display:none"><div id="qp_rp996896" style="font-size: 14px;width: 5ex;text-align: right;overflow: hidden;position: absolute;right: 5px;height: 1.5em;line-height: 1.5em"></div><div id="qp_rv996896" style="font-size: 14px;line-height: 1.5em;width: 0%;text-align: right;color: rgb(255, 255, 255);box-sizing: border-box;padding-right: 3px"></div><div id="qp_rb996896" style="font-size: 14px;line-height: 1.5em;color: rgb(255, 255, 255);display: block"></div><div id="qp_rva996896" style="background: rgb(0, 111, 185);border-color: rgb(0, 111, 185)"></div><div id="qp_rvb996896" style="background: rgb(22, 52, 99);border-color: rgb(22, 52, 99)"></div><div id="qp_rvc996896" style="background: rgb(91, 207, 252);border-color: rgb(20, 129, 171)"></div></div></div></div><script src="//scripts.poll-maker.com/3012/scpolls.js" language="javascript"></script>
+                            </div-->
+<?php get_sidebar('el-termometro'); ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card bg-calm">
+                        <h3><span id="hashtag"></span> ... <span class="badge badge-pill bg-secondary">¡Nuevo!</span></h3>
+                        <div class="card-block">
+                            <div class="form-group">
+                                <textarea id="meme-text" class="form-control" rows="2" placeholder="Comparta sus pensamientos ahora que Robledo es el PRIMER candidato presidencial :)"></textarea>
+                            </div>
+                            <button class="btn btn-secondary" id="share-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Trinar</button>
+                            <button class="btn btn-tertiary" id="meme"><i class="fa fa-camera-retro" aria-hidden="true"></i> Haga su meme</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
+</div>
+<div class="container">    
+    <div class="row">
+        <div class="col-md-8">
+            <div class="section" id="volunteers">
+              <h2><!--<i class="fa fa-hand-peace-o" aria-hidden="true"></i> -->Voluntarios</h2>
+                <div class="link">
+                    <a href="/voluntarios">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/voluntarios.png" class="img-fluid">
+                        <h3>Sea Voluntario</h3>
+                    </a>
+                </div>
+                <p class="px-4">Llegó la hora de transformar a Colombia. Vincúlese a este gran cambio.</p>
+            </div>
+        </div>
+        <div class="col-md-4" id="colombia-container">
+            <div class="section">
+                <h2>#EstePaísSíTieneArreglo</h2>
+                <img id="colombia" src="<?php echo get_template_directory_uri(); ?>/img/map.png" alt="" usemap="#colombia-regions" class="img-fluid">
+                <map name="colombia-regions" id="colombia-regions">
+                    <area data-key="north" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="3,2,5,76,13,129,84,132,81,170,109,171,132,150,160,179,186,154,185,113,253,104,262,1" />
+                    <area data-key="center" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="84,135,54,142,35,189,57,289,3,366,68,406,142,319,151,323,148,347,189,357,189,334,268,310,293,313,309,289,376,272,386,201,366,196,319,204,311,184,292,177,261,174,232,179,220,133,208,113,189,149,159,181,105,172,80,172,86,136" />
+                    <area data-key="south" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="74,410,142,324,146,325,146,355,187,362,193,336,263,316,293,320,313,295,379,276,398,353,359,458,307,526,283,527,299,488,233,493,203,483,127,486" />
+                </map>
+            </div>
+        </div>
     </div>
     <div class="section" id="feed">
-      <h2 class="twitter">
-        <i class="fa fa-twitter" aria-hidden="true"></i> Twitter
-        <script>window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)?w:(n=t.createElement(e),n.id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)},w)}(document,"script","twitter-wjs")</script><a href="https://www.periscope.tv/jerobledo" class="periscope-on-air" data-size="large">@JERobledo</a>
-        <div id="periscope"></div>
-      </h2>
-      <div class="card-columns"></div>
-      <div class="text-center">
-        <a class="btn btn-primary more" href="javascriot:none"><i class="fa fa-plus" aria-hidden="true"></i> Cargar más...</a>
-        <a class="btn btn-secondary" href="https://twitter.com/JERobledo/"><i class="fa fa-twitter" aria-hidden="true"></i> Ir a Twitter...</a>
-      </div>
+        <h2 class="twitter">
+            <i class="fa fa-twitter" aria-hidden="true"></i> Twitter
+            <script>window.twttr = function (t, e, r) {
+                var n, i = t.getElementsByTagName(e)[0], w = window.twttr || {};
+                return t.getElementById(r) ? w : (n = t.createElement(e), n.id = r, n.src = "https://platform.twitter.com/widgets.js", i.parentNode.insertBefore(n, i), w._e = [], w.ready = function (t) {
+                    w._e.push(t)
+                }, w)
+            }(document, "script", "twitter-wjs")</script><a href="https://www.periscope.tv/jerobledo" class="periscope-on-air" data-size="large">@JERobledo</a>
+            <div id="periscope"></div>
+        </h2>
+        <div class="card-columns"></div>
+        <div class="text-center">
+            <a class="btn btn-primary more" href="javascriot:none"><i class="fa fa-plus" aria-hidden="true"></i> Cargar más...</a>
+            <a class="btn btn-secondary" href="https://twitter.com/JERobledo/"><i class="fa fa-twitter" aria-hidden="true"></i> Ir a Twitter...</a>
+        </div>
     </div>
-  </div>
-    <!--TODO: esto debe mostrar 4 videos destacados y ordenados con descripción, plugin?-->
-  <div class="bg-inverse">
+</div>
+<!--TODO: esto debe mostrar 4 videos destacados y ordenados con descripción, plugin?-->
+<div class="bg-inverse">
     <div class="container">
-      <div class="section">
-        <h2 class="video"><i class="fa fa-video-camera" aria-hidden="true"></i> Videoteca</h2>   
-      <div class="row bg-inverse ">
-        <div class="col-lg-8">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/qu5VBQkXY3k" allowfullscreen=""></iframe>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="hidden-md-down">
-            <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
-          </div>
-          <div class="hidden-lg-up pt-3">
-            <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
-          </div>
-          <div class="highlight-caption text-center">
-              <h4>Robledo y Peláez - Homenaje al senador Robledo, 5 veces elegido mejor senador de Colombia</h5>
-                <p class="hidden-md-down">
-                  El "doctor" Peláez logra un divertida entrevista, donde el senador y precandidato presidencial hablan sobre
-                  su trayectoria, su familia y los deseos de ser Presidente de Colombia.
-                </p>          
-                <div class="share" data-url="http://www.youtube.com/watch?v=qu5VBQkXY3k" data-title="Robledo y Peláez - Homenaje al senador Robledo, 5 veces elegido mejor senador de Colombia">
-                  <ul>
-                    <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
-                    <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                    <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
-                    <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
-                    <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
-                  </ul>
+        <div class="section">
+            <h2 class="video"><i class="fa fa-video-camera" aria-hidden="true"></i> Videoteca</h2>   
+            <div class="row bg-inverse ">
+                <div class="col-lg-8">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/qu5VBQkXY3k" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="hidden-md-down">
+                        <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
+                    </div>
+                    <div class="hidden-lg-up pt-3">
+                        <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
+                    </div>
+                    <div class="highlight-caption text-center">
+                        <h4>Robledo y Peláez - Homenaje al senador Robledo, 5 veces elegido mejor senador de Colombia</h5>
+                            <p class="hidden-md-down">
+                                El "doctor" Peláez logra un divertida entrevista, donde el senador y precandidato presidencial hablan sobre
+                                su trayectoria, su familia y los deseos de ser Presidente de Colombia.
+                            </p>          
+                            <div class="share" data-url="http://www.youtube.com/watch?v=qu5VBQkXY3k" data-title="Robledo y Peláez - Homenaje al senador Robledo, 5 veces elegido mejor senador de Colombia">
+                                <ul>
+                                    <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                                    <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                                    <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+                                    <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                                    <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
+                                </ul>
+                            </div>
+                    </div>
                 </div>
             </div>
+            <div class="row pt-4">
+                <div class="col-md-4">
+                    <div class="card card-inverse">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/FqAkM4V5Xsc" allowfullscreen=""></iframe>
+                        </div>
+                        <div class="card-text pt-3">
+                            <h5>¿Qué esperar de la investigación por el escándalo de Odebrecht?</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-inverse"> 
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/kCmO8P_egL8" allowfullscreen=""></iframe>
+                        </div>
+                        <div class="card-text pt-3">
+                            <h5>¿Conviene al país la indignación contra el Establecimiento?</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-inverse">          
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/QqfTauOVatE" allowfullscreen=""></iframe>
+                        </div>
+                        <div class="card-text pt-3">
+                            <h5>Salvemos la pesca artesanal: Audiencia Pública del senador Jorge Robledo</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>          
         </div>
-      </div>
-      <div class="row pt-4">
-          <div class="col-md-4">
-            <div class="card card-inverse">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/FqAkM4V5Xsc" allowfullscreen=""></iframe>
-            </div>
-              <div class="card-text pt-3">
-                <h5>¿Qué esperar de la investigación por el escándalo de Odebrecht?</h5>
-              </div>
-          </div>
-        </div>
-          <div class="col-md-4">
-            <div class="card card-inverse"> 
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/kCmO8P_egL8" allowfullscreen=""></iframe>
-            </div>
-              <div class="card-text pt-3">
-                <h5>¿Conviene al país la indignación contra el Establecimiento?</h5>
-              </div>
-          </div>
-        </div>
-          <div class="col-md-4">
-            <div class="card card-inverse">          
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/QqfTauOVatE" allowfullscreen=""></iframe>
-            </div>
-              <div class="card-text pt-3">
-                <h5>Salvemos la pesca artesanal: Audiencia Pública del senador Jorge Robledo</h5>
-              </div>
-          </div>
-        </div>
-      </div>          
     </div>
-  </div>
-  </div>
-  <div class="container">
+</div>
+<div class="container">
     <div class="section news">
-      <h2 class="colored"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Noticias</h2>
-      <!--TODO: Acá se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
-      <div class="row">      
-        <?php $query = new WP_Query (array(
-          'category_name' => 'noticias-home',
-          'orderby' => 'modified',
-          'order' => 'DESC',
-          'posts_per_page' => 6
-        )); ?>
-        <?php $i = 0; ?>
-        <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
-        <div class="col-md-4">
-          <a href="<?php the_permalink(); ?>" class="card">
-            <div class="card-image-header" style="background-image: url(<?php the_post_thumbnail_url( 'medium' ) ?>)">
-              <div class="card-img-overlay">
-                <div class="card-content bottom">
-                  <h4 class="card-title"><?php the_title() ?></h4>
+        <h2 class="colored"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Noticias</h2>
+        <!--TODO: Acá se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
+        <div class="row">      
+            <?php
+            $query = new WP_Query(array(
+                'category_name' => 'noticias-home',
+                'orderby' => 'modified',
+                'order' => 'DESC',
+                'posts_per_page' => 6
+            ));
+            ?>
+<?php $i = 0; ?>
+<?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+                    <div class="col-md-4">
+                        <a href="<?php the_permalink(); ?>" class="card">
+                            <div class="card-image-header" style="background-image: url(<?php the_post_thumbnail_url('medium') ?>)">
+                                <div class="card-img-overlay">
+                                    <div class="card-content bottom">
+                                        <h4 class="card-title"><?php the_title() ?></h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff(get_the_time('U'), current_time('timestamp')); ?></small></div>
+                            <div class="card-text"><?php echo get_the_excerpt(); ?></div>
+                        </a>
+                    </div>
+        <?php $i++;
+    endwhile;
+endif; ?>
+        </div>
+        <div class="section">
+            <h2 class="colored"><i class="fa fa-share-alt" aria-hidden="true"></i> En redes</h2>
+            <div class="row">
+                <div class="col">
+                    <div class="fb-page" data-href="https://www.facebook.com/jorge.robledo.castillo" data-height="450" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/jorge.robledo.castillo" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jorge.robledo.castillo">Jorge Enrique Robledo Castillo</a></blockquote></div>
                 </div>
-              </div>
+                <div class="col text-center">
+                    <!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->
+                    <script src="https://apis.google.com/js/platform.js" async defer>
+                    {
+                        lang: 'es'}
+                    </script>
+
+                    <!-- Inserta esta etiqueta donde quieras que aparezca widget. -->
+                    <div class="g-person" data-href="//plus.google.com/u/0/100711622690849831280" data-rel="author"></div>
+                </div>
+                <div class="col">
+                    <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/151219963&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+                </div>
             </div>
-            <div class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></div>
-            <div class="card-text"><?php echo get_the_excerpt(); ?></div>
-          </a>
         </div>
-        <?php $i++; endwhile; endif;?>
-      </div>
-    <div class="section">
-      <h2 class="colored"><i class="fa fa-share-alt" aria-hidden="true"></i> En redes</h2>
-        <div class="row">
-          <div class="col">
-            <div class="fb-page" data-href="https://www.facebook.com/jorge.robledo.castillo" data-height="450" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/jorge.robledo.castillo" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jorge.robledo.castillo">Jorge Enrique Robledo Castillo</a></blockquote></div>
-          </div>
-          <div class="col text-center">
-            <!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->
-            <script src="https://apis.google.com/js/platform.js" async defer>
-              {lang: 'es'}
-            </script>
-
-            <!-- Inserta esta etiqueta donde quieras que aparezca widget. -->
-            <div class="g-person" data-href="//plus.google.com/u/0/100711622690849831280" data-rel="author"></div>
-          </div>
-          <div class="col">
-            <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/151219963&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
-          </div>
-        </div>
-      </div>
     </div>
-    </div>
-    <script src="<?php echo get_template_directory_uri(); ?>/lib/ImageMapster/dist/jquery.imagemapster.min.js" type="text/javascript"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/lib/wScratchPad/wScratchPad.min.js" type="text/javascript"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/home.js" type="text/javascript"></script>   
-    <script src="<?php echo get_template_directory_uri(); ?>/js/twitter.js" type="text/javascript"></script> 
-    <script src="<?php echo get_template_directory_uri(); ?>/js/twitterFetcher_min.js" type="text/javascript"></script>
+</div>
+<script src="<?php echo get_template_directory_uri(); ?>/lib/ImageMapster/dist/jquery.imagemapster.min.js" type="text/javascript"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/lib/wScratchPad/wScratchPad.min.js" type="text/javascript"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/home.js" type="text/javascript"></script>   
+<script src="<?php echo get_template_directory_uri(); ?>/js/twitter.js" type="text/javascript"></script> 
+<script src="<?php echo get_template_directory_uri(); ?>/js/twitterFetcher_min.js" type="text/javascript"></script>
 
-    <!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->
-    <script src="https://apis.google.com/js/platform.js" async defer>
-      {lang: 'es'}
-    </script>
+<!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->
+<script src="https://apis.google.com/js/platform.js" async defer>
+        {
+            lang: 'es'}
+</script>
 <?php
-/*get_sidebar();*/
+/* get_sidebar(); */
 get_footer();

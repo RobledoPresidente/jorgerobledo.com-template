@@ -79,8 +79,8 @@ get_header();
     </div>
 </div>
 <div class="container">
-    <div class="section news">
-        <h2><span>noticias</span></h2>
+    <div class="section boletines">
+        <h2><span>Boletines</span></h2>
         <!--TODO: Acá se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
         <div class="row">      
             <?php
@@ -114,11 +114,11 @@ get_header();
         </div>
     </div>
     <div class="section audios">
-        <h2><span>audios</span></h2>
+        <h2><span>Audios</span></h2>
         <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/151219963&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
     </div>
     <div class="section debates">
-        <h2><span>debates</span></h2>
+        <h2><span>Debates</span></h2>
         <!--TODO: Ac� se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
         <div class="row">      
             <?php
@@ -152,8 +152,42 @@ get_header();
         </div>
     </div>
     <div class="section articulos quincenales">
-        <h2><span>art�culos quincenales</span></h2>
+        <h2><span>Artículos</span></h2>
         <!--TODO: Ac� se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
+        <div class="row">      
+            <?php
+            $query = new WP_Query(array(
+                'category_name' => 'noticias-home',
+                'orderby' => 'modified',
+                'order' => 'DESC',
+                'posts_per_page' => 6
+            ));
+            ?>
+            <?php $i = 0; ?>
+            <?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+                    <div class="col-md-4">
+                        <a href="<?php the_permalink(); ?>" class="card <?php echo ($i == 0 ? 'bg-primary' : ($i == 2 ? 'card-inverse bg-secondary' : ($i == 4 ? 'card-inverse bg-tertiary' : 'bg-calm'))) ?>">
+                            <div class="card-image-header" style="background-image: url(<?php the_post_thumbnail_url('medium') ?>)">
+                                <div class="card-img-overlay">
+                                    <div class="card-content bottom">
+                                        <h4 class="card-title"><?php the_title() ?></h4>
+                                        <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff(get_the_time('U'), current_time('timestamp')); ?></small></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-text p-3"><?php echo get_the_excerpt(); ?></div>
+                        </a>
+                    </div>
+                    <?php
+                    $i++;
+                endwhile;
+            endif;
+            ?>
+        </div>
+    </div>
+    <div class="section news">
+        <h2><span>Noticias</span></h2>
+        <!--TODO: Acá se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
         <div class="row">      
             <?php
             $query = new WP_Query(array(

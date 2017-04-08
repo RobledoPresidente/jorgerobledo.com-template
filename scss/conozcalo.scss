@@ -1,1 +1,46 @@
 @import "common";
+
+#header {
+    width: 100%;
+}
+
+#back  {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+h2 {
+    font-family: 'butlermedium';
+    font-size: 3rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+.img-white-boder {
+    border: 10px solid white;
+}
+
+.bg-inverse {
+    
+    * {
+        color: white;
+    }
+}
+
+.content-block {
+
+    h2, p {
+        padding-left: 3rem;
+    }
+
+    h2 {
+        margin-top: 4rem;
+    }
+
+    p {
+        font-size: 24px;
+        font-family: aaux_nextlight;
+        padding-top: 2rem;
+    }
+}

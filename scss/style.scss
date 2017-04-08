@@ -220,10 +220,6 @@ textarea.form-control {
 }
 
 .bg-inverse {
-    
-    * {
-        color: white;
-    }
 
     .section {
 
@@ -245,67 +241,10 @@ textarea.form-control {
     }
 }
 
-.font-secondary {
-    font-family: $font-secondary;
-}
-
-.btn {
-    cursor: pointer;
-    font-family: 'aaux_nextsemibold';
-    font-size: 18px;
-    margin-left: 5px;
-    margin-right: 5px;
-
-    &.btn-primary {
-        color: $gray;
-        border-color: $brand-primary;
-        box-shadow: 3px 3px 0 #d5bb00;
-
-        &:hover {
-            background-color: #d5bb00;
-            border-color: #d5bb00;
-        }
-    }
-
-    &.btn-secondary {
-        background-color: $brand-secondary;
-        color: white;
-        border-color: $brand-secondary;
-        box-shadow: 3px 3px 0 #003bae;
-
-        &:hover {
-            color: white;
-            background-color: #003bae;
-            border-color: #003bae;
-        }
-    }
-
-    &.btn-tertiary {
-        background-color: $brand-tertiary;
-        color: white !important;
-        box-shadow: 3px 3px 0 #a80900;
-
-        &:hover {
-            background-color: #a80900;
-        }
-    }
-
-    &.btn-white-border {
-        background-color: transparent;
-        border: 2px solid white;
-        color: white;
-    }
-}
-
 //Custom styles
 
 body {
-    font-family: 'aaux_next_regularregular';
     padding-top: 11vw;
-
-    button,input,optgroup,select,textarea {
-        font-family: 'aaux_next_regularregular';
-    }
     
     > header {
         background-color: white;
@@ -645,7 +584,7 @@ h4, h5 {
 }
 
 #bio {
-    background-image: url(../img/header-bio.jpg);
+    background-image: url(../img/biografia/header-bio.jpg);
     background-position: center center;
     background-size: cover;
 

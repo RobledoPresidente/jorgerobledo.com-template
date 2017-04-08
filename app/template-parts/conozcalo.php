@@ -34,27 +34,31 @@
   </script>
 </head>
 <body <?php body_class(); ?>>
-<img src="<?php echo get_template_directory_uri(); ?>/img/biografia/header-bio.png" class="img-fluid" alt="Cinque Terre">
-<button class="btn btn-white-border m-2">Volver asl sitio</button>
-    <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia1.png"  alt="Cinque Terre"> <!---height="363" width="263"-->
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia2.png"  alt="Cinque Terre"><!--- height="276" width="537"-->
-                </div>
-                <div class="col-md-6">
-                    <h2 class="text-center">Hombre de familia</h2>
-                    <h3>Felizmente casado hace cuarenta y dos años con su
-                        novia de la universidad, Carmen Escobar. Tienen dos
-                        hijos, Natalia y Julián. Nunca pierde oportunidad para
-                        compartir en familia y jugar con su nieta Alicia.</h3>
-                </div>
-                <div class="col-12">
-
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
-
+<header>
+    <button id="back" class="btn btn-white-border m-2"><i class="fa fa-chevron-left" aria-hidden="true"></i> Volver al sitio</button>
+</header>
+<div class="bg-inverse">
+    <div class="container">
+        <div class="row py-3">
+            <div class="col-md-6 px-0">
+                <div class="row align-items-center">
+                    <div class="col-md-6 p-0">
+                        <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia1.png">
+                    </div>
+                    <div class="col-md-6 p-0">
+                        <img class="img-fluid"  src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia2.png">
+                    </div>
                 </div>
             </div>
+            <div class="col-md-6 px-0 content-block">
+                <h2>El hombre de familia</h2>
+                <p>
+                    Felizmente casado hace cuarenta y dos años con su novia de la universidad, Carmen Escobar. Tienen dos hijos, Natalia y Julián. Nunca pierde oportunidad para compartir en familia y jugar con su nieta Alicia.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
             <div class="row">
 

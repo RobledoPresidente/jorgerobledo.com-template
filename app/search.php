@@ -16,9 +16,9 @@ get_header(); ?>
             <?php if (have_posts()) : ?>
 
                 <?php if ( have_posts() ) : ?>
-			<h1 class="page-title"><?php printf( __( 'Resultados de búsqueda para: %s', 'robledo-presidente' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			<h1 class="page-title"><?php printf(__( 'Resultados de búsqueda para: %s', 'robledo-presidente' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 		<?php else : ?>
-			<h1 class="page-title"><?php _e( 'No se encontraron resultados', 'robledo-presidente' ); ?></h1>
+			<h1 class="page-title"><?php printf(__( 'No se encontraron resultados', 'robledo-presidente' )); ?></h1>
 		<?php endif; ?>
 
 

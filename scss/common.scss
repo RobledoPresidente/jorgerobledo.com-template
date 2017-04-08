@@ -1,0 +1,24 @@
+//Bootstrap variables overrides
+
+$brand-primary: #FFD600;
+$brand-calm: #F2F2F2;
+
+$border-radius: 0;
+$card-border-width: 0;
+$input-btn-border-width: 2px;
+
+//Custom variables
+$brand-secondary: #3FA9F5;
+$brand-secondary: #3f6df5;
+$brand-tertiary: #FF1D25;
+$brand-quaternary: #f45d22;
+$brand-twitter: #1da1f2;
+$brand-google: #e62117;
+$font-secondary: 'Fjalla One', sans-serif;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$fa-font-path: "../lib/components-font-awesome/fonts" !default;
+
+@import "app/lib/components-font-awesome/scss/font-awesome";
+@import "app/lib/bootstrap/scss/bootstrap";
+@import "fonts";

@@ -1,29 +1,46 @@
-<?php /*Template Name: Conozcalo*/
+<?php /*Template Name: Conozcalo*/ ?>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 
-get_header(); ?>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Spirax" rel="stylesheet">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="profile" href="http://gmpg.org/xfn/11"-->
 
-<div class="container-fluid">
+    <?php wp_head(); ?>
+    <link href="<?php echo get_template_directory_uri(); ?>/css/conozcalo.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/codebird.js"></script>
+    <script>
+        var themeDirectory = '<?php echo get_template_directory_uri(); ?>';
 
-            <div class="col-12">
+        var cb = new Codebird;        
+        cb.setConsumerKey("m3QT1gSSXb5mENHuYClFHUVFE", "wHtgKSFmeBtF1LVQ78DioPLrEfxFmbR5Oxtzi4P0XFqQi0w7gf");
+        //cb.setUseProxy(false);
+    </script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/tether/dist/js/tether.min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-                <!--div class="row" id="box-search">
-                    <div class="col-sm-12 thumbnail text-center">
-                        <img src="img/biografia/header-bio.png" alt="Comque Terre">
-                        <div class="caption">
-                            <p>Robledo Presidente</p>
-                        </div>
-                    </div>
-                </div-->
+    ga('create', 'UA-46114492-2', 'auto');
+    ga('send', 'pageview');
 
-
-                <img src="img/biografia/header-bio.png" class="img-thumbnail" alt="Cinque Terre" width="3000" height="773">
-
-
-            </div>
+  </script>
+</head>
+<body <?php body_class(); ?>>
+<img src="<?php echo get_template_directory_uri(); ?>/img/biografia/header-bio.png" class="img-fluid" alt="Cinque Terre">
+<button class="btn btn-white-border m-2">Volver asl sitio</button>
+    <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="img/foto-biografia1.png"  alt="Cinque Terre"> <!---height="363" width="263"-->
-                    <img src="img/foto-biografia2.png"  alt="Cinque Terre"><!--- height="276" width="537"-->
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia1.png"  alt="Cinque Terre"> <!---height="363" width="263"-->
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia2.png"  alt="Cinque Terre"><!--- height="276" width="537"-->
                 </div>
                 <div class="col-md-6">
                     <h2 class="text-center">Hombre de familia</h2>
@@ -34,7 +51,7 @@ get_header(); ?>
                 </div>
                 <div class="col-12">
 
-                    <img src="img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
 
                 </div>
             </div>
@@ -54,19 +71,19 @@ get_header(); ?>
                         problemas.</h3>
                 </div>
                 <div class="col-md-6">
-                    <img src="img/biografia/foto-biografia3.png"  alt="Cinque Terre"> <!---height="363" width="263"-->
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia3.png"  alt="Cinque Terre"> <!---height="363" width="263"-->
 
                 </div>
                 <div class="col-12">
 
-                    <img src="img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
 
                 </div>
             </div>
             <div class="row">
 
                 <div class="col-md-6">
-                    <img src="img/biografia/foto-biografia4.png"  alt="Cinque Terre" align="middle"> <!---height="363" width="263"-->
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia4.png"  alt="Cinque Terre" align="middle"> <!---height="363" width="263"-->
 
                 </div>
 
@@ -85,7 +102,7 @@ get_header(); ?>
 
                 <div class="col-12">
 
-                    <img src="img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
 
                 </div>
 
@@ -108,19 +125,19 @@ get_header(); ?>
                         Arquitectura en la categoría Teoría, Historia y Crítica.</h3>
                 </div>
                 <div class="col-md-6">
-                    <img src="img/biografia/B8.jpg"  alt="Cinque Terre"> <!---height="363" width="263"-->
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/B8.jpg"  alt="Cinque Terre"> <!---height="363" width="263"-->
 
                 </div>
                 <div class="col-12">
 
-                    <img src="img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
 
                 </div>
             </div>
             <div class="row">
 
                 <div class="col-md-6">
-                    <img src="img/biografia/foto-biografia8.png"  alt="Cinque Terre" align="middle"> <!---height="363" width="263"-->
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia8.png"  alt="Cinque Terre" align="middle"> <!---height="363" width="263"-->
 
                 </div>
 
@@ -138,7 +155,7 @@ get_header(); ?>
 
                 <div class="col-12">
 
-                    <img src="img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
 
                 </div>
 
@@ -153,12 +170,12 @@ get_header(); ?>
                         políticos ni sociales, que quieran superar la desigualdad y la grave crisis nacional.</h3>
                 </div>
                 <div class="col-md-6">
-                    <img src="img/biografia/foto-biografia9.png"  alt="Cinque Terre"> <!---height="363" width="263"-->
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia9.png"  alt="Cinque Terre"> <!---height="363" width="263"-->
 
                 </div>
                 <div class="col-12">
 
-                    <img src="img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
 
                 </div>
             </div>

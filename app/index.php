@@ -131,7 +131,7 @@ get_header(); ?>
             <button class="btn btn-white-border m-2 mt-3">Conózcalo</button>
           </blockquote>
           <div class="row justify-content-center">
-            <div class="share" data-url="http://jorgerobledo.co/boletin-prensa.html" data-title="Con millones de voluntarios vamos a ganar la Presidencia: Robledo">
+            <div class="share" data-url="<?php echo get_home_url(); ?>/conozcalo" data-title="Con millones de voluntarios vamos a ganar la Presidencia: Robledo">
               <ul>
                 <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
                 <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>

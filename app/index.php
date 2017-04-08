@@ -56,19 +56,15 @@ get_header(); ?>
     <div class="section">
       <h2 class="colored"><!--<i class="fa fa-font" aria-hidden="true"></i> -->Primera plana</h2>
       <div class="row highlights justify-content-center">
-        <div class="col text-center">
-          <div id="scratchcard" class="scratchpad"></div>
-        </div>
-      </div>
-      <div class="row highlights justify-content-center">
-        <?php $query = new WP_Query (array(
-          'category_name' => 'primera-plana-1',
-          'orderby' => 'modified',
-          'order' => 'DESC',
-          'posts_per_page' => 1
-        )); ?>
-        <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-          <div class="col-md-6 col-lg-5">
+        <div class="col-md-8 col-lg-6">
+          <div id="scratchcard" class="scratchpad mb-3"></div>
+          <?php $query = new WP_Query (array(
+            'category_name' => 'primera-plana-1',
+            'orderby' => 'modified',
+            'order' => 'DESC',
+            'posts_per_page' => 1
+          )); ?>
+          <?php if ( $query->have_posts() ) : $query->the_post(); ?>
             <a href="<?php the_permalink(); ?>" class="card card-inverse" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
               <div class="card-img-overlay">
                 <div class="card-content bottom">
@@ -78,8 +74,8 @@ get_header(); ?>
                 </div>
               </div>
             </a>
-          </div>
-        <?php endif; ?>
+          <?php endif; ?>
+        </div>
         <?php $query = new WP_Query (array(
           'category_name' => 'primera-plana-3',
           'orderby' => 'modified',
@@ -87,7 +83,7 @@ get_header(); ?>
           'posts_per_page' => 1
         )); ?>
         <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-            <div class="col-md-6 col-lg-3 no-gutters">
+            <div class="col-md-4 col-lg-3 no-gutters">
               <a href="<?php the_permalink(); ?>" class="card card-inverse card-primary">
                 <div class="card-content top">
                   <h3 class="card-title"><?php the_title(); ?></h3>
@@ -104,7 +100,7 @@ get_header(); ?>
           'posts_per_page' => 1
         )); ?>
         <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
               <a href="<?php the_permalink(); ?>" class="card">
                 <div class="card-content middle text-center">
                   <h3 class="card-title text-uppercase"><?php the_title(); ?></h3>

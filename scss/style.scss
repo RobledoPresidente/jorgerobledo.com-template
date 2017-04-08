@@ -516,7 +516,7 @@ h4, h5 {
 }
 
 .scratchpad {
-    height: 15vw;
+    height: 3rem;
     background-image: url(../img/especial-bg.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -549,14 +549,17 @@ h4, h5 {
         padding: 15px;
 
         .card {
-            min-height: 300px;
+            min-height: 260px;
         }
 
         &:first-child {
 
-            .card-title {
-                font-size: 50px;
-                line-height: 42px;
+            .card {
+
+                .card-title {
+                    font-size: 50px;
+                    line-height: 42px;
+                }
             }
         }
 
@@ -587,16 +590,17 @@ h4, h5 {
         &:last-child {
 
             .card {
+                height: 100%;
 
                 h3.card-title {
-                    font-size:40px;
+                    font-size:2.4rem;
                     font-family: $font-secondary;
                     color: #333;
                 }
 
                 h4.card-title {
                     color: #333;
-                    font-size: 38px;
+                    font-size: 2rem;
                     font-family: 'aaux_next_complight';
                 }
 
@@ -879,7 +883,7 @@ img.alignright {
     }
     
     body {
-        padding-top: 147vw;
+        padding-top: 85vw;
 
         > header { 
 
@@ -917,7 +921,7 @@ img.alignright {
         }
 
         &.sticky {
-            padding-top: 76vw;
+            padding-top: 16vw;
 
             > header { 
                 display: initial;
@@ -941,10 +945,6 @@ img.alignright {
 
     .especial {
         background-size: cover;
-    }
-
-    .scratchpad {
-        height: 28vw;
     }
 
     #volunteers h3 {

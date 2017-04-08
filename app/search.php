@@ -6,20 +6,20 @@
  *
  * @package robledo-presidente
  */
+get_header();
+?>
 
-get_header(); ?>
-
-	<div class="container">
+<div class="container">
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
             <?php if (have_posts()) : ?>
 
-                <?php if ( have_posts() ) : ?>
-			<h1 class="page-title"><?php printf(__( 'Resultados de búsqueda para: %s', 'robledo-presidente' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-		<?php else : ?>
-			<h1 class="page-title"><?php printf(__( 'No se encontraron resultados', 'robledo-presidente' )); ?></h1>
-		<?php endif; ?>
+                <?php if (have_posts()) : ?>
+                    <h1 class="page-title"><?php printf(__('Resultados de bÃºsqueda para: %s', 'robledo-presidente'), '<span>' . get_search_query() . '</span>'); ?></h1>
+                <?php else : ?>
+                    <h1 class="page-title"><?php _e('No se encontraron resultados', 'robledo-presidente'); ?></h1>
+                <?php endif; ?>
 
 
                 <div class="row">

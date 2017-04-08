@@ -4,7 +4,9 @@
  */
 get_header();
 ?>
-<h1 class="display-4" id="page-title-origin">Biblioteca de Jorge Enrique Robledo</h1>
+<div class="container" id="main">
+    <h1 class="display-4 section" id="page-title-origin">Biblioteca de Jorge Enrique Robledo</h1>
+</div>
 
 <div class="bg-inverse">
     <div class="container">
@@ -76,9 +78,7 @@ get_header();
         </div>
     </div>
 </div>
-<div class="container" id="main">
-
-
+<div class="container">
     <div class="section news">
         <h2><span>noticias</span></h2>
         <!--TODO: Acá se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
@@ -119,7 +119,7 @@ get_header();
     </div>
     <div class="section debates">
         <h2><span>debates</span></h2>
-        <!--TODO: Ac� se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
+        <!--TODO: Ac� se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
         <div class="row">      
             <?php
             $query = new WP_Query(array(
@@ -152,8 +152,8 @@ get_header();
         </div>
     </div>
     <div class="section articulos quincenales">
-        <h2><span>art�culos quincenales</span></h2>
-        <!--TODO: Ac� se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
+        <h2><span>art�culos quincenales</span></h2>
+        <!--TODO: Ac� se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
         <div class="row">      
             <?php
             $query = new WP_Query(array(

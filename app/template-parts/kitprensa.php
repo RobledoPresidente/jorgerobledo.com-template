@@ -1,4 +1,4 @@
-<?php /*Template Name: Articulo quincenal*/
+<?php /*Template Name: Kit de prensa*/
 
 get_header(); ?>
 

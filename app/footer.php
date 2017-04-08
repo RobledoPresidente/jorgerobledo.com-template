@@ -46,7 +46,7 @@
               <h3><a href="prensa.html">prensa</a></h3>
               <div class="list-group">
                 <a href="<?php echo get_home_url(); ?>/category/articulo-quincenal/" class="list-group-item list-group-item-action bg-inverse border-0">Artículo quincenal</a>
-                <a href="prensa-kit.html" class="list-group-item list-group-item-action bg-inverse border-0">Kit de prensa</a>
+                <a href="/prensa/kit-de-prensa/" class="list-group-item list-group-item-action bg-inverse border-0">Kit de prensa</a>
                 <a href="<?php echo get_home_url(); ?>/category/boletines" class="list-group-item list-group-item-action bg-inverse border-0">Boletines</a>
               </div>
             </div>

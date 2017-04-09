@@ -31,7 +31,7 @@
               <h3><a href="biografia.pdf" target="_blank">conózcalo</a></h3>
             </div>
             <div class="col-md-3">
-              <h3><a href="biblioteca.html">biblioteca</a></h3>
+              <h3><a href="<?php echo get_home_url(); ?>/biblioteca">biblioteca</a></h3>
               <!--TODO: Los enlaces de Boletines, debates y articulo quincenal deben ser enlaces a la categoría y deben tene rel contador de artículos en esa categoría (lo del contador puede o no ser)-->
               <div class="list-group">
                 <a href="https://www.youtube.com/user/ROBLEDOTELEVISION" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Videos <span class="badge bg-secondary badge-pill">+1000</span></a>
@@ -43,7 +43,7 @@
               </div>
             </div>
             <div class="col-md-2">
-              <h3><a href="prensa.html">prensa</a></h3>
+              <h3><a href="<?php echo get_home_url(); ?>/prensa">prensa</a></h3>
               <div class="list-group">
                 <a href="<?php echo get_home_url(); ?>/category/articulo-quincenal/" class="list-group-item list-group-item-action bg-inverse border-0">Artículo quincenal</a>
                 <a href="/prensa/kit-de-prensa/" class="list-group-item list-group-item-action bg-inverse border-0">Kit de prensa</a>

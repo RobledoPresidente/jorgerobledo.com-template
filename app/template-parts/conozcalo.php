@@ -35,18 +35,27 @@
 </head>
 <body <?php body_class(); ?>>
 <header>
-    <button id="back" class="btn btn-white-border m-2"><i class="fa fa-chevron-left" aria-hidden="true"></i> Volver al sitio</button>
+    <a id="back" href="<?php echo get_home_url(); ?>" class="btn btn-white-border m-2"><i class="fa fa-chevron-left" aria-hidden="true"></i> Volver al sitio</a>
+    <div class="content">
+        <h1>Jorge Robledo</h1>
+        <p class="highlighted">HOMBRE HONESTO Y TRABAJADOR. ARQUITECTO DE PROFESIÓN, DOCENTE POR VOCACIÓN Y POLÍTICO POR CONVICCIÓN.</p>
+        <p>Reconocido en los últimos cinco años como "El mejor senador de Colombia".</p>
+        <p>En 2014 obtuvo la mayor votación individual al senado</p>
+        <p>Aspira a ser elegido Presidente de la República en 2018.</p>
+        <button class="btn btn-white-border mt-3"><i class="fa fa-chevron-down" aria-hidden="true"></i> INFOGRAFÍA</button>
+    </div>
+    <div class="top-colors"></div>
 </header>
 <div class="bg-inverse">
     <div class="container">
         <div class="row py-3">
             <div class="col-md-6 px-0">
                 <div class="row align-items-center">
-                    <div class="col-md-6 p-0">
-                        <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia1.png">
+                    <div class="col-6 p-0">
+                        <img class="img-fluid" src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia1.jpg">
                     </div>
-                    <div class="col-md-6 p-0">
-                        <img class="img-fluid"  src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia2.png">
+                    <div class="col-6 p-0">
+                        <img class="img-fluid"  src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia2.jpg">
                     </div>
                 </div>
             </div>
@@ -59,35 +68,21 @@
         </div>
     </div>
 </div>
-
+<div id="his-youth">
+    <div class="container">
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6 col-xl-5 px-5 content">
+            <h2>Su Juventud</h2>
+            <p>Nació en Ibagué el 11 de febrero de 1950. En 1968 ingresó a la Universidad de los Andes y antes de graduarse de arquitecto decidió dedicar su vida a transformar a Colombia.</p>
+            <p>Se vinculó al proyecto de voluntariado pies descalzos, actividad que consistía en ayudar a la gente en las regiones a encontrar el camino para resolver sus problemas.</p>
+        </div>
+    </div>
+</div>
             <div class="row">
 
                 <div class="col-md-6">
-                    <h1 class="text-center">Su Juventud</h1>
-                    <h3>Nació en Ibagué el 11 de febrero de 1950.
-                        En 1968 ingresó a la Universidad de los Andes y antes
-                        de graduarse de arquitecto decidió dedicar su vida a
-                        transformar a Colombia.
-
-                        Se vinculó al proyecto de voluntariado pies descalzos,
-                        actividad que consistía en ayudar a la gente en las
-                        regiones a encontrar el camino para resolver sus
-                        problemas.</h3>
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia3.png"  alt="Cinque Terre"> <!---height="363" width="263"-->
-
-                </div>
-                <div class="col-12">
-
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
-
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-md-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia4.png"  alt="Cinque Terre" align="middle"> <!---height="363" width="263"-->
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia4.jpg"  alt="Cinque Terre" align="middle"> <!---height="363" width="263"-->
 
                 </div>
 
@@ -106,7 +101,7 @@
 
                 <div class="col-12">
 
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.jpg"  alt="Cinque Terre" width="3000" height="4">
 
                 </div>
 
@@ -134,14 +129,14 @@
                 </div>
                 <div class="col-12">
 
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.jpg"  alt="Cinque Terre" width="3000" height="4">
 
                 </div>
             </div>
             <div class="row">
 
                 <div class="col-md-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia8.png"  alt="Cinque Terre" align="middle"> <!---height="363" width="263"-->
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia8.jpg"  alt="Cinque Terre" align="middle"> <!---height="363" width="263"-->
 
                 </div>
 
@@ -159,7 +154,7 @@
 
                 <div class="col-12">
 
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.jpg"  alt="Cinque Terre" width="3000" height="4">
 
                 </div>
 
@@ -174,12 +169,12 @@
                         políticos ni sociales, que quieran superar la desigualdad y la grave crisis nacional.</h3>
                 </div>
                 <div class="col-md-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia9.png"  alt="Cinque Terre"> <!---height="363" width="263"-->
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia9.jpg"  alt="Cinque Terre"> <!---height="363" width="263"-->
 
                 </div>
                 <div class="col-12">
 
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.png"  alt="Cinque Terre" width="3000" height="4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.jpg"  alt="Cinque Terre" width="3000" height="4">
 
                 </div>
             </div>

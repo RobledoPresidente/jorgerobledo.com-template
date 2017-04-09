@@ -80,29 +80,8 @@ textarea.form-control {
     }
 }
 
-.list-group-item {
-    padding: .2rem 1.25rem;
-
-    .list-group-item-action.bg-inverse {
-        color: $brand-calm;
-    }
-}
-
 .bg-calm {
     background-color: $brand-calm;
-}
-
-.bg-secondary {
-    background-color: $brand-secondary !important;
-}
-.bg-tertiary {
-    background-color: $brand-tertiary !important;
-}
-.text-secondary {
-    color: $brand-secondary !important;
-}
-.text-tertiary {
-    color: $brand-tertiary !important;
 }
 
 .col, [class*="col-"] {
@@ -275,14 +254,6 @@ body {
             }
         }
 
-        .top-colors {
-            height: 5px;          
-            background-image: url(../img/header-line.png);
-            background-image: url(../img/header-line.png), linear-gradient(to right, $brand-primary 0%,$brand-primary 50%, $brand-secondary 50%,$brand-secondary 75%, $brand-tertiary 75%,$brand-tertiary 100%);
-            background-repeat: no-repeat;
-            background-size: 100%;
-        }
-
         #page-title {
             display: none;
             font-family: 'aaux_nextsemibold';
@@ -291,6 +262,10 @@ body {
         }
 
         .navbar {
+
+            &.navbar-light .navbar-toggler {
+                border: none;
+            }
 
             .navbar-brand { 
                 display: none;
@@ -377,7 +352,11 @@ body {
             }
 
             .navbar {   
-                padding: 0 1rem;         
+                padding: 0 1rem;      
+
+                &.navbar-light .navbar-toggler {
+                    padding-top: .6rem;
+                }   
 
                 .navbar-brand { 
                     display: initial;
@@ -442,10 +421,6 @@ h4, h5 {
         left: 0;
         top: 0;
     }
-}
-
-#main {
-    margin-top: 3vw;
 }
 
 #infografia {
@@ -584,7 +559,7 @@ h4, h5 {
 }
 
 #bio {
-    background-image: url(../img/biografia/header-bio.jpg);
+    background-image: url(../img/biografia/header-bio2.jpg);
     background-position: center center;
     background-size: cover;
 
@@ -736,13 +711,6 @@ h4, h5 {
     }
 }
 
-footer { 
-    clear: both;
-    a {
-        color: white;
-    }
-}
-
 //Wordpress
 img.alignnone, img.aligncenter, img.alignleft, img.alignright {
     height: auto;
@@ -775,34 +743,76 @@ img.alignright {
 
     .wp-polls-ul {
 
-        li:first-child {
+        li {
 
-            .pollbar {
-                background: $brand-primary;
-                border-color: $brand-primary;
+            &:first-child {
+
+                .pollbar {
+                    background: $brand-primary;
+                    border-color: $brand-primary;
+                }
+            }
+
+            input {
+                margin: .5rem 0;
+            }
+
+            label {
+                font-family: aaux_nextbold;
+                font-size: 24px;
             }
         }
+    }
+
+    .wp-polls .Buttons {
+        display: inline-block;
+        line-height: 1.25;
+        text-align: center;
+        vertical-align: middle;
+        user-select: none;
+        padding: .5rem 1rem;
+        transition: all .2s ease-in-out;   
+          
+        cursor: pointer;
+        font-family: 'aaux_nextsemibold';
+        font-size: 18px;
+        margin-right: .5rem;
+        border: none;
+        background-color: $brand-primary;
+        color: $gray;
+
+        &:hover {
+            background-color: #d5bb00;
+        }
+    }
+    
+    #polls-2-ans p:last-child {
+        display: none;
     }
 }
 
 @include media-breakpoint-down(sm) {
+
+    h2 {
+        font-size: 1.5rem;
+    }
 
     .btn, input[btype=v], input[btype=r] {
         margin-top: 10px;
     }
     
     body {
-        padding-top: 85vw;
+        padding-top: 60vw;
 
         > header { 
 
             #header-img {
-                height: 100vw;
+                height: 50vw;
                 background-image: url(../img/header-s.jpg);
                 background-size: contain;
 
                 img.biglogo {
-                    height: 35vw;
+                    height: 30vw;
                 }
             }
 
@@ -812,7 +822,7 @@ img.alignright {
                 
                 .main-menu li a.nav-link {
                     font-size: 8vw;
-                    line-height: 10vw;
+                    line-height: 12vw;
                 }
 
                 .navbar-nav.social {
@@ -824,6 +834,16 @@ img.alignright {
 
                     img {
                         width: 8vw;
+                    }
+                }
+
+                .main-menu {
+
+                    li {
+
+                        a.nav-link {
+                            border-left: none;
+                        }
                     }
                 }
             }
@@ -858,5 +878,9 @@ img.alignright {
 
     #volunteers h3 {
         font-size: 11vw;
+    }
+    
+    .over-menu {
+        margin-top: -15vw;
     }
 }

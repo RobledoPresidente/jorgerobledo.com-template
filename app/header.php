@@ -62,7 +62,11 @@
     <link href="<?php echo get_template_directory_uri(); ?>/css/style.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/codebird.js"></script>
     <script>
+        var hashtag = '<?php echo get_theme_mod( 'rp_custom_hashtag', 'default_value' ); ?>';
+
         var themeDirectory = '<?php echo get_template_directory_uri(); ?>';
+
+        var homeUrl = '<?php echo get_home_url(); ?>';
 
         var cb = new Codebird;        
         cb.setConsumerKey("m3QT1gSSXb5mENHuYClFHUVFE", "wHtgKSFmeBtF1LVQ78DioPLrEfxFmbR5Oxtzi4P0XFqQi0w7gf");

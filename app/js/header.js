@@ -1,5 +1,3 @@
-var hashtag = '#RobledoPresidente2018';
-
 $(function () {
 
     if ($('#page-title-origin').length > 0) {
@@ -30,6 +28,11 @@ $(function () {
 
                 headerTimeout = undefined;
             }, 200);
+    });
+
+    $('.navbar-toggler').click(function () {
+
+        $('.navbar-collapse').toggle('slow');
     });
 
     $('.share li').click(function (event) {

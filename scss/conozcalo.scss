@@ -1,20 +1,72 @@
 @import "common";
 
-#header {
+p {    
+    font-size: 1.5rem;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 1.2rem;
+    }
+}
+
+header {
+    background-image: url(../img/biografia/header-bio2.jpg);
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
     width: 100%;
+
+    .content {
+        padding: 1rem;
+        padding-top: 14vw;
+
+        h1 {
+            color: white;
+            font-family: 'butlermedium';
+            font-size: 5rem;
+            text-shadow: 2px 2px 10px black;
+            margin: 1rem 0;
+
+            @include media-breakpoint-down(sm) {         
+                font-size: 3rem;
+            }
+        }
+
+        p {
+            color: white;
+            margin: 0;
+            text-shadow: 2px 2px 10px black;
+
+            &.highlighted {
+                font-family: 'aaux_nextbold';
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        background-image: url(../img/biografia/header-bio2-m.jpg);
+
+        h1 {      
+            font-size: 3rem;
+        }
+    }
 }
 
 #back  {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 h2 {
     font-family: 'butlermedium';
     font-size: 3rem;
     padding-bottom: 10px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
+
+    @include media-breakpoint-down(sm) {   
+        font-size: 2rem;
+    }
 }
 
 .img-white-boder {
@@ -22,9 +74,9 @@ h2 {
 }
 
 .bg-inverse {
-    
-    * {
-        color: white;
+
+    h2 {        
+        border-bottom: 1px solid white;
     }
 }
 
@@ -39,8 +91,108 @@ h2 {
     }
 
     p {
-        font-size: 24px;
         font-family: aaux_nextlight;
         padding-top: 2rem;
+    }
+
+    @include media-breakpoint-down(sm) {   
+        padding: 2rem !important;
+
+        h2, p {
+            padding-left: 0;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            padding-top: 1rem;
+        }
+    }
+}
+
+#his-youth {
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        display: block;
+        filter: blur(8px);
+        height: 31rem;
+        width: 100%;
+        
+        background-image: url(../img/biografia/foto-biografia3.jpg);
+        background-size: cover;
+        background-position: center center;
+        filter: blur(8px);
+    }
+
+    .container {
+        background-image: url(../img/biografia/foto-biografia3.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-position-y: 1rem;
+        background-repeat: no-repeat;
+        height: 30rem;
+    }
+
+    .content {
+        border-radius: 50%;
+        background: white;
+        margin-top: -10rem;
+        padding: 5rem 1rem;
+        text-align: center;
+
+        h2 {        
+            padding: 10px 3rem;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-family: aaux_nextlight;
+        }
+    }
+    
+    @include media-breakpoint-down(sm) {   
+
+        &:before {
+            height: 16rem;
+        }
+
+        .container {
+            margin: 0 1rem;
+            height: 15rem;
+        }
+
+        .content {
+            margin-top: -1rem;
+            text-align: left;
+            border-radius: 0;
+            border-top-right-radius: 25%;
+            padding: 0;
+            padding-top: 1rem;
+
+            h2 {        
+                padding: 10px 1rem;
+                display: block;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    
+    @include media-breakpoint-up(xl) {   
+
+        &:before {
+            height: 36rem;
+        }
+
+        .container {
+            height: 35rem;
+        }
     }
 }

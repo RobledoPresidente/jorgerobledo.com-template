@@ -12,6 +12,7 @@ $brand-secondary: #3FA9F5;
 $brand-secondary: #3f6df5;
 $brand-tertiary: #FF1D25;
 $brand-quaternary: #f45d22;
+$brand-facebook: #3b5998;
 $brand-twitter: #1da1f2;
 $brand-google: #e62117;
 $font-secondary: 'Fjalla One', sans-serif;
@@ -29,47 +30,72 @@ body {
     button,input,optgroup,select,textarea {
         font-family: 'aaux_next_regularregular';
     }
+
+    > header {        
+
+        .top-colors {
+            height: 5px;          
+            background-image: url(../img/header-line.png);
+            background-image: url(../img/header-line.png), linear-gradient(to right, $brand-primary 0%,$brand-primary 50%, $brand-secondary 50%,$brand-secondary 75%, $brand-tertiary 75%,$brand-tertiary 100%);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    }
 }
 
 .font-secondary {
     font-family: $font-secondary;
 }
 
+.bg-secondary {
+    background-color: $brand-secondary !important;
+}
+.bg-tertiary {
+    background-color: $brand-tertiary !important;
+}
+.text-secondary {
+    color: $brand-secondary !important;
+}
+.text-tertiary {
+    color: $brand-tertiary !important;
+}
+
+.bg-inverse {
+    
+    * {
+        color: white;
+    }
+}
+
 .btn {
     cursor: pointer;
     font-family: 'aaux_nextsemibold';
     font-size: 18px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-right: .5rem;
+    border: none;
 
     &.btn-primary {
+        background-color: $brand-primary;
         color: $gray;
-        border-color: $brand-primary;
-        box-shadow: 3px 3px 0 #d5bb00;
 
         &:hover {
             background-color: #d5bb00;
-            border-color: #d5bb00;
         }
     }
 
     &.btn-secondary {
         background-color: $brand-secondary;
         color: white;
-        border-color: $brand-secondary;
-        box-shadow: 3px 3px 0 #003bae;
 
         &:hover {
             color: white;
             background-color: #003bae;
-            border-color: #003bae;
         }
     }
 
     &.btn-tertiary {
         background-color: $brand-tertiary;
         color: white !important;
-        box-shadow: 3px 3px 0 #a80900;
 
         &:hover {
             background-color: #a80900;
@@ -81,5 +107,20 @@ body {
         border: 2px solid white;
         color: white;
         background: rgba(0, 0, 0,.3);
+    }
+}
+
+footer { 
+    clear: both;
+    a {
+        color: white;
+    }
+}
+
+.list-group-item {
+    padding: .2rem 1.25rem;
+
+    .list-group-item-action.bg-inverse {
+        color: $brand-calm;
     }
 }

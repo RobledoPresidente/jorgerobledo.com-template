@@ -109,7 +109,7 @@ $(function () {
 
     $('#meme').click(function () {
 
-        location.href = 'memes.html#' + $('#meme-text').val();
+        location.href = homeUrl + '/crea-tu-meme#' + $('#meme-text').val();
     });
 })
 

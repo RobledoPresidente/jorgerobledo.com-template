@@ -50,9 +50,7 @@ get_header(); ?>
 
 		</main--><!-- #main -->
 	<!--/div--><!-- #primary -->
-  <div class="container" id="main">
-  </div>
-  <div class="container">
+  <div class="container over-menu" id="main">
     <div class="section">
       <h2 class="colored"><!--<i class="fa fa-font" aria-hidden="true"></i> -->Primera plana</h2>
       <div class="row highlights justify-content-center">

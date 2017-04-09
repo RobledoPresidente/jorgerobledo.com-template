@@ -3,9 +3,9 @@
 get_header(); ?>
 
 <div class="container" id="main">
-<div class="section">
-            <h2><span>prensa</span></h2>
-             <div class="text-center"><a class="btn btn-secondary" href="<?php echo get_home_url(); ?>/prensa/kit-de-prensa/ "><i class="fa fa-microphone" aria-hidden="true"></i> Vea el kit de prensa</a></div>
+  <div class="section">
+      <h2><span>prensa</span></h2>
+      <div class="text-center"><a class="btn btn-secondary" href="<?php echo get_home_url(); ?>/prensa/kit-de-prensa/ "><i class="fa fa-microphone" aria-hidden="true"></i> Vea el kit de prensa</a></div>
             <div class="row px-3 pt-3">
               <div class="col pb-3">        
                 <div class="card bg-calm"> 
@@ -63,7 +63,7 @@ get_header(); ?>
             </div>
         </div>
     </div>
-    </div>
+</div>
 
 <?php
 get_footer();

@@ -112,6 +112,32 @@ h2 {
     }
 }
 
+
+#family {
+    background: transparent !important;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        display: block;
+        filter: blur(8px);
+        height: 100vh;
+        width: 100%;
+        
+        background-image: url(../img/biografia/foto-biografia1.jpg);
+        background-size: cover;
+        background-position: center center;
+        filter: blur(8px) brightness(.5);
+
+        @include media-breakpoint-down(sm) { 
+            height: 150vh; 
+        }
+    }
+}
+
 #his-youth {
 
     &:before {
@@ -135,7 +161,7 @@ h2 {
         background-image: url(../img/biografia/foto-biografia3.jpg);
         background-size: cover;
         background-position: center center;
-        background-position-y: 1rem;
+        background-position-y: 3rem;
         background-repeat: no-repeat;
         height: 30rem;
     }

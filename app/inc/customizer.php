@@ -29,16 +29,6 @@ function robledo_presidente_customize_register( $wp_customize ) {
   		}
 	}
 
-	$wp_customize->add_setting('rp_custom_hashtag', array('default' => '#RobledoPresidente2018',));
-	$wp_customize->add_control(new RP_Customize_Textarea_Control($wp_customize, 'rp_custom_hashtag', array(
-		'label' => 'Escriba aquí el hashtag con el tema destacado de actualidad:',
-		'section' => 'content',
-		'settings' => 'rp_custom_hashtag',
-	)));
-	$wp_customize->add_section('content' , array(
-		'title' => __('Hashtag Robledo Presidente','robledo-presidente'),
-	));
-
 	/**
 	 * Hashtag: el tema del momento para posicionar en redes sociales
 	 */

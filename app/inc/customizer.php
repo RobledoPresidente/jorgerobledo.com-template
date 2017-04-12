@@ -40,7 +40,7 @@ function robledo_presidente_customize_register( $wp_customize ) {
 		'settings' => 'rp_custom_hashtag',
 	)));
 	$wp_customize->add_section('content' , array(
-		'title' => __('Hashtag Robledo','robledo-presidente'),
+		'title' => __('Hashtag','robledo-presidente'),
 	));
 
 	/**
@@ -106,7 +106,7 @@ function robledo_presidente_customize_register( $wp_customize ) {
 	)));
 
 	$wp_customize->add_section('rp_theme_section' , array(
-		'title' => __('Ajustes Robledo Presidente','robledo-presidente'),
+		'title' => __('Videos','robledo-presidente'),
 	));
 }
 add_action( 'customize_register', 'robledo_presidente_customize_register' );

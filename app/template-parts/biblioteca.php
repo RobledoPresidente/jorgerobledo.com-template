@@ -15,7 +15,7 @@ get_header();
             <div class="row bg-inverse ">
                 <div class="col-lg-8">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/qu5VBQkXY3k" allowfullscreen=""></iframe>
+                        <iframe class="embed-responsive-item" src="<?php echo get_theme_mod( 'rp_video1_url' ); ?>" allowfullscreen=""></iframe>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -26,12 +26,11 @@ get_header();
                         <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
                     </div>
                     <div class="highlight-caption text-center">
-                        <h4>Robledo y Peláez - Homenaje al senador Robledo, 5 veces elegido mejor senador de Colombia</h5>
+                        <h5><?php echo get_theme_mod( 'rp_video1_title' ); ?></h5>
                             <p class="hidden-md-down">
-                                El "doctor" Peláez logra un divertida entrevista, donde el senador y precandidato presidencial hablan sobre
-                                su trayectoria, su familia y los deseos de ser Presidente de Colombia.
+                                <?php echo get_theme_mod( 'rp_video1_caption' ); ?>
                             </p>          
-                            <div class="share" data-url="http://www.youtube.com/watch?v=qu5VBQkXY3k" data-title="Robledo y Peláez - Homenaje al senador Robledo, 5 veces elegido mejor senador de Colombia">
+                            <div class="share" data-url="<?php echo get_theme_mod( 'rp_video1_url' ); ?>" data-title="<?php echo get_theme_mod( 'rp_video1_title' ); ?>">
                                 <ul>
                                     <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
                                     <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
@@ -47,30 +46,30 @@ get_header();
                 <div class="col-md-4">
                     <div class="card card-inverse">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/FqAkM4V5Xsc" allowfullscreen=""></iframe>
+                            <iframe class="embed-responsive-item" src="<?php echo get_theme_mod( 'rp_video2_url' ); ?>" allowfullscreen=""></iframe>
                         </div>
                         <div class="card-text pt-3">
-                            <h5>¿Qué esperar de la investigación por el escándalo de Odebrecht?</h5>
+                            <h5><?php echo get_theme_mod( 'rp_video2_title' ); ?></h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card card-inverse"> 
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/kCmO8P_egL8" allowfullscreen=""></iframe>
+                            <iframe class="embed-responsive-item" src="<?php echo get_theme_mod( 'rp_video3_url' ); ?>" allowfullscreen=""></iframe>
                         </div>
                         <div class="card-text pt-3">
-                            <h5>¿Conviene al país la indignación contra el Establecimiento?</h5>
+                            <h5><?php echo get_theme_mod( 'rp_video3_title' ); ?></h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card card-inverse">          
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/QqfTauOVatE" allowfullscreen=""></iframe>
+                            <iframe class="embed-responsive-item" src="<?php echo get_theme_mod( 'rp_video4_url' ); ?>" allowfullscreen=""></iframe>
                         </div>
                         <div class="card-text pt-3">
-                            <h5>Salvemos la pesca artesanal: Audiencia Pública del senador Jorge Robledo</h5>
+                            <h5><?php echo get_theme_mod( 'rp_video4_title' ); ?></h5>
                         </div>
                     </div>
                 </div>

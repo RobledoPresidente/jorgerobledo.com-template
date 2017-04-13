@@ -22,6 +22,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/tether/dist/js/tether.min.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/common.js" type="text/javascript"></script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -42,10 +43,37 @@
         <p>Reconocido en los últimos cinco años como "El mejor senador de Colombia".</p>
         <p>En 2014 obtuvo la mayor votación individual al senado</p>
         <p>Aspira a ser elegido Presidente de la República en 2018.</p>
-        <button class="btn btn-white-border mt-3"><i class="fa fa-chevron-down" aria-hidden="true"></i> INFOGRAFÍA</button>
+        <button id="infografia-button" class="btn btn-white-border mt-3">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i> 
+            INFOGRAFÍA
+        </button>
     </div>
     <div class="top-colors"></div>
 </header>
+<div id="infografia">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/infografia.jpg" class="img-fluid">
+    <div>
+        <div class="share" data-url="<?php echo get_template_directory_uri(); ?>/img/biografia/infografia.jpg" data-title="Infografía | Jorge Robledo">
+            <ul>
+                <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+                <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+$(function () {
+
+    $('#infografia-button').click(function () {
+
+        $(this).toggleClass('shown');
+
+        $('#infografia').slideToggle('slow');
+    })
+});
+</script>
 <div id="family" class="bg-inverse">
     <div class="container">
         <div class="row py-5">

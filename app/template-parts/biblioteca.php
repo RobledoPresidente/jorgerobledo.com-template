@@ -186,11 +186,10 @@ get_header();
     </div>
     <div class="section news">
         <h2><span>Noticias</span></h2>
-        <!--TODO: Acá se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
         <div class="row">      
             <?php
             $query = new WP_Query(array(
-                'category_name' => 'noticias-home',
+                'category_name' => 'noticias',
                 'orderby' => 'modified',
                 'order' => 'DESC',
                 'posts_per_page' => 6

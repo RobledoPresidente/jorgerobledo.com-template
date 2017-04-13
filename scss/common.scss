@@ -124,3 +124,45 @@ footer {
         color: $brand-calm;
     }
 }
+
+.share {
+    border-top: 1px solid $brand-calm;
+    display: inline-block;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        display: table;
+
+        li {
+            display: table-cell;
+            padding: .8rem 1rem;
+            cursor: pointer;
+            color: #333;
+
+            &.share-facebook {
+                color: #3b5998;
+            }
+
+            &.share-twitter {
+                color: $brand-twitter;
+            }
+
+            &.share-google {
+                color: $brand-google;
+            }
+
+            &.share-whatsapp {
+                color: #09d261;
+
+                @include media-breakpoint-up(lg) {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}

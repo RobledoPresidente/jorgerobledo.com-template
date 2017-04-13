@@ -148,44 +148,6 @@ textarea.form-control {
     }
 }
 
-.share {
-    border-top: 1px solid $brand-calm;
-    display: inline-block;
-
-    ul {
-        padding: 0;
-        margin: 0;
-        display: table;
-
-        li {
-            display: table-cell;
-            padding: .8rem 1rem;
-            cursor: pointer;
-            color: #333;
-
-            &.share-facebook {
-                color: #3b5998;
-            }
-
-            &.share-twitter {
-                color: $brand-twitter;
-            }
-
-            &.share-google {
-                color: $brand-google;
-            }
-
-            &.share-whatsapp {
-                color: #09d261;
-
-                @include media-breakpoint-up(lg) {
-                    display: none;
-                }
-            }
-        }
-    }
-}
-
 .card-inverse {
     
     * {
@@ -409,8 +371,11 @@ h4, h5 {
 }
 
 .scratchpad {
-    height: 3rem;
-    background-image: url(../img/especial-bg.jpg);
+    max-width: 22rem;
+    height: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../img/especial-bg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
@@ -425,6 +390,11 @@ h4, h5 {
     img, canvas {
         left: 0;
         top: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+
+        background-image: url(../img/especial-bg-sm.png);
     }
 }
 

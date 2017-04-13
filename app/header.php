@@ -77,6 +77,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/spin.js/spin.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/spin.js/jquery.spin.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/common.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/header.js" type="text/javascript"></script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

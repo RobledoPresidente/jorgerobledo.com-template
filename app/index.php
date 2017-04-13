@@ -15,10 +15,10 @@
 get_header(); ?>
   <div class="container over-menu" id="main">
     <div class="section">
-      <h2 class="colored"><!--<i class="fa fa-font" aria-hidden="true"></i> -->Primera plana</h2>
+      <h2 class="colored m-0"><!--<i class="fa fa-font" aria-hidden="true"></i> -->Primera plana</h2>
       <div class="row highlights justify-content-center">
         <div class="col-md-8 col-lg-6">
-          <div id="scratchcard" class="scratchpad mb-3"></div>
+          <div id="scratchcard" class="scratchpad mb-2"></div>
           <?php $query = new WP_Query (array(
             'category_name' => 'primera-plana-1',
             'orderby' => 'modified',
@@ -251,7 +251,7 @@ get_header(); ?>
   <div class="container">
     <div class="section news">
       <h2 class="colored"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Noticias</h2>
-      <!--TODO: Acá se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
+      <?php get_sidebar( 'suscribe' ); ?>
       <div class="row">      
         <?php $query = new WP_Query (array(
           'category_name' => 'noticias-home',

@@ -92,9 +92,9 @@ $(function () {
     })
 
     $('#scratchcard').wScratchPad({
-        size: $(window).width() / 30,
-        bg: themeDirectory + '/img/especial-odebrecht.png',
-        fg: themeDirectory + '/img/especial-raspe.png',
+        size: $(window).width() / 20,
+        bg: themeDirectory + '/img/especial-2.png',
+        fg: themeDirectory + '/img/especial-1.png',
         'cursor': 'url("' + themeDirectory + '/img/coin.png") 5 5, default',
         scratchMove: function (e, percent) {
 

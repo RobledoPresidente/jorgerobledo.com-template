@@ -74,9 +74,14 @@ a.card {
 
 textarea.form-control {
     background-color: transparent;
+    height: 4rem;
 
     &:focus {
         background-color: white;
+    }
+
+    @include media-breakpoint-down(sm) {         
+        height: 5rem;
     }
 }
 
@@ -316,7 +321,7 @@ body {
             li {   
             
                 img {
-                    width: 2.5vw;
+                    width: 2rem;
                 }             
 
                 &:hover {
@@ -433,7 +438,12 @@ h4, h5 {
         padding: 15px;
 
         .card {
-            min-height: 260px;
+            min-height: 16rem;
+
+            @include media-breakpoint-down(xs) {
+
+                min-height: 18rem;
+            }
         }
 
         &:first-child {

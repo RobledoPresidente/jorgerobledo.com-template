@@ -43,7 +43,7 @@ get_header(); ?>
 				<img class="img-fluid img-thumbnail" src="<?php the_post_thumbnail_url( 'medium_large' ) ?>" alt="Generic placeholder image">
 			</div>
 			<div class="col-md-7">
-				<h2 class="mt-0 display-4" id="page-title-origin"><?php the_title(); ?></h2>
+				<h2 class="mt-0 display-5" id="page-title-origin"><?php the_title(); ?></h2>
 				<blockquote class="blockquote">
 					<p class="mb-0"><?php echo get_the_excerpt(); ?></p>
 				</blockquote>

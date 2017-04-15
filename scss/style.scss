@@ -289,7 +289,7 @@ body {
                 &:hover {
 
                     img {
-                        width: 3vw;
+                        width: 2.5rem;
                     }
                 }
             }
@@ -348,6 +348,14 @@ a {
 
 h4, h5 {
     font-family: 'aaux_nextbold';
+}
+
+#main {
+    h1 {
+        text-align: center;
+        border-top: 1px solid #f2f2f2;
+        margin-top: 2vw;
+    }
 }
 
 #loading {
@@ -706,18 +714,6 @@ img.alignright {
     margin-left: 20px;
 }
 
-#primary {
-    #main {
-        article {
-            footer {
-                a {
-                    color: $brand-primary;
-                }
-            }
-        }
-    }
-}
-
 //WP-Poll
 .widget_polls-widget {
 
@@ -782,7 +778,7 @@ img.alignright {
     }
     
     body {
-        padding-top: 60vw;
+        padding-top: 51vw;
 
         > header { 
 

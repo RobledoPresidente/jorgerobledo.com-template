@@ -5,7 +5,7 @@
 get_header();
 ?>
 <div class="container" id="main">
-    <h1 class="display-4 section" id="page-title-origin">Biblioteca de Jorge Enrique Robledo</h1>
+    <h1 class="display-5 section" id="page-title-origin">Biblioteca de Jorge Enrique Robledo</h1>
 </div>
 
 <div class="bg-inverse">

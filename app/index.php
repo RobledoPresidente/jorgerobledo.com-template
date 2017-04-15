@@ -89,7 +89,7 @@ get_header(); ?>
           <blockquote>
             Los países sólo cambian cuando cambian sus gentes y ellos se deciden a cambiar a sus dirigentes
             <cite>Jorge Enrique Robledo</cite>
-            <button class="btn btn-white-border m-2 mt-3">Conózcalo</button>
+            <a href="<?php echo get_home_url(); ?>/conozcalo" class="btn btn-white-border m-2 mt-3">Conózcalo</a>
           </blockquote>
           <div class="row justify-content-center">
             <div class="share" data-url="<?php echo get_home_url(); ?>/conozcalo" data-title="Con millones de voluntarios vamos a ganar la Presidencia: Robledo">

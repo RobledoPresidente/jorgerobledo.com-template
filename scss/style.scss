@@ -81,7 +81,7 @@ a.card {
 
 textarea.form-control {
     background-color: transparent;
-    height: 4rem;
+    height: 5rem;
 
     &:focus {
         background-color: white;
@@ -854,6 +854,15 @@ img.alignright {
     color: $brand-secondary;
     font-family: aaux_nextbold;
     background-color: $brand-calm;
+    margin-top: 1rem;
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        
+        > div:first-child {
+            margin-bottom: .5rem;
+        }
+    }
 }
 
 //WP-Poll

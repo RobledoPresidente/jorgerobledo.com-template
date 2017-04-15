@@ -59,6 +59,7 @@
                 <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
                 <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
                 <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                <li class="share-download"><a href="<?php echo get_template_directory_uri(); ?>/img/biografia/infografia.jpg" download="inforgrafia-robledo"><i class="fa fa-download" aria-hidden="true"></i></a></li>
             </ul>
         </div>
     </div>
@@ -76,7 +77,7 @@ $(function () {
 </script>
 <div id="family" class="bg-inverse">
     <div class="container">
-        <div class="row py-5">
+        <div class="row pt-5">
             <div class="col-md-6 px-0">
                 <div class="row align-items-center">
                     <div class="col-6 p-0">
@@ -107,108 +108,69 @@ $(function () {
         </div>
     </div>
 </div>
-            <div class="row">
-
-                <div class="col-md-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia4.jpg"  alt="Cinque Terre" align="middle"> <!---height="363" width="263"-->
-
-                </div>
-
-                <div class="col-md-6">
-                    <h1 class="text-center">El Dirigente social</h1>
-                    <h3><b>En Manizales, alternó su vocación de profesor de
-                            arquitectura con la de dirigente social.</b></h3>
-                    <h3>
-                        Cofundador y dirigente de Unidad Cafetera y Salvación
-                        Agropecuaria, ambas organizaciones de productores
-                        agropecuarios que se defendían de las
-                        importaciones.
-                        En 1995, ayudó a la condonación de las deudas
-                        bancarias de más de cien mil familias cafeteras..</h3>
-                </div>
-
-                <div class="col-12">
-
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.jpg"  alt="Cinque Terre" width="3000" height="4">
-
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-md-6">
-                    <h1 class="text-center">El Profesor</h1>
-                    <h3>Durante 26 años fue profesor de tiempo completo de
-                        la Universidad Nacional de Colombia, Sede Manizales.
-                        Institución que le concedió las distinciones Medalla al
-                        Mérito, Maestro Universitario y Orden Gerardo Molina.
-                        Ha publicado 15 libros sobre historia, arquitectura,
-                        vivienda, economía, agricultura, política y Tratados de
-                        Libre Comercio.
-                        Reconocido columnista de La Patria, donde ha
-                        publicado más de 1.300 artículos.
-                        En 1997 ganó la XVII Bienal Colombiana de
-                        Arquitectura en la categoría Teoría, Historia y Crítica.</h3>
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/B8.jpg"  alt="Cinque Terre"> <!---height="363" width="263"-->
-
-                </div>
-                <div class="col-12">
-
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.jpg"  alt="Cinque Terre" width="3000" height="4">
-
-                </div>
-            </div>
-            <div class="row">
-
-                <div class="col-md-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia8.jpg"  alt="Cinque Terre" align="middle"> <!---height="363" width="263"-->
-
-                </div>
-
-                <div class="col-md-6">
-                    <h1 class="text-center">El Senador</h1>
-                    <h3>Llegó al Senado en 2002, desde entonces ha
-                        realizado más de 150 debates de control político.
-                        Con su labor parlamentaria, ha ayudado a
-                        comprender y solucionar los temas de la política
-                        nacional, convirtiéndose en el congresista que más
-                        debates ha realizado en la historia del Congreso.</h3>
-                    <h3><b>“Vivo con sueldo de profesor y el resto lo dono a las
-                            causas que considero justas”</b></h3>
-                </div>
-
-                <div class="col-12">
-
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.jpg"  alt="Cinque Terre" width="3000" height="4">
-
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-md-6">
-                    <h1 class="text-center">El Candidato</h1>
-                    <h3>Candidato a la Presidencia de la República por el Polo.
-                        Su proyecto es de convergencia nacional, donde se unan todos los colombianos sin distingos
-                        políticos ni sociales, que quieran superar la desigualdad y la grave crisis nacional.</h3>
-                </div>
-                <div class="col-md-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia9.jpg"  alt="Cinque Terre"> <!---height="363" width="263"-->
-
-                </div>
-                <div class="col-12">
-
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/franjaCol.jpg"  alt="Cinque Terre" width="3000" height="4">
-
-                </div>
-            </div>
-
-
+<div id="the-social-leader">
+    <div class="row justify-content-end">
+        <div class="col-md-5 content">
+            <h2>El Dirigente social</h2>
+            <h3>En Manizales, alternó su vocación de profesor de arquitectura con la de dirigente social.</h3>
+            <p>
+                Cofundador y dirigente de <i>Unidad Cafetera y Salvación Agropecuaria</i>, ambas organizaciones de productores agropecuarios que se defendían de las importaciones.
+            </p>
+            <p>
+                En 1995, ayudó a la condonación de las deudas bancarias de más de cien mil familias cafeteras.
+            <p>
         </div>
+    </div>
+</div>
+<div class="bg-inverse" id="the-professor">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 content">
+                <h2>El Profesor</h2>
+                <p>
+                    Durante 26 años fue profesor de tiempo completo de la Universidad Nacional de Colombia, Sede Manizales. Institución que le concedió las distinciones <i>Medalla al Mérito, Maestro Universitario y Orden Gerardo Molina.</i>
+                </p>
+                <p>Ha publicado 15 libros sobre historia, arquitectura, vivienda, economía, agricultura, política y Tratados de Libre Comercio.</p>
+                <p>Reconocido columnista de <i>La Patria</i>, donde ha publicado más de 1.300 artículos.</p>
+                <p>En 1997 ganó la XVII Bienal Colombiana de Arquitectura en la categoría Teoría, Historia y Crítica.</p>
+            </div>
+            <div class="col-md-7">
+                <div class="row">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia7.jpg" class="img-fluid">
+                </div>
+                <div class="row">
+                    <div class="col-4 p-0">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia5_.jpg" class="img-fluid">
+                    </div>
+                    <div class="col-8 p-0">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/biografia/foto-biografia6.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-inverse" id="the-senator">
+    <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-md-5 content">
+                <h2>El Senador</h2>
+                <p>Llegó al Senado en 2002, desde entonces ha realizado más de 150 debates de control político.</p>
+                <p>Con su labor parlamentaria, ha ayudado a comprender y solucionar los temas de la política nacional, convirtiéndose en el congresista que más debates ha realizado en la historia del Congreso.</p>
+                <p><i>“Vivo con sueldo de profesor y el resto lo dono a las causas que considero justas”</i></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="the-candidate">
+    <div class="container">
+    </div>
+    <div class="container content bg-inverse text-center">
+        <h2>El Candidato</h2>
+        <h3 class="text-uppercase">Candidato a la Presidencia de la República por el Polo.</h3>
+        <p>Su proyecto es de convergencia nacional, donde se unan todos los colombianos sin distingos políticos ni sociales, que quieran superar la desigualdad y la grave crisis nacional.</p>
+    </div>
+</div>
 
 <?php
 get_footer();

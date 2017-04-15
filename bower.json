@@ -5,12 +5,13 @@
     "spin.js": "^2.3.2",
     "remodal": "^1.0.7",
     "codebird-js": "^2.6.0",
-    "alertifyjs": "^1.0.11",
     "bower": "*",
     "install": "^1.0.4",
     "bootstrap": "v4.0.0-alpha.6",
     "components-font-awesome": "^4.7.0",
     "ImageMapster": "imagemapster#*",
-    "wScratchPad": "https://github.com/RobledoPresidente/wScratchPad.git#^2.2.3"
+    "wScratchPad": "https://github.com/RobledoPresidente/wScratchPad.git#^2.2.3",
+    "alertifyjs": "^1.0.11",
+    "alertify": "^0.3.10"
   }
 }

@@ -41,6 +41,13 @@ body {
             background-size: 100%;
         }
     }
+
+    > footer { 
+        clear: both;
+        a {
+            color: white;
+        }
+    }
 }
 
 .font-secondary {
@@ -107,13 +114,10 @@ body {
         border: 2px solid white;
         color: white;
         background: rgba(0, 0, 0,.3);
-    }
-}
 
-footer { 
-    clear: both;
-    a {
-        color: white;
+        &:hover {
+            background: rgba(0, 0, 0,.8);
+        }
     }
 }
 
@@ -157,6 +161,13 @@ footer {
 
                 @include media-breakpoint-up(lg) {
                     display: none;
+                }
+            }
+
+            &.share-download {
+
+                a {
+                    color: $brand-quaternary;
                 }
             }
 

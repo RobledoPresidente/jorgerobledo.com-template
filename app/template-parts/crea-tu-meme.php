@@ -8,7 +8,7 @@ get_header(); ?>
 			Sorry, canvas not supported
 		</canvas>
 		<div>
-			Tu mensaje: <textarea type="text" rows="2" id="meme-text"></textarea>
+			<textarea type="text" rows="2" id="meme-text"></textarea>
 		</div>
 		<div class="row opciones mt-3">
 			<div class="col p-0"><img src="<?php echo get_template_directory_uri(); ?>/memes/img/positivo1.jpg" data-id="<?php echo get_template_directory_uri(); ?>/memes/img/positivo1.jpg" class="img-fluid selected" width="200"></div>

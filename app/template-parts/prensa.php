@@ -3,8 +3,9 @@
 get_header(); ?>
 
 <div class="container" id="main">
-  <div class="section">
-      <h2><span>prensa</span></h2>
+    <h1 class="display-5" id="page-title-origin">Prensa</h1>
+    <?php dynamic_sidebar( 'suscribase' ); ?>
+    <div class="section">
       <div class="text-center"><a class="btn btn-secondary" href="<?php echo get_home_url(); ?>/prensa/kit-de-prensa/ "><i class="fa fa-microphone" aria-hidden="true"></i> Vea el kit de prensa</a></div>
             <div class="row px-3 pt-3">
               <div class="col pb-3">        
@@ -63,6 +64,7 @@ get_header(); ?>
             </div>
         </div>
     </div>
+  </div>
 </div>
 
 <?php

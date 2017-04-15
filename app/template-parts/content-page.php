@@ -8,36 +8,41 @@
  */
 
 ?>
+<div class="container" id="main">
+    <?php the_title( '<h1 class="display-5" id="page-title-origin">', '</h1>' ); ?>
+    <div class="section">
+	</div>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<header class="entry-header">
+			
+		</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php
-			the_content();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'robledo-presidente' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<div class="entry-content">
 			<?php
-				edit_post_link(
-					sprintf(
-						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'robledo-presidente' ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
+				the_content();
+
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'robledo-presidente' ),
+					'after'  => '</div>',
+				) );
 			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
-</article><!-- #post-## -->
+		</div>
+
+		<?php if ( get_edit_post_link() ) : ?>
+			<footer class="entry-footer">
+				<?php
+					edit_post_link(
+						sprintf(
+							/* translators: %s: Name of current post */
+							esc_html__( 'Edit %s', 'robledo-presidente' ),
+							the_title( '<span class="screen-reader-text">"', '"</span>', false )
+						),
+						'<span class="edit-link">',
+						'</span>'
+					);
+				?>
+			</footer><!-- .entry-footer -->
+		<?php endif; ?>
+	</article><!-- #post-## -->
+</div>

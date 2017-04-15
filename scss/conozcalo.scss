@@ -1,7 +1,7 @@
 @import "common";
 
 p {    
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 
     @include media-breakpoint-down(sm) {
         font-size: 1rem;
@@ -177,7 +177,7 @@ h2 {
         background-image: url(../img/biografia/foto-biografia3.jpg);
         background-size: cover;
         background-position: center center;
-        filter: blur(8px);
+        filter: blur(8px) brightness(.5);
     }
 
     .container {
@@ -190,10 +190,12 @@ h2 {
     }
 
     .content {
-        border-radius: 50%;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
         background: white;
         margin-top: -10rem;
-        padding: 5rem 1rem;
+        padding-top: 5rem;
+        padding-bottom: 1rem;
         text-align: center;
 
         h2 {        
@@ -242,6 +244,171 @@ h2 {
 
         .container {
             height: 35rem;
+        }
+    }
+}
+
+#the-social-leader {
+    background-image: url(../img/biografia/foto-biografia4.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        display: block;
+        filter: blur(8px);
+        height: 41rem;
+        width: 100%;
+        
+        background-image: url(../img/biografia/foto-biografia4.jpg);
+        background-size: cover;
+        background-position: center center;
+        filter: blur(8px) brightness(.5);
+    }
+
+    .content {
+        background-color: white;
+        margin: 3rem 0 3rem 3rem;
+        padding: 1rem 3rem;
+
+        h2 {
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-family: aaux_nextbold;
+        }
+
+        p {
+            font-family: aaux_nextlight;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        background-size: contain;
+        background-position: top -30vw center;
+
+        .content {
+            margin-top: 30vw;
+        }
+    }
+}
+
+#the-professor {
+
+    .content {
+        padding: 2rem;
+    }
+
+    .img-fluid {
+        width: 100%;
+    }
+}
+
+#the-senator {
+    background-image: url(../img/biografia/foto-biografia8.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        display: block;
+        filter: blur(8px);
+        height: 41rem;
+        width: 100%;
+        
+        background-image: url(../img/biografia/foto-biografia8.jpg);
+        background-size: cover;
+        background-position: center center;
+        filter: blur(8px) brightness(.5);
+    }
+
+    .content {
+        background-color: rgba(0,0,0,.5);
+        padding: 6rem 2rem;
+    }
+
+    @include media-breakpoint-down(md) {
+
+        .content {
+            padding: 2rem 2rem;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        background-size: contain;
+        background-position: top center;
+        
+        .content {
+            margin-top: 35vw;
+        }
+    }
+}
+
+#the-candidate {
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        display: block;
+        filter: blur(8px);
+        height: 50rem;
+        width: 100%;
+        
+        background-image: url(../img/biografia/foto-biografia9.jpg);
+        background-size: cover;
+        background-position: center center;
+        filter: blur(8px) brightness(.5);
+    }
+
+    .container:first-child {
+        background-image: url(../img/biografia/foto-biografia9.jpg);
+        background-size: cover;
+        background-position: center 2rem;
+        background-repeat: no-repeat;
+        height: 30rem;
+    }
+
+    .content {
+        padding: 2rem;
+        background-color: rgba(0,0,0,.5) !important;
+
+        h2 {
+            border: none;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-family: aaux_nextultra;
+        }
+
+        p {
+            padding: 0 1rem;
+        }
+    }
+    
+    @include media-breakpoint-down(sm) {
+
+        .container:first-child {
+            margin: 0 1rem;
+            height: 15rem;
+            background-position-y: 1rem;
         }
     }
 }

@@ -10,21 +10,26 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php robledo_presidente_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+	<header class="row mb-3">
+		<div class="col-md-5 hidden-lg-up">
+			<img class="img-fluid img-thumbnail" src="<?php the_post_thumbnail_url( 'medium_large' ) ?>" alt="Generic placeholder image">
+		</div>
+		<div class="col-md-5 text-right hidden-md-down">
+			<img class="img-fluid img-thumbnail" src="<?php the_post_thumbnail_url( 'medium_large' ) ?>" alt="Generic placeholder image">
+		</div>
+		<div class="col-md-7 mt-3">
+			<h2 class="mt-0 display-5" id="page-title-origin"><?php the_title(); ?></h2>
+			<blockquote class="blockquote">
+				<p class="mb-0"><?php echo get_the_excerpt(); ?></p>
+			</blockquote>
+			<p class="text-muted"><?php robledo_presidente_posted_on(); ?></p>
+			<?php if ( 'post' == get_post_type() && current_user_can('edit_others_posts') ) : ?>
+			<div class="entry-meta">
+				<a href="<?php echo get_edit_post_link(); ?>" class="btn btn-sm btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a>
+			</div><!-- .entry-meta -->
+			<?php endif; ?>
+		</div>
+	</header>
 
 	<div class="entry-content">
 		<?php

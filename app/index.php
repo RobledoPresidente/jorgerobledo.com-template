@@ -31,7 +31,7 @@ get_header(); ?>
                 <div class="card-content bottom">
                   <h3 class="card-title"><?php the_title(); ?></h3>
                   <p class="card-text"><?php echo get_the_excerpt(); ?></p>
-                  <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></p>
+                  <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
                 </div>
               </div>
             </a>
@@ -49,7 +49,7 @@ get_header(); ?>
                 <div class="card-content top">
                   <h3 class="card-title"><?php the_title(); ?></h3>
                   <p class="card-text"><?php echo get_the_excerpt(); ?></p>
-                  <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></p>
+                  <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
                 </div>
               </a>
             </div>
@@ -173,7 +173,7 @@ get_header(); ?>
       </h2>
       <div class="card-columns"></div>
       <div class="text-center">
-        <a class="btn btn-primary more" href="javascriot:none"><i class="fa fa-plus" aria-hidden="true"></i> Cargar más...</a>
+        <a class="btn btn-primary twitter-more" href="javascriot:none"><i class="fa fa-plus" aria-hidden="true"></i> Cargar más...</a>
         <a class="btn btn-secondary" href="https://twitter.com/JERobledo/"><i class="fa fa-twitter" aria-hidden="true"></i> Ir a Twitter...</a>
       </div>
     </div>
@@ -252,7 +252,7 @@ get_header(); ?>
     <div class="section news">
       <h2 class="colored"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Noticias</h2>
       <?php dynamic_sidebar( 'suscribase' ); ?>
-      <div class="row">      
+      <div class="row entries">      
         <?php $query = new WP_Query (array(
           'category_name' => 'noticias-home',
           'orderby' => 'modified',
@@ -270,12 +270,14 @@ get_header(); ?>
                 </div>
               </div>
             </div>
-            <div class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff( get_the_time('U'), current_time('timestamp') ); ?></small></div>
+            <div class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></div>
             <div class="card-text"><?php echo get_the_excerpt(); ?></div>
           </a>
         </div>
         <?php $i++; endwhile; endif;?>
       </div>
+      <a href="<?php echo get_home_url(); ?>/bibliote" class="more"><i class="fa fa-plus" aria-hidden="true"></i> Ir a la biblioteca...</a>
+    </div>
     <div class="section">
       <h2 class="colored"><i class="fa fa-share-alt" aria-hidden="true"></i> En redes</h2>
         <div class="row">

@@ -5,14 +5,15 @@
 get_header();
 ?>
 <div class="container" id="main">
-    <h1 class="display-5 section" id="page-title-origin">Biblioteca de Jorge Enrique Robledo</h1>
+    <h1 class="display-5" id="page-title-origin">Biblioteca de Jorge Enrique Robledo</h1>
+    <?php dynamic_sidebar( 'suscribase' ); ?>
 </div>
 
 <div class="bg-inverse">
     <div class="container">
         <div class="section">
             <h2 class="video"><i class="fa fa-video-camera" aria-hidden="true"></i> Videoteca</h2>   
-            <div class="row bg-inverse ">
+            <div class="row bg-inverse">
                 <div class="col-lg-8">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="<?php echo get_theme_mod( 'rp_video1_url' ); ?>" allowfullscreen=""></iframe>
@@ -73,18 +74,19 @@ get_header();
                         </div>
                     </div>
                 </div>
+                <a href="https://www.youtube.com/user/ROBLEDOTELEVISION" class="more"><i class="fa fa-plus" aria-hidden="true"></i> Ver más...</a>
             </div>          
         </div>
     </div>
 </div>
 <div class="container">
-    <div class="section boletines">
+    <div class="section">
         <h2><span>Boletines</span></h2>
         <!--TODO: Acá se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
-        <div class="row">      
+        <div class="row entries">      
             <?php
             $query = new WP_Query(array(
-                'category_name' => 'noticias-home',
+                'category_name' => 'boletines',
                 'orderby' => 'modified',
                 'order' => 'DESC',
                 'posts_per_page' => 6
@@ -98,7 +100,7 @@ get_header();
                                 <div class="card-img-overlay">
                                     <div class="card-content bottom">
                                         <h4 class="card-title"><?php the_title() ?></h4>
-                                        <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff(get_the_time('U'), current_time('timestamp')); ?></small></p>
+                                        <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
                                     </div>
                                 </div>
                             </div>
@@ -111,18 +113,19 @@ get_header();
             endif;
             ?>
         </div>
+        <a href="<?php echo get_home_url(); ?>/category/boletines" class="more"><i class="fa fa-plus" aria-hidden="true"></i> Ver más...</a>
     </div>
-    <div class="section audios">
+    <div class="section">
         <h2><span>Audios</span></h2>
         <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/151219963&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
     </div>
-    <div class="section debates">
+    <div class="section">
         <h2><span>Debates</span></h2>
         <!--TODO: Ac� se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
-        <div class="row">      
+        <div class="row entries">      
             <?php
             $query = new WP_Query(array(
-                'category_name' => 'noticias-home',
+                'category_name' => 'debates',
                 'orderby' => 'modified',
                 'order' => 'DESC',
                 'posts_per_page' => 6
@@ -136,7 +139,7 @@ get_header();
                                 <div class="card-img-overlay">
                                     <div class="card-content bottom">
                                         <h4 class="card-title"><?php the_title() ?></h4>
-                                        <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff(get_the_time('U'), current_time('timestamp')); ?></small></p>
+                                        <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
                                     </div>
                                 </div>
                             </div>
@@ -149,14 +152,15 @@ get_header();
             endif;
             ?>
         </div>
+        <a href="<?php echo get_home_url(); ?>/category/debates" class="more"><i class="fa fa-plus" aria-hidden="true"></i> Ver más...</a>
     </div>
-    <div class="section articulos quincenales">
+    <div class="section">
         <h2><span>Artículos</span></h2>
         <!--TODO: Ac� se deben mostrar las 6 noticias (categoría) más recientes, debe ir además, antes de las noticias, espacio para el widget de suscribirse-->
-        <div class="row">      
+        <div class="row entries">      
             <?php
             $query = new WP_Query(array(
-                'category_name' => 'noticias-home',
+                'category_name' => 'articulos',
                 'orderby' => 'modified',
                 'order' => 'DESC',
                 'posts_per_page' => 6
@@ -170,7 +174,7 @@ get_header();
                                 <div class="card-img-overlay">
                                     <div class="card-content bottom">
                                         <h4 class="card-title"><?php the_title() ?></h4>
-                                        <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff(get_the_time('U'), current_time('timestamp')); ?></small></p>
+                                        <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
                                     </div>
                                 </div>
                             </div>
@@ -183,10 +187,11 @@ get_header();
             endif;
             ?>
         </div>
+        <a href="<?php echo get_home_url(); ?>/category/articulos" class="more"><i class="fa fa-plus" aria-hidden="true"></i> Ver más...</a>
     </div>
-    <div class="section news">
+    <div class="section">
         <h2><span>Noticias</span></h2>
-        <div class="row">      
+        <div class="row entries">      
             <?php
             $query = new WP_Query(array(
                 'category_name' => 'noticias',
@@ -203,7 +208,7 @@ get_header();
                                 <div class="card-img-overlay">
                                     <div class="card-content bottom">
                                         <h4 class="card-title"><?php the_title() ?></h4>
-                                        <p class="card-text"><small class="text-muted"><?php echo 'Hace ' . human_time_diff(get_the_time('U'), current_time('timestamp')); ?></small></p>
+                                        <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
                                     </div>
                                 </div>
                             </div>
@@ -216,9 +221,15 @@ get_header();
             endif;
             ?>
         </div>
+        <a href="<?php echo get_home_url(); ?>/category/noticias" class="more"><i class="fa fa-plus" aria-hidden="true"></i> Ver más...</a>
     </div>
 
 </div>
+
+<!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->
+    <script src="https://apis.google.com/js/platform.js" async defer>
+      {lang: 'es'}
+    </script>
 
 <?php
 get_footer();

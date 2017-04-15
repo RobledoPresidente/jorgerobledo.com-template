@@ -26,6 +26,9 @@ bottomText.addEventListener('change', update)
 
 function drawMeme(img) {
 
+    if (!$('#meme-text').val())
+        $('#meme-text').val('Probando ando :)');
+
     var bottomText = $('#meme-text').val();
     
     if (!bottomText)

@@ -9,45 +9,7 @@
  * @package robledo-presidente
  */
 
-?><!--!DOCTYPE html-->
-<!--html--> <!--?php language_attributes(); ?>>
-<head-->
-<!--meta charset="--><!--?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11"-->
-
-<!--?php wp_head(); ?>
-</head-->
-
-<!--body --><!--?php body_class(); ?>-->
-<!--div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"--><!--?php esc_html_e( 'Skip to content', 'robledo-presidente' ); ?></a>
-
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding"-->
-			<!--?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="--><!--?php echo esc_url( home_url( '/' ) ); ?>" rel="home"--><!--?php bloginfo( 'name' ); ?></a></h1-->
-			<!--?php else : ?>
-				<p class="site-title"><a href="--><!--?php echo esc_url( home_url( '/' ) ); ?>" rel="home"--><!--?php bloginfo( 'name' ); ?></a></p-->
-			<!--?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"--><!--?php echo $description; /* WPCS: xss ok. */ ?></p-->
-			<!--?php
-			endif; ?>
-		</div--><!-- .site-branding -->
-
-		<!--nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"--><!--?php esc_html_e( 'Primary Menu', 'robledo-presidente' ); ?></button-->
-			<!--?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav--><!-- #site-navigation -->
-	<!--/header--><!-- #masthead -->
-
-	<!--div id="content" class="site-content"-->
-
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 
@@ -59,6 +21,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11"-->
 
     <?php wp_head(); ?>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/alertifyjs/dist/css/alertify.css"></script>
     <link href="<?php echo get_template_directory_uri(); ?>/css/style.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/codebird.js"></script>
     <script>
@@ -106,13 +69,16 @@
   <header>
     <div id="header-img">
       <a href="<?php echo get_home_url(); ?>"><img class="biglogo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
-    </div>    
+    </div>
     <div class="top-colors"></div>
-    <nav class="container navbar navbar-toggleable-md navbar-light">
+    <nav class="navbar navbar-toggleable-md navbar-light">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="<?php echo get_home_url(); ?>">'R!</a>
+      <div id="up">
+        <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+      </div>
       <div class="collapse navbar-collapse" id="navbar">        
         <!--TODO: Los items de este menú deben ser un Menú de wordpress, aun no tan priopritario ahora-->
         <ul class="navbar-nav m-auto main-menu">
@@ -131,10 +97,16 @@
           <li class="nav-item">
             <a class="nav-link" href="<?php echo get_home_url(); ?>/voluntarios">voluntarios</a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" href="<?php echo get_home_url(); ?>/contactenos">contáctenos</a>
-          </li>
+          </li>-->
         </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <div class="input-group">
+            <span class="input-group-addon bg-calm"><i class="fa fa-search" aria-hidden="true"></i></span>
+            <input type="text" class="form-control mr-sm-2" placeholder="Encuentre..." name="s">
+          </div>
+        </form>
         <ul class="navbar-nav social">
           <li class="nav-item">
             <a class="nav-link" href="https://es-la.facebook.com/jorge.robledo.castillo/"><img src="<?php echo get_template_directory_uri(); ?>/img/social-facebook.png"></a>
@@ -163,7 +135,7 @@
           <li class="nav-item">
             <a class="nav-link" href="https://www.linkedin.com/in/jorge-robledo/"><img src="<?php echo get_template_directory_uri(); ?>/img/social-linkedin.png"></a>
           </li>
-        </ul>
+        </ul>        
       </div>
     </nav>
   </header>

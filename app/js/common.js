@@ -1,6 +1,6 @@
 $(function () {    
 
-    $('.share li').click(function (event) {
+    $('.share li:not(.share-download)').click(function (event) {
 
         event.preventDefault();
         

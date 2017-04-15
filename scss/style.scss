@@ -72,6 +72,13 @@ a.card {
     }
 }
 
+.row.entries {
+
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
 textarea.form-control {
     background-color: transparent;
     height: 4rem;
@@ -167,6 +174,14 @@ textarea.form-control {
 
 .bg-inverse {
 
+    a {
+        color: white;
+
+        &:hover {
+            color: white;
+        }
+    }
+
     .section {
 
         > h2 {
@@ -190,7 +205,7 @@ textarea.form-control {
 //Custom styles
 
 body {
-    padding-top: 11vw;
+    padding-top: 16vw;
     
     > header {
         background-color: white;
@@ -267,30 +282,57 @@ body {
                 }
             }
 
+            .form-inline {
+
+                .form-control {
+                    padding: 0 .75rem;
+                }
+
+                .input-group-addon {
+                    border: none;
+
+                    i {
+                        color: white;
+                    }
+                }
+
+                input[type=text] {
+                    border-color: $brand-calm;
+                    border-left-width: 0;
+                }
+            }
+
             .social {
 
                 li {
 
                     a.nav-link {
                         padding: 0.2em .4vw;
+            
+                        img {
+                            width: 2rem;
+                        }             
+
+                        &:hover {
+
+                            img {
+                                opacity: .8;
+                            }
+                        }
                     }
                 }
             }
-        }
 
-        .social {
-
-            li {   
-            
-                img {
-                    width: 2rem;
-                }             
+            #up {
+                position: fixed;
+                right: .5rem;
+                display: none;
+                font-size: 2rem;
+                color: $gray-light;
+                cursor: pointer;
 
                 &:hover {
-
-                    img {
-                        width: 2.5rem;
-                    }
+                    opacity: .8;
                 }
             }
         }
@@ -306,7 +348,7 @@ body {
 
             .top-colors {
                 display: table-cell;
-                background-image: url(../img/header-line.jpg), linear-gradient(to bottom, $brand-primary 0%,$brand-primary 50%, $brand-secondary 50%,$brand-secondary 75%, $brand-tertiary 75%,$brand-tertiary 100%);
+                background-image: url(../img/header-line.png), linear-gradient(to bottom, $brand-primary 0%,$brand-primary 50%, $brand-secondary 50%,$brand-secondary 75%, $brand-tertiary 75%,$brand-tertiary 100%);
                 width: 10px;
             }
 
@@ -337,24 +379,53 @@ body {
                         height: 3vw;
                     }
                 }
+
+                #up {
+                    display: initial;
+
+                    @include media-breakpoint-down(md) {
+                        display: none
+                    }
+                }
             }
         }
     }
 }
+    
+body.home.sticky > header .navbar #up {
+    display: none;
+}
 
 a {
     text-decoration: none !important;
+    color: $brand-secondary;
+
+    &:hover {
+        color: $brand-secondary;
+        opacity: .8;
+    }
 }
 
 h4, h5 {
     font-family: 'aaux_nextbold';
 }
 
+.more {
+    text-align: right;
+    width: 100%;
+    display: block;
+    font-family: aaux_nextbold;
+}
+
 #main {
     h1 {
         text-align: center;
         border-top: 1px solid #f2f2f2;
-        margin-top: 2vw;
+        padding: 1rem 0;
+
+        @include media-breakpoint-down(sm) {
+            margin-top: 2vw;
+        }
     }
 }
 
@@ -699,11 +770,23 @@ h4, h5 {
     }
 }
 
+#meme-text {
+    width: 300px;
+    border: 2px solid rgba(0,0,0,.15);
+    padding: .2rem .5rem;
+}
+
 //Wordpress
 img.alignnone, img.aligncenter, img.alignleft, img.alignright {
     height: auto;
     max-width: 100%;
+}
+img.alignleft, img.alignright {
     margin-bottom: 20px;
+}
+img.aligncenter {
+    margin: 0 auto;
+    display: flex;
 }
 img.alignleft {
     float: left;
@@ -712,6 +795,65 @@ img.alignleft {
 img.alignright {
     float: right;
     margin-left: 20px;
+}
+.widget.jetpack_subscription_widget {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+
+    * {
+        margin-right: 1rem;
+    }
+
+    form {
+        display: table;
+
+        * {
+            display: table-cell;
+        }
+
+        p {
+            vertical-align: middle;
+        }
+
+        input[type=email] {
+            padding: .3rem 1rem;
+            width: 15rem !important;
+            margin-right: 1rem;
+            border: 2px solid $gray;
+        }
+
+        input[type=submit] {
+             @extend .btn;
+             @extend .btn-tertiary;
+        }
+    }
+    
+    @include media-breakpoint-down(sm) {
+        display: block;
+        
+        form {
+            width: 100%;
+
+            input[type=email] {
+                width: 95% !important;
+            }
+
+            input[type=submit] {
+                width: 100%;
+                margin: 0 !important;
+            }
+        }
+    }
+}
+
+.entry-navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    color: $brand-secondary;
+    font-family: aaux_nextbold;
+    background-color: $brand-calm;
 }
 
 //WP-Poll
@@ -778,7 +920,7 @@ img.alignright {
     }
     
     body {
-        padding-top: 51vw;
+        padding-top: 60vw;
 
         > header { 
 
@@ -803,6 +945,10 @@ img.alignright {
 
                 .navbar-nav.social {
                     flex-direction: row;
+                }
+
+                .form-inline .form-control {
+                    padding: .5rem .75rem;
                 }
 
                 .social li a.nav-link {
@@ -834,7 +980,7 @@ img.alignright {
                 .top-colors {
                     display: block;
                     width: 100%;
-                    background-image: url(../img/header-line.jpg), linear-gradient(to right, $brand-primary 0%,$brand-primary 50%, $brand-secondary 50%,$brand-secondary 75%, $brand-tertiary 75%,$brand-tertiary 100%);
+                    background-image: url(../img/header-line.png), linear-gradient(to right, $brand-primary 0%,$brand-primary 50%, $brand-secondary 50%,$brand-secondary 75%, $brand-tertiary 75%,$brand-tertiary 100%);
                 }
 
                 #page-title {

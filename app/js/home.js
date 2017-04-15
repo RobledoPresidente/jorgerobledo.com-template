@@ -82,7 +82,7 @@ $(function () {
 
     twitter();
 
-    $('#feed .more').click(function () {
+    $('#feed .twitter-more').click(function () {
         
         $('#feed > .card-columns').empty();
 

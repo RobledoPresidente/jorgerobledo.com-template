@@ -38,7 +38,7 @@
                 <a href="<?php echo get_home_url(); ?>/category/boletines" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Boletines <span class="badge bg-secondary badge-pill">+1000</span></a>
                 <a href="https://soundcloud.com/prensa-jorge-enrique-robledo" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Audios <span class="badge bg-secondary badge-pill">+300</span></a>
                 <a href="<?php echo get_home_url(); ?>/category/debates/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Debates <span class="badge bg-secondary badge-pill">+150</span></a>
-                <a href="<?php echo get_home_url(); ?>/category/articulo-quincenal/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Artículos <span class="badge bg-secondary badge-pill">+1300</span></a>
+                <a href="<?php echo get_home_url(); ?>/category/articulos/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Artículos <span class="badge bg-secondary badge-pill">+1300</span></a>
                 <a href="<?php echo get_home_url(); ?>/category/noticias/" class="list-group-item list-group-item-action justify-content-between bg-inverse border-0">Noticias <span class="badge bg-secondary badge-pill">+1300</span></a>
               </div>
             </div>
@@ -51,7 +51,10 @@
               </div>
             </div>
             <div class="col-md-2">
-              <h3><a href="http://jorgerobledo.com/voluntarios">voluntarios</a></h3>
+              <h3><a href="<?php echo get_home_url(); ?>/voluntarios">voluntarios</a></h3>
+            </div>
+            <div class="col-md-2">
+              <h3><a href="<?php echo get_home_url(); ?>/contacto">contacto</a></h3>
             </div>
           </div>
         </div>
@@ -66,6 +69,7 @@
     </footer>
 
 <?php wp_footer(); ?>
-
+  
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/alertifyjs/dist/js/alertify.js"></script>
 </body>
 </html>

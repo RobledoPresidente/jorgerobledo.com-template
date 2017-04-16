@@ -8,16 +8,8 @@
  */
 
 ?>
-<div class="container" id="main">
-    <?php the_title( '<h1 class="display-5" id="page-title-origin">', '</h1>' ); ?>
-    <div class="section">
-	</div>
-
+<div class="section">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<header class="entry-header">
-			
-		</header><!-- .entry-header -->
-
 		<div class="entry-content">
 			<?php
 				the_content();

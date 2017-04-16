@@ -205,7 +205,7 @@ textarea.form-control {
 //Custom styles
 
 body {
-    padding-top: 16vw;
+    padding-top: 13vw;
     
     > header {
         background-color: white;
@@ -422,6 +422,7 @@ h4, h5 {
         text-align: center;
         border-top: 1px solid #f2f2f2;
         padding: 1rem 0;
+        margin-top: 1rem;
 
         @include media-breakpoint-down(sm) {
             margin-top: 2vw;
@@ -749,6 +750,10 @@ h4, h5 {
             padding-top: 10px;
             color: white;
             font-weight: bold;
+
+            a {
+                color: $brand-primary;
+            }
         }
 
         .timePosted {
@@ -896,25 +901,8 @@ img.alignright {
     }
 
     .wp-polls .Buttons {
-        display: inline-block;
-        line-height: 1.25;
-        text-align: center;
-        vertical-align: middle;
-        user-select: none;
-        padding: .5rem 1rem;
-        transition: all .2s ease-in-out;   
-          
-        cursor: pointer;
-        font-family: 'aaux_nextsemibold';
-        font-size: 18px;
-        margin-right: .5rem;
-        border: none;
-        background-color: $brand-primary;
-        color: $gray;
-
-        &:hover {
-            background-color: #d5bb00;
-        }
+        @extend .btn;
+        @extend .btn-primary;
     }
     
     #polls-2-ans p:last-child {

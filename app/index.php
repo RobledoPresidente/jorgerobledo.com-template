@@ -144,13 +144,13 @@ get_header(); ?>
       <div class="col-md-8">
         <div class="section" id="volunteers">
           <h2><!--<i class="fa fa-hand-peace-o" aria-hidden="true"></i> -->Voluntarios</h2>
-          <div class="link">
+          <div class="link text-center">
             <a href="/voluntarios">
               <img src="<?php echo get_template_directory_uri(); ?>/img/voluntarios.png" class="img-fluid">
               <h3>Sea Voluntario</h3>
             </a>
           </div>
-          <p class="px-4">Llegó la hora de transformar a Colombia. Vincúlese a este gran cambio.</p>
+          <p class="px-4 text-center">Llegó la hora de transformar a Colombia. Vincúlese a este gran cambio.</p>
         </div>
       </div>
       <div class="col-md-4" id="colombia-container">

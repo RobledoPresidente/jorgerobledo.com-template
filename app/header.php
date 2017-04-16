@@ -21,7 +21,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11"-->
 
     <?php wp_head(); ?>
-    <script src="<?php echo get_template_directory_uri(); ?>/lib/alertifyjs/dist/css/alertify.css"></script>
+    <link href="<?php echo get_template_directory_uri(); ?>/lib/alertifyjs/dist/css/alertify.css" rel="stylesheet" type="text/css">
     <link href="<?php echo get_template_directory_uri(); ?>/css/style.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/codebird.js"></script>
     <script>

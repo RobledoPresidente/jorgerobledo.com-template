@@ -78,6 +78,7 @@ get_header(); ?>
             </div>
         <?php endif; ?>
       </div>
+      <?php dynamic_sidebar( 'suscribase' ); ?>
     </div>
   </div>
   <div class="bg-calm bg-inverse" id="bio">

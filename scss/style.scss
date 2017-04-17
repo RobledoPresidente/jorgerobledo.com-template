@@ -138,7 +138,7 @@ textarea.form-control {
 
 .section {
     
-    padding: 1.5rem 0;
+    padding: 1rem 0;
 
     > h2 {
         font-family: 'aaux_nextbold';
@@ -448,6 +448,12 @@ h4, h5 {
 }
 
 #main {
+
+    .widget.jetpack_subscription_widget {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
     h1 {
         text-align: center;
         border-top: 1px solid #f2f2f2;

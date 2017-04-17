@@ -871,6 +871,10 @@ img.alignright {
              @extend .btn;
              @extend .btn-tertiary;
         }
+
+        label {
+            display: none;
+        }
     }
     
     @include media-breakpoint-down(sm) {

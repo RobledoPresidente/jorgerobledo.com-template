@@ -68,8 +68,14 @@
       </div>
     </footer>
 
-<?php wp_footer(); ?>
+    <?php wp_footer(); ?> 
   
     <script src="<?php echo get_template_directory_uri(); ?>/lib/alertifyjs/dist/js/alertify.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/tether/dist/js/tether.min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/spin.js/spin.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/spin.js/jquery.spin.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/common.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/header.js" type="text/javascript"></script>
 </body>
 </html>

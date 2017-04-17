@@ -118,14 +118,19 @@ function handleTweets(tweets) {
     var x = tweets.length;
     var n = 0;
 
-    var row = $('#feed > .card-columns');
+    var row = $('#feed > .row');
 
     var periscope;
+
+    var author = $('<div>' + tweets[n].author + '</div>');
+    author.find('.u-hiddenVisually').html('<i class="fa fa-check-circle" aria-hidden="true"></i>');
+
+    author = author.html();
 
     while (n < x) {
 
         if (tweets[n].image)
-            row.append('<div class="card p-0 media-bg" style="background-image: url(' + tweets[n].image + ')"><div class="p-3"><div class="user">' + tweets[n].author + '</div><div class="tweet">' + tweets[n].tweet + '</div><p class="timePosted"><a href="' + tweets[n].permalinkURL + '">' + tweets[n].time + '</div></div></div>')
+            row.append('<div class="col no-gutters card card-block-img-overlay" style="background-image: url(' + tweets[n].image + ')"><div class="card-block"><div class="user">' + author + '</div><div class="tweet">' + tweets[n].tweet + '</div><p class="timePosted"><a href="' + tweets[n].permalinkURL + '">' + tweets[n].time + '</div></div></div>')
         else {
 
             var content; 
@@ -164,7 +169,7 @@ function handleTweets(tweets) {
             else
                 content = tweets[n].tweet;
 
-            row.append('<div class="card' + (tweets[n].author.indexOf('https://twitter.com/JERobledo') < 0 ? ' rt' : '') + '"><div class="user">' + tweets[n].author + '</div><div class="tweet">' + content + '</div><p class="timePosted"><a href="' + tweets[n].permalinkURL + '">' + tweets[n].time + '</div></div>');
+            row.append('<div class="col no-gutters card' + (author.indexOf('https://twitter.com/JERobledo') < 0 ? ' rt' : '') + '"><div class="card-block"><div class="user">' + author + '</div><div class="tweet">' + content + '</div><p class="timePosted"><a href="' + tweets[n].permalinkURL + '">' + tweets[n].time + '</div></div></div>');
         }
         n++;
     }

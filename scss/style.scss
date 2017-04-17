@@ -31,18 +31,37 @@
 
     .card-image-header {
         position: relative;
-        height: 20vw;
+        height: 15rem;
         max-height: 400px;
         background-size: cover;
         background-position: center center;
-
-        @include media-breakpoint-down(sm) {
-            height: 60vw;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0,0,0,.6);
         }
     }
 
-    .card-img-overlay {
-        background-color: rgba(0,0,0,.6);
+    &.card-block-img-overlay {
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0,0,0,.6);
+        }
+
+        .card-block {
+            z-index: 1;
+        }
     }
 
     .card-content {
@@ -60,6 +79,16 @@
             top: 50%;
             transform: translateY(-50%);
         }
+    }
+
+    &.middle {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    &.bottom {
+        align-items: flex-end;
+        flex-direction: row;
     }
 }
 
@@ -109,10 +138,9 @@ textarea.form-control {
 
 .section {
     
-    padding: 1rem 0;
+    padding: 1.5rem 0;
 
     > h2 {
-        padding-top: 1rem;
         font-family: 'aaux_nextbold';
         margin-bottom: 1rem;
 
@@ -205,7 +233,7 @@ textarea.form-control {
 //Custom styles
 
 body {
-    padding-top: 13vw;
+    padding-top: 11.6rem;
     
     > header {
         background-color: white;
@@ -213,15 +241,15 @@ body {
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 1;
+        z-index: 2;
         transition: all 0.4s ease;    
 
         #header-img {
             background-image: url(../img/header.jpg);
             background-image: url(../img/header.jpg), linear-gradient(to right, $brand-primary 0%,$brand-primary 50%, $brand-secondary 50%,$brand-secondary 75%, $brand-tertiary 75%,$brand-tertiary 100%);
             background-position: center center;
-            background-size: cover;
-            height: 11vw;
+            background-size: contain;
+            height: 8rem;
             position: relative;
 
             img.biglogo {
@@ -231,7 +259,7 @@ body {
                 left: 50%;
                 margin-right: -50%;
                 transform: translate(-50%, -50%);
-                height: 8vw;
+                height: 6rem;
                 margin-top: .5vw;
             }
         }
@@ -259,7 +287,7 @@ body {
 
                     a.nav-link {
                         font-size: 1.5rem;
-                        line-height: 1.5vw;
+                        line-height: 1.5rem;
                         font-family: 'aaux_nextsemibold';
                         color: $gray;
                         border-left: 1px solid $gray-dark;
@@ -307,7 +335,7 @@ body {
                 li {
 
                     a.nav-link {
-                        padding: 0.2em .4vw;
+                        padding: .2rem .3rem;
             
                         img {
                             width: 2rem;
@@ -339,7 +367,7 @@ body {
     }
 
     &.sticky {
-        padding-top: 8vw;
+        padding-top: 4.4rem;
 
         > header {
             transition: all 0.4s ease;
@@ -356,8 +384,10 @@ body {
                 display: initial;
             }
 
-            #navbar.has-page-title {                
-                display: none !important; 
+            @include media-breakpoint-up(lg) {
+                #navbar.has-page-title {                
+                    display: none !important; 
+                }
             }
 
             .navbar {   
@@ -422,7 +452,7 @@ h4, h5 {
         text-align: center;
         border-top: 1px solid #f2f2f2;
         padding: 1rem 0;
-        margin-top: 1rem;
+        margin-top: .1rem;
 
         @include media-breakpoint-down(sm) {
             margin-top: 2vw;
@@ -487,18 +517,15 @@ h4, h5 {
     > div {
         padding: 15px;
 
-        .card {
-            min-height: 16rem;
-
-            @include media-breakpoint-down(xs) {
-
-                min-height: 18rem;
-            }
-        }
-
         &:first-child {
 
             .card {
+                min-height: 16rem;
+
+                @include media-breakpoint-down(xs) {
+
+                    min-height: 18rem;
+                }
 
                 .card-title {
                     font-size: 50px;
@@ -511,11 +538,11 @@ h4, h5 {
 
             .card {
 
-                .card-content {
+                .card-block {
                     padding: 2rem;
 
                     .card-title {
-                        font-size: 38px;
+                        font-size: 2.1rem;
                         font-family: 'aaux_nextbold';
                     }
 
@@ -544,7 +571,7 @@ h4, h5 {
 
                 h4.card-title {
                     color: #333;
-                    font-size: 2rem;
+                    font-size: 1.8rem;
                     font-family: 'aaux_next_complight';
                 }
 
@@ -702,8 +729,7 @@ h4, h5 {
 
     .card {
         background-color: $brand-twitter;
-        margin-bottom: 15px;
-        padding: 15px;
+        margin: .5rem;
 
         &.media-bg {
 
@@ -733,13 +759,17 @@ h4, h5 {
                 span:nth-child(2), span:nth-child(2) > * {
                     color: white;
                     font-weight: bold;
-                    display: block;
+                    white-space: nowrap;
                 }
 
                 span:nth-child(3), span:nth-child(4) {
                     font-size: 14px;
                     color: white;
                     font-weight: bold;
+                }
+
+                .u-hiddenVisually {
+                    margin-right: .2rem;
                 }
             }
         }
@@ -780,9 +810,8 @@ h4, h5 {
 }
 
 #meme-text {
-    width: 300px;
     border: 2px solid rgba(0,0,0,.15);
-    padding: .2rem .5rem;
+    height: 5rem;
 }
 
 //Wordpress
@@ -910,6 +939,37 @@ img.alignright {
     }
 }
 
+@include media-breakpoint-down(md) {
+    
+    body {
+
+        &.home {
+            padding-top: 8rem;
+        }
+
+        > header {    
+
+            .navbar {  
+
+                .navbar-nav.social {
+                    flex-direction: row;
+                }
+
+                .main-menu {
+
+                    li {
+
+                        a.nav-link {
+                            border-left: none;
+                            line-height: 2.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @include media-breakpoint-down(sm) {
 
     h2 {
@@ -921,12 +981,16 @@ img.alignright {
     }
     
     body {
-        padding-top: 60vw;
+        padding-top: 13.6rem;
+
+        &.home {
+            padding-top: 10rem;
+        }
 
         > header { 
 
             #header-img {
-                height: 50vw;
+                height: 10rem;
                 background-image: url(../img/header-s.jpg);
                 background-size: contain;
 
@@ -938,36 +1002,9 @@ img.alignright {
             .navbar {
                 //background-image: url(../img/header-line-s.png);
                 margin-top: -1vw;
-                
-                .main-menu li a.nav-link {
-                    font-size: 8vw;
-                    line-height: 12vw;
-                }
-
-                .navbar-nav.social {
-                    flex-direction: row;
-                }
 
                 .form-inline .form-control {
                     padding: .5rem .75rem;
-                }
-
-                .social li a.nav-link {
-                    padding: 0.2em 1vw;
-
-                    img {
-                        width: 8vw;
-                    }
-                }
-
-                .main-menu {
-
-                    li {
-
-                        a.nav-link {
-                            border-left: none;
-                        }
-                    }
                 }
             }
         }
@@ -1001,9 +1038,5 @@ img.alignright {
 
     #volunteers h3 {
         font-size: 11vw;
-    }
-    
-    .over-menu {
-        margin-top: -15vw;
     }
 }

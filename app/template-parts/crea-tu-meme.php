@@ -3,9 +3,10 @@
 get_header(); ?>
 	    
 <div class="container text-center" id="main">
+    <h1 class="display-5" id="page-title-origin">Haga su meme</h1>
 	<div class="section">
 		<canvas id="memecanvas">
-			Sorry, canvas not supported
+			Lo sentimos, debes usar un navegador más moderno
 		</canvas>
 		<div>
 			<textarea type="text" rows="2" id="meme-text"></textarea>

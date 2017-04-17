@@ -26,13 +26,11 @@ get_header(); ?>
             'posts_per_page' => 1
           )); ?>
           <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-            <a href="<?php the_permalink(); ?>" class="card card-inverse" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
-              <div class="card-img-overlay">
-                <div class="card-content bottom">
-                  <h3 class="card-title"><?php the_title(); ?></h3>
-                  <p class="card-text"><?php echo get_the_excerpt(); ?></p>
-                  <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
-                </div>
+            <a href="<?php the_permalink(); ?>" class="card card-inverse card-block-img-overlay bottom" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
+              <div class="card-block">
+                <h3 class="card-title"><?php the_title(); ?></h3>
+                <p class="card-text"><?php echo get_the_excerpt(); ?></p>
+                <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
               </div>
             </a>
           <?php endif; ?>
@@ -46,7 +44,7 @@ get_header(); ?>
         <?php if ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="col-md-4 col-lg-3 no-gutters">
               <a href="<?php the_permalink(); ?>" class="card card-inverse card-primary">
-                <div class="card-content top">
+                <div class="card-block top">
                   <h3 class="card-title"><?php the_title(); ?></h3>
                   <p class="card-text"><?php echo get_the_excerpt(); ?></p>
                   <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
@@ -61,9 +59,9 @@ get_header(); ?>
           'posts_per_page' => 1
         )); ?>
         <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-            <div class="col-lg-3">
-              <a href="<?php the_permalink(); ?>" class="card">
-                <div class="card-content middle text-center">
+            <div class="col-lg-3 no-gutters">
+              <a href="<?php the_permalink(); ?>" class="card middle">
+                <div class="card-block text-center">
                   <h3 class="card-title text-uppercase"><?php the_title(); ?></h3>
                   <h4 class="card-title"><?php $custom = get_post_custom(); echo $custom['hashtag'][0]; ?></h4>
                   <div class="share" data-url="<?php the_permalink(); ?>" data-title="<?php the_title(); ?> <?php echo $custom['hashtag'][0]; ?>">
@@ -82,7 +80,7 @@ get_header(); ?>
       </div>
     </div>
   </div>
-  <div class="bg-calm mt-4 bg-inverse" id="bio">
+  <div class="bg-calm bg-inverse" id="bio">
     <div class="container">
       <div class="row">
         <div class="col-md-6 p-4 pt-5">
@@ -126,10 +124,10 @@ get_header(); ?>
         <div class="col-sm-6">
           <div class="card bg-calm">
             <h3><?php echo get_theme_mod( 'rp_custom_hashtag' ); ?> ... <span class="badge badge-pill bg-secondary">¡Nuevo!</span></h3>
-            <div class="card-block">
-              <div class="form-group">
-                <textarea id="meme-text" class="form-control" rows="2" placeholder="Comparta sus pensamientos ahora que Robledo es el PRIMER candidato presidencial :)"></textarea>
-              </div>
+            <div class="form-group">
+              <textarea id="meme-text" class="form-control" placeholder="Comparta sus pensamientos ahora que Robledo es el PRIMER candidato presidencial :)"></textarea>
+            </div>
+            <div>
               <button class="btn btn-secondary" id="share-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Trinar</button>
               <button class="btn btn-tertiary" id="meme"><i class="fa fa-camera-retro" aria-hidden="true"></i> Haga su meme</button>
             </div>
@@ -155,7 +153,7 @@ get_header(); ?>
       </div>
       <div class="col-md-4" id="colombia-container">
         <div class="section">
-          <h2>#EstePaísSíTieneArreglo</h2>
+          <h2>Este País Sí Tiene Arreglo</h2>
           <img id="colombia" src="<?php echo get_template_directory_uri(); ?>/img/map.png" alt="" usemap="#colombia-regions" class="img-fluid">
           <map name="colombia-regions" id="colombia-regions">
             <area data-key="north" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="3,2,5,76,13,129,84,132,81,170,109,171,132,150,160,179,186,154,185,113,253,104,262,1" />
@@ -171,7 +169,7 @@ get_header(); ?>
         <script>window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)?w:(n=t.createElement(e),n.id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)},w)}(document,"script","twitter-wjs")</script><a href="https://www.periscope.tv/jerobledo" class="periscope-on-air" data-size="large">@JERobledo</a>
         <div id="periscope"></div>
       </h2>
-      <div class="card-columns"></div>
+      <div class="row"></div>
       <div class="text-center">
         <a class="btn btn-primary twitter-more" href="javascriot:none"><i class="fa fa-plus" aria-hidden="true"></i> Cargar más...</a>
         <a class="btn btn-secondary" href="https://twitter.com/JERobledo/"><i class="fa fa-twitter" aria-hidden="true"></i> Ir a Twitter...</a>

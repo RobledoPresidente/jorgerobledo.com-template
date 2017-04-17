@@ -36,5 +36,9 @@
 				?>
 			</footer><!-- .entry-footer -->
 		<?php endif; ?>
+
+		<footer class="entry-footer">
+			<?php robledo_presidente_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
 	</article><!-- #post-## -->
 </div>

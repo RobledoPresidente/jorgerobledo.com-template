@@ -117,3 +117,17 @@ function robledo_presidente_category_transient_flusher() {
 }
 add_action( 'edit_category', 'robledo_presidente_category_transient_flusher' );
 add_action( 'save_post',     'robledo_presidente_category_transient_flusher' );
+
+
+if ( ! function_exists( 'robledo_presidente_youtube_embed' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function robledo_presidente_youtube_embed($url) {
+
+	parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
+	echo '<div class="embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive-item" src="//www.youtube.com/embed/' . $my_array_of_vars['v'] . '" allowfullscreen=""></iframe>
+		</div>';  
+}
+endif;

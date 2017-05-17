@@ -47,6 +47,12 @@ function robledo_presidente_setup() {
 		'menu-1' => esc_html__( 'Primary', 'robledo-presidente' ),
 	) );
 
+	// Enable support for Post Formats.
+	add_theme_support( 'post-formats', array(
+		'video',
+		'audio',
+	) );
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.

@@ -13,30 +13,11 @@ get_header();
     <div class="container">
         <div class="section">
             <h2 class="video"><i class="fa fa-video-camera" aria-hidden="true"></i> Videoteca</h2>   
-            <?php
-            $query = new WP_Query(array(
-                'orderby' => 'modified',
-                'order' => 'DESC',
-                'posts_per_page' => 4,
-                'tax_query' => array(
-                    'relation' => 'AND',
-                    array(
-                        'taxonomy' => 'category',
-                        'field'    => 'slug',
-                        'terms'    => array( 'videos-destacados' ),
-                    ),
-                    array(
-                        'taxonomy' => 'post_format',
-                        'field'    => 'slug',
-                        'terms'    => array( 'post-format-video' ),
-                    ),
-                )
-            ));
-            ?>
             <div class="row bg-inverse">
-                <?php if ($query->have_posts()) : $query->the_post(); ?>
                 <div class="col-lg-8">
-                    <?php robledo_presidente_youtube_embed(get_the_content()) ?>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="<?php echo get_theme_mod( 'rp_video1_url' ); ?>" allowfullscreen=""></iframe>
+                    </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="hidden-md-down">
@@ -46,11 +27,11 @@ get_header();
                         <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
                     </div>
                     <div class="highlight-caption text-center">
-                        <h5><?php the_title(); ?></h5>
+                        <h5><?php echo get_theme_mod( 'rp_video1_title' ); ?></h5>
                             <p class="hidden-md-down">
-                                <?php echo get_the_excerpt(); ?>
+                                <?php echo get_theme_mod( 'rp_video1_caption' ); ?>
                             </p>          
-                            <div class="share" data-url="<?php echo get_the_content() ?>" data-title="<?php the_title(); ?>">
+                            <div class="share" data-url="<?php echo get_theme_mod( 'rp_video1_url' ); ?>" data-title="<?php echo get_theme_mod( 'rp_video1_title' ); ?>">
                                 <ul>
                                     <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
                                     <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
@@ -61,19 +42,38 @@ get_header();
                             </div>
                     </div>
                 </div>
-                <?php endif; ?>
             </div>
             <div class="row pt-4">
-                <?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
                 <div class="col-md-4">
                     <div class="card card-inverse">
-                        <?php robledo_presidente_youtube_embed(get_the_content()) ?>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="<?php echo get_theme_mod( 'rp_video2_url' ); ?>" allowfullscreen=""></iframe>
+                        </div>
                         <div class="card-text pt-3">
-                            <h5><?php the_title(); ?></h5>
+                            <h5><?php echo get_theme_mod( 'rp_video2_title' ); ?></h5>
                         </div>
                     </div>
                 </div>
-                <?php endwhile; endif; ?>
+                <div class="col-md-4">
+                    <div class="card card-inverse"> 
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="<?php echo get_theme_mod( 'rp_video3_url' ); ?>" allowfullscreen=""></iframe>
+                        </div>
+                        <div class="card-text pt-3">
+                            <h5><?php echo get_theme_mod( 'rp_video3_title' ); ?></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-inverse">          
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="<?php echo get_theme_mod( 'rp_video4_url' ); ?>" allowfullscreen=""></iframe>
+                        </div>
+                        <div class="card-text pt-3">
+                            <h5><?php echo get_theme_mod( 'rp_video4_title' ); ?></h5>
+                        </div>
+                    </div>
+                </div>
                 <a href="https://www.youtube.com/user/ROBLEDOTELEVISION" class="more"><i class="fa fa-plus" aria-hidden="true"></i> Ver más...</a>
             </div>          
         </div>

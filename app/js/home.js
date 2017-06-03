@@ -122,12 +122,12 @@ function handleTweets(tweets) {
 
     var periscope;
 
-    var author = $('<div>' + tweets[n].author + '</div>');
-    author.find('.u-hiddenVisually').html('<i class="fa fa-check-circle" aria-hidden="true"></i>');
-
-    author = author.html();
-
     while (n < x) {
+
+        var author = $('<div>' + tweets[n].author + '</div>');
+        author.find('.u-hiddenVisually').html('<i class="fa fa-check-circle" aria-hidden="true"></i>');
+
+        author = author.html();
 
         if (tweets[n].image)
             row.append('<div class="col no-gutters card card-block-img-overlay" style="background-image: url(' + tweets[n].image + ')"><div class="card-block"><div class="user">' + author + '</div><div class="tweet">' + tweets[n].tweet + '</div><p class="timePosted"><a href="' + tweets[n].permalinkURL + '">' + tweets[n].time + '</div></div></div>')

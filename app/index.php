@@ -303,7 +303,7 @@ get_header(); ?>
     <script src="<?php echo get_template_directory_uri(); ?>/lib/wScratchPad/wScratchPad.min.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/home.js" type="text/javascript"></script>   
     <script src="<?php echo get_template_directory_uri(); ?>/js/twitter.js" type="text/javascript"></script> 
-    <script src="<?php echo get_template_directory_uri(); ?>/js/twitterFetcher_min.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/lib/twitter-fetcher/js/twitterFetcher_min.js" type="text/javascript"></script>
 
     <!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->
     <script src="https://apis.google.com/js/platform.js" async defer>

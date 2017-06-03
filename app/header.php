@@ -23,12 +23,12 @@
     <?php wp_head(); ?>
     <link href="<?php echo get_template_directory_uri(); ?>/lib/alertifyjs/dist/css/alertify.css" rel="stylesheet" type="text/css">
     <link href="<?php echo get_template_directory_uri(); ?>/css/style.min.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/codebird.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/lib/codebird-js/codebird.js"></script>
     <script>
         var hashtag = '<?php echo get_theme_mod( 'rp_custom_hashtag', 'default_value' ); ?>';
 
         var themeDirectory = '<?php echo get_template_directory_uri(); ?>';
-
+        
         var homeUrl = '<?php echo get_home_url(); ?>';
 
         var cb = new Codebird;        

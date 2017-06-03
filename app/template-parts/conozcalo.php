@@ -11,7 +11,7 @@
 
     <?php wp_head(); ?>
     <link href="<?php echo get_template_directory_uri(); ?>/css/conozcalo.min.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/codebird.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/lib/codebird-js/codebird.js"></script>
     <script>
         var themeDirectory = '<?php echo get_template_directory_uri(); ?>';
 

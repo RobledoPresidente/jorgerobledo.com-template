@@ -13,9 +13,36 @@ get_header();
     <h1 class="display-5" id="page-title-origin"><?php the_archive_title(); ?></h1>
     <?php dynamic_sidebar( 'suscribase' ); ?>
 	<div class="section">
-
+        <?php 
+        global $query_string;
+        $idVideos = get_category_by_slug('videos');
+        query_posts( $query_string . '&category__not_in=' . $idVideos->term_id );
+        ?>
         <?php if (have_posts()) : ?>
-        <div class="row entries">
+            <?php the_post(); ?>
+            <a href="<?php the_permalink(); ?>" class="card">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <img src="<?php the_post_thumbnail_url('large') ?>" class="img-fluid">
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <h4 class="card-title"><?php the_title() ?></h4>
+                        <div class="card-text"><?php echo get_the_excerpt(); ?></div>
+                        <div class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></div> 
+                        <div class="share" data-url="<?php echo get_the_content() ?>" data-title="<?php the_title(); ?>">
+                            <ul>
+                                <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                                <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                                <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+                                <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                                <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <hr>
+            <div class="row entries">
             <?php
                 /* Start the Loop */
                 while (have_posts()) : the_post();
@@ -26,8 +53,6 @@ get_header();
                     */
                     get_template_part( 'template-parts/content', 'listing' );
                 endwhile;
-
-                the_posts_navigation();
 
             else :
 
@@ -44,10 +69,13 @@ get_header();
             <h2>Videos</h2>
             <?php
                 $cate = get_queried_object();
+                $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1; 
                 $query = new WP_Query(array(
                     'orderby' => 'modified',
                     'order' => 'DESC',
-                    'category_name' => 'politica+videos'
+                    'category_name' => $cate->slug . '+videos',
+                    'posts_per_page' => 5,
+                    'paged' => $paged
                 ));
                 ?>
             <?php if ($query->have_posts()) : ?>
@@ -71,4 +99,5 @@ get_header();
 
 <?php
 /* get_sidebar(); */
+the_posts_navigation();
 get_footer();

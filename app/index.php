@@ -36,7 +36,7 @@ get_header(); ?>
           <?php endif; ?>
         </div>
         <?php $query = new WP_Query (array(
-          'category_name' => 'primera-plana-3',
+          'category_name' => 'primera-plana-2',
           'orderby' => 'modified',
           'order' => 'DESC',
           'posts_per_page' => 1
@@ -53,7 +53,7 @@ get_header(); ?>
             </div>
         <?php endif; ?>
         <?php $query = new WP_Query (array(
-          'category_name' => 'primera-plana-2',
+          'category_name' => 'primera-plana-3',
           'orderby' => 'modified',
           'order' => 'DESC',
           'posts_per_page' => 1
@@ -281,7 +281,7 @@ get_header(); ?>
       <h2 class="colored"><i class="fa fa-share-alt" aria-hidden="true"></i> En redes</h2>
         <div class="row">
           <div class="col">
-            <div class="fb-page" data-href="https://www.facebook.com/jorge.robledo.castillo" data-height="450" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/jorge.robledo.castillo" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jorge.robledo.castillo">Jorge Enrique Robledo Castillo</a></blockquote></div>
+            <div class="fb-page" data-href="https://www.facebook.com/jorge.robledo.castillo" data-height="450" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/jorge.robledo.castillo" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jorge.robledo.castillo">Jorge Enrique Robledo Castillo</a></blockquote></div>
           </div>
           <div class="col text-center">
             <!-- Inserta esta etiqueta en la sección "head" o justo antes de la etiqueta "body" de cierre. -->

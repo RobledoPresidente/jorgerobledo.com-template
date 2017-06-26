@@ -117,7 +117,7 @@ function oauth_requestToken() {
     
     cb.__call(
         "oauth_requestToken", {
-        oauth_callback: "http://jorgerobledo.co/twitter.html"
+        oauth_callback: "http://jorgerobledo.com/twitter"
     },
     function (reply, rate, err) {
         

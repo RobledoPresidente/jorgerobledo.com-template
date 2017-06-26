@@ -25,12 +25,12 @@
 
     <footer class="section bg-inverse py-4 px-3 text-white">
       <div class="row">
-        <div class="col-md-10">
+        <div class="col-lg-10">
           <div class="row">
             <div class="col-md-2">
               <h3><a href="biografia.pdf" target="_blank">conózcalo</a></h3>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
               <h3><a href="<?php echo get_home_url(); ?>/biblioteca">biblioteca</a></h3>
               <!--TODO: Los enlaces de Boletines, debates y articulo quincenal deben ser enlaces a la categoría y deben tene rel contador de artículos en esa categoría (lo del contador puede o no ser)-->
               <div class="list-group">
@@ -53,12 +53,9 @@
             <div class="col-md-2">
               <h3><a href="<?php echo get_home_url(); ?>/voluntarios">voluntarios</a></h3>
             </div>
-            <div class="col-md-2">
-              <h3><a href="<?php echo get_home_url(); ?>/contacto">contacto</a></h3>
-            </div>
           </div>
         </div>
-        <div class="col-md-2 text-center">
+        <div class="col-lg-2 text-center">
           <p>Todos los derechos reservados © 2017</p>
           <small><i class="fa fa-code" aria-hidden="true"></i> Desarrollado como un <a href="https://github.com/RobledoPresidente/WebCandidato" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> proyecto de código abierto</a> bajo GNU GENERAL PUBLIC LICENSE</small>
         </div>

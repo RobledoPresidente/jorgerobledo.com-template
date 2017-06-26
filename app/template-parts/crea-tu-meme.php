@@ -24,6 +24,7 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
+<script src="<?php echo get_template_directory_uri(); ?>/js/twitter.js" type="text/javascript"></script> 
 <script src="<?php echo get_template_directory_uri(); ?>/memes/js/index.js"></script>
 <?php
 get_footer();

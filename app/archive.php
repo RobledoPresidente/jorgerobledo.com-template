@@ -29,7 +29,7 @@ get_header();
                         <h4 class="card-title"><?php the_title() ?></h4>
                         <div class="card-text"><?php echo get_the_excerpt(); ?></div>
                         <div class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></div> 
-                        <div class="share" data-url="<?php echo get_the_content() ?>" data-title="<?php the_title(); ?>">
+                        <div class="share" data-url="<?php echo the_permalink() ?>" data-title="<?php the_title(); ?>">
                             <ul>
                                 <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
                                 <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>

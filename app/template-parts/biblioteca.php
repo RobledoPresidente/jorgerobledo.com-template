@@ -70,7 +70,7 @@ get_header();
                     </div>
                 </div>
                 <?php endwhile; endif; ?>
-                <a href="<?php echo get_home_url(); ?>/videoteca" class="more"><i class="fa fa-plus" aria-hidden="true"></i> Ver más...</a>
+                <a href="https://www.youtube.com/user/ROBLEDOTELEVISION" class="more"><i class="fa fa-plus" aria-hidden="true"></i> Ver más...</a>
             </div>          
         </div>
     </div>
@@ -89,7 +89,7 @@ get_header();
             </div>
             <div class="row justify-content-center">
                 <div class="col-4">
-                    <a href="<?php echo get_home_url(); ?>/category/temas/medio-ambiente">Medio ambiente</a>
+                    <a href="<?php echo get_home_url(); ?>/category/temas/ambiente">Ambiente</a>
                 </div>
                 <div class="col-4">
                     <a href="<?php echo get_home_url(); ?>/category/temas/politica">Política</a>
@@ -195,7 +195,7 @@ get_header();
                 <div class="col-lg-7">
                     <img src="<?php the_post_thumbnail_url('large') ?>" class="img-fluid">
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-5 text-center">
                     <h5><?php the_title(); ?></h5>
                     <p class="hidden-md-down">
                         <?php echo get_the_excerpt(); ?>

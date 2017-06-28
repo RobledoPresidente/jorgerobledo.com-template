@@ -851,18 +851,18 @@ img.alignnone, img.aligncenter, img.alignleft, img.alignright {
     height: auto;
     max-width: 100%;
 }
-img.alignleft, img.alignright {
+img.alignleft, img.alignright, figure.alignleft, figure.alignright {
     margin-bottom: 20px;
 }
-img.aligncenter {
+img.aligncenter, figure.aligncenter {
     margin: 0 auto;
     display: flex;
 }
-img.alignleft {
+img.alignleft, figure.alignleft {
     float: left;
     margin-right: 20px;
 }
-img.alignright {
+img.alignright, figure.alignright {
     float: right;
     margin-left: 20px;
 }

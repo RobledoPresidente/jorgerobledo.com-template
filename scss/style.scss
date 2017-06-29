@@ -856,7 +856,6 @@ img.alignleft, img.alignright, figure.alignleft, figure.alignright {
 }
 img.aligncenter, figure.aligncenter {
     margin: 0 auto;
-    display: flex;
 }
 img.alignleft, figure.alignleft {
     float: left;
@@ -865,6 +864,10 @@ img.alignleft, figure.alignleft {
 img.alignright, figure.alignright {
     float: right;
     margin-left: 20px;
+}
+figcaption {
+    font-size: .9em;
+    text-align: center;
 }
 .widget.jetpack_subscription_widget {
     margin-bottom: 1rem;

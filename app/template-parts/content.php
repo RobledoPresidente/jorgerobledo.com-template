@@ -23,6 +23,15 @@
 				<p class="mb-0"><?php echo get_the_excerpt(); ?></p>
 			</blockquote>
 			<p class="text-muted"><?php robledo_presidente_posted_on(); ?></p>
+			<div class="share" data-url="<?php echo the_permalink() ?>" data-title="<?php the_title(); ?>">
+				<ul>
+					<li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+					<li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+					<li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+					<li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
+					<li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
+				</ul>
+			</div>
 			<?php if ( 'post' == get_post_type() && current_user_can('edit_others_posts') ) : ?>
 			<div class="entry-meta">
 				<a href="<?php echo get_edit_post_link(); ?>" class="btn btn-sm btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i> Editar</a>

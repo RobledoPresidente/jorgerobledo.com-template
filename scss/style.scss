@@ -844,8 +844,18 @@ h4, h5 {
 
 #boletines {
     
-    .row.entries > div:last-child {
-        border-left: 2px solid $gray-dark;
+    .row.entries {
+
+        > div {
+
+            &:first-child img {
+                margin-bottom: 1rem;
+            }
+
+            &:last-child {
+                border-left: 2px solid $gray-dark;
+            }
+        }
     }
 }
 
@@ -856,6 +866,7 @@ h4, h5 {
 
     > h4 {
         color: black;
+        text-shadow: none;
     }
 }
 

@@ -118,22 +118,22 @@ get_header();
             ?>
             <div class="col-lg-7">
             <?php if ($query->have_posts()) : $query->the_post(); ?>
-                <a href="<?php the_permalink(); ?>">
-                    <div class="row">
-                        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-lg-6 text-center">
+                        <a href="<?php the_permalink(); ?>">
                             <img src="<?php the_post_thumbnail_url('medium') ?>" class="img-fluid">
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-block top py-0">
-                                    <h4 class="card-title"><?php the_title() ?></h4>
-                                    <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
-                                    <div class="card-text"><?php echo get_the_excerpt(); ?></div>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
-                </a>
+                    <div class="col-lg-6">
+                        <a href="<?php the_permalink(); ?>" class="card">
+                            <div class="card-block top py-0">
+                                <h4 class="card-title"><?php the_title() ?></h4>
+                                <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
+                                <div class="card-text"><?php echo get_the_excerpt(); ?></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             <?php endif; ?>
             </div>
             <div class="col-lg-5">

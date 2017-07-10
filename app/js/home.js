@@ -118,7 +118,7 @@ function handleTweets(tweets) {
     var x = tweets.length;
     var n = 0;
 
-    var row = $('#feed > .row');
+    var row = $('#feed > .card-columns');
 
     var periscope;
 
@@ -129,48 +129,55 @@ function handleTweets(tweets) {
 
         author = author.html();
 
-        if (tweets[n].image)
-            row.append('<div class="col no-gutters card card-block-img-overlay" style="background-image: url(' + tweets[n].image + ')"><div class="card-block"><div class="user">' + author + '</div><div class="tweet">' + tweets[n].tweet + '</div><p class="timePosted"><a href="' + tweets[n].permalinkURL + '">' + tweets[n].time + '</div></div></div>')
-        else {
+        var content; 
 
-            var content; 
+        if (tweets[n].tweet.indexOf('https://www.periscope.tv/') > 0) {
 
-            if (tweets[n].tweet.indexOf('https://www.periscope.tv/') > 0) {
+            var element = $('<div>' + tweets[n].tweet + '</div>');  
 
-                var element = $('<div>' + tweets[n].tweet + '</div>');  
+            var link = element.find("[rel='nofollow noopener']");
 
-                var link = element.find("[rel='nofollow noopener']");
+            element.append('<a href="' + link.data('expanded-url') + '"><img src="http://www.robledopresidente.elchapin.co/img/periscope.png" class="img-fluid"></a>');
 
-                element.append('<a href="' + link.data('expanded-url') + '"><img src="http://www.robledopresidente.elchapin.co/img/periscope.png" class="img-fluid"></a>');
+            link.remove();
 
-                link.remove();
-
-                content = element.html();
-            }
-            else if (tweets[n].tweet.indexOf('youtube.com') > 0 || tweets[n].tweet.indexOf('youtu.be') > 0) {
-
-                var element = $('<div>' + tweets[n].tweet + '</div>');  
-
-                var link = element.find("[rel='nofollow noopener']");
-
-                var vid;
-
-                if (tweets[n].tweet.indexOf('youtube.com'))
-                    vid = link.data('expanded-url').replace('https://www.youtube.com/watch?v=', '');
-                else
-                    vid = link.data('expanded-url').replace('https://youtu.be/', '');
-
-                element.append('<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="http://www.youtube.com/embed/' + vid + '" allowfullscreen=""></iframe></div>');
-
-                link.remove();
-
-                content = element.html();
-            }
-            else
-                content = tweets[n].tweet;
-
-            row.append('<div class="col no-gutters card' + (author.indexOf('https://twitter.com/JERobledo') < 0 ? ' rt' : '') + '"><div class="card-block"><div class="user">' + author + '</div><div class="tweet">' + content + '</div><p class="timePosted"><a href="' + tweets[n].permalinkURL + '">' + tweets[n].time + '</div></div></div>');
+            content = element.html();
         }
+        else if (tweets[n].tweet.indexOf('youtube.com') > 0 || tweets[n].tweet.indexOf('youtu.be') > 0) {
+
+            var element = $('<div>' + tweets[n].tweet + '</div>');  
+
+            var link = element.find("[rel='nofollow noopener']");
+
+            var vid;
+
+            if (tweets[n].tweet.indexOf('youtube.com'))
+                vid = link.data('expanded-url').replace('https://www.youtube.com/watch?v=', '');
+            else
+                vid = link.data('expanded-url').replace('https://youtu.be/', '');
+
+            element.append('<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="http://www.youtube.com/embed/' + vid + '" allowfullscreen=""></iframe></div>');
+
+            link.remove();
+
+            content = element.html();
+        }
+        else
+            content = tweets[n].tweet;
+
+        row.append(
+            `<div class="col no-gutters card` 
+                + (author.indexOf('https://twitter.com/JERobledo') < 0 ? ' rt' : '') + `">`
+                + (tweets[n].image ? '<img src="' + tweets[n].image + '" class="card-img-top img-fluid">' : '') +
+                    `<div class="card-block">
+                        <div class="user">` + author + `</div>
+                        <div class="tweet">` + content + `</div>
+                        <p class="timePosted"><a href="' + tweets[n].permalinkURL + '">` + tweets[n].time + `
+                    </div>
+                </div>
+            </div>`
+        );
+        
         n++;
     }
 

@@ -171,7 +171,7 @@ get_header(); ?>
         <script>window.twttr=function(t,e,r){var n,i=t.getElementsByTagName(e)[0],w=window.twttr||{};return t.getElementById(r)?w:(n=t.createElement(e),n.id=r,n.src="https://platform.twitter.com/widgets.js",i.parentNode.insertBefore(n,i),w._e=[],w.ready=function(t){w._e.push(t)},w)}(document,"script","twitter-wjs")</script><a href="https://www.periscope.tv/jerobledo" class="periscope-on-air" data-size="large">@JERobledo</a>
         <div id="periscope"></div>
       </h2>
-      <div class="row"></div>
+      <div class="card-columns"></div>
       <div class="text-center">
         <a class="btn btn-primary twitter-more" href="javascriot:none"><i class="fa fa-plus" aria-hidden="true"></i> Cargar más...</a>
         <a class="btn btn-secondary" href="https://twitter.com/JERobledo/"><i class="fa fa-twitter" aria-hidden="true"></i> Ir a Twitter...</a>

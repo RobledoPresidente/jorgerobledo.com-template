@@ -105,7 +105,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="section">
+    <div class="section" id="boletines">
         <h2><span>Boletines de prensa</span></h2>
         <div class="row entries">      
             <?php
@@ -113,29 +113,46 @@ get_header();
                 'category_name' => 'boletines',
                 'orderby' => 'modified',
                 'order' => 'DESC',
-                'posts_per_page' => 6
+                'posts_per_page' => 3
             ));
             ?>
-            <?php $i = 0; ?>
-            <?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-                    <div class="col-md-4">
-                        <a href="<?php the_permalink(); ?>" class="card <?php echo ($i == 0 ? 'bg-primary' : ($i == 2 ? 'card-inverse bg-secondary' : ($i == 4 ? 'card-inverse bg-tertiary' : 'bg-calm'))) ?>">
-                            <div class="card-image-header" style="background-image: url(<?php the_post_thumbnail_url('medium') ?>)">
-                                <div class="card-img-overlay">
-                                    <div class="card-content bottom">
-                                        <h4 class="card-title"><?php the_title() ?></h4>
-                                        <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
-                                    </div>
+            <div class="col-lg-7">
+            <?php if ($query->have_posts()) : $query->the_post(); ?>
+                <a href="<?php the_permalink(); ?>">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src="<?php the_post_thumbnail_url('medium') ?>" class="img-fluid">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-block top py-0">
+                                    <h4 class="card-title"><?php the_title() ?></h4>
+                                    <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
+                                    <div class="card-text"><?php echo get_the_excerpt(); ?></div>
                                 </div>
                             </div>
-                            <div class="card-text p-3"><?php echo get_the_excerpt(); ?></div>
-                        </a>
+                        </div>
                     </div>
-                    <?php
-                    $i++;
+                </a>
+            <?php endif; ?>
+            </div>
+            <div class="col-lg-5">
+            <?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
+                <div class="row">
+                    <a href="<?php the_permalink(); ?>" class="card">
+                        <div class="card-block py-0">
+                            <h4 class="card-title"><?php the_title() ?></h4>
+                            <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
+                            <div class="card-text"><?php echo get_the_excerpt(); ?></div>
+                        </div>
+                    </a>
+                </div>
+                <?php
+                $i++;
                 endwhile;
-            endif;
-            ?>
+                endif;
+                ?>
+            </div>
         </div>
         <a href="<?php echo get_home_url(); ?>/category/boletines" class="more"><i class="fa fa-plus" aria-hidden="true"></i> Ver más...</a>
     </div>
@@ -151,7 +168,7 @@ get_header();
                 'category_name' => 'debates',
                 'orderby' => 'modified',
                 'order' => 'DESC',
-                'posts_per_page' => 6
+                'posts_per_page' => 3
             ));
             ?>
             <?php $i = 0; ?>

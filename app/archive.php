@@ -22,7 +22,7 @@ get_header();
             <?php the_post(); ?>
             <a href="<?php the_permalink(); ?>" class="card">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 text-center">
                         <img src="<?php the_post_thumbnail_url('large') ?>" class="img-fluid">
                     </div>
                     <div class="col-lg-4 text-center">

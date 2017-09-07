@@ -154,7 +154,7 @@ textarea.form-control {
             content: '';
             width: 100px;
             height: 5px;
-            background: $gray;
+            background: $gray-700;
             display: block;
             margin-top: .5rem;
         }
@@ -206,7 +206,7 @@ textarea.form-control {
     }
 }
 
-.bg-inverse {
+.bg-dark {
 
     a {
         color: white;
@@ -295,7 +295,7 @@ body {
                         font-size: 1.5rem;
                         line-height: 1.5rem;
                         font-family: 'aaux_nextsemibold';
-                        color: $gray;
+                        color: $gray-700;
                         padding: 0 1vw;
                     }
 
@@ -361,7 +361,7 @@ body {
                 right: .5rem;
                 display: none;
                 font-size: 2rem;
-                color: $gray-light;
+                color: $gray-500;
                 cursor: pointer;
 
                 &:hover {
@@ -644,13 +644,13 @@ h4, h5 {
     }
 
     input[btype=r] {
-        background-color: $gray !important;
-        border-color: $gray !important;
-        box-shadow: 3px 3px 0 $gray-dark !important;
+        background-color: $gray-700 !important;
+        border-color: $gray-700 !important;
+        box-shadow: 3px 3px 0 $gray-900 !important;
 
         &:hover {
-            background-color: $gray-dark;
-            border-color: $gray-dark;
+            background-color: $gray-900;
+            border-color: $gray-900;
         }
     }
 }
@@ -739,82 +739,70 @@ h4, h5 {
 
     .card {
         background-color: $brand-twitter;
-        margin: .5rem;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
-        &.media-bg {
-
-            > div {                
-                background-color: rgba(0, 0, 0, .6);
-            }
-        }
-
-        .user {
-
-            > div {
-
-                a {
-                    display: table;
-
-                    span:first-child {
-                        display: table-cell;
-                        padding-right: 10px;
-
-                        img {
-                            border-radius: 50%;
-                            border: 2px solid white;
+        .card-body {
+            padding-bottom: 0;
+            
+            .user {
+    
+                > div {
+    
+                    a {
+                        display: table;
+    
+                        span:first-child {
+                            display: table-cell;
+                            padding-right: 10px;
+    
+                            img {
+                                border-radius: 50%;
+                                border: 2px solid white;
+                            }
                         }
                     }
-                }
-
-                span:nth-child(2), span:nth-child(2) > * {
-                    color: white;
-                    font-weight: bold;
-                    white-space: nowrap;
-                }
-
-                span:nth-child(3), span:nth-child(4) {
-                    font-size: 14px;
-                    color: white;
-                    font-weight: bold;
-                }
-
-                .u-hiddenVisually {
-                    margin-right: .2rem;
+    
+                    span:nth-child(2), span:nth-child(2) > * {
+                        color: white;
+                        font-weight: bold;
+                        white-space: nowrap;
+                    }
+    
+                    span:nth-child(3), span:nth-child(4) {
+                        font-size: 14px;
+                        color: white;
+                        font-weight: bold;
+                    }
+    
+                    .u-hiddenVisually {
+                        margin-right: .2rem;
+                    }
                 }
             }
-        }
-
-        .tweet {
-            overflow: hidden;
-            margin: 0;
-            padding-top: 10px;
-            color: white;
-            font-weight: bold;
-
-            a {
-                color: $brand-primary;
-            }
-        }
-
-        .timePosted {
-            text-align: right;
-            padding-right: 10px;
-            padding-bottom: 5px;
-            margin-bottom: 0;
-
-            a {
-                font-weight: bold;
-                font-size: 14px;
+                    
+            .tweet {
+                overflow: hidden;
+                margin: 0;
+                padding: 10px 0;
                 color: white;
+                font-weight: bold;
+    
+                a {
+                    color: $brand-primary;
+                }
             }
-        }
-
-        .media {
-            display: none;
-
-            img {
-                max-width: 100%;
+    
+            .card-link {
+                color: white;
+                font-size: .8rem;
+            }
+    
+            .media {
+                display: none;
+    
+                img {
+                    max-width: 100%;
+                }
             }
         }
     }
@@ -853,7 +841,7 @@ h4, h5 {
             }
 
             &:last-child {
-                border-left: 2px solid $gray-dark;
+                border-left: 2px solid $gray-900;
             }
         }
     }
@@ -917,7 +905,7 @@ figcaption {
             padding: .3rem 1rem;
             width: 15rem !important;
             margin-right: 1rem;
-            border: 2px solid $gray;
+            border: 2px solid $gray-700;
         }
 
         input[type=submit] {

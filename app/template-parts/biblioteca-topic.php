@@ -9,26 +9,26 @@ get_header();
     <div class="mb-3"><?php dynamic_sidebar( 'suscribase' ); ?></div>
 </div>
 
-<div class="bg-inverse">
+<div class="bg-dark">
     <div class="container">
         <div class="section">
             <h2 class="video"><i class="fa fa-video-camera" aria-hidden="true"></i> Videoteca</h2>   
-            <div class="row bg-inverse">
+            <div class="row bg-darke">
                 <div class="col-lg-8">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="<?php echo get_theme_mod( 'rp_video1_url' ); ?>" allowfullscreen=""></iframe>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="hidden-md-down">
+                    <div class="d-none d-lg-block">
                         <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
                     </div>
-                    <div class="hidden-lg-up pt-3">
+                    <div class="d-lg-none pt-3">
                         <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
                     </div>
                     <div class="highlight-caption text-center">
                         <h5><?php echo get_theme_mod( 'rp_video1_title' ); ?></h5>
-                            <p class="hidden-md-down">
+                            <p class="d-none d-lg-block">
                                 <?php echo get_theme_mod( 'rp_video1_caption' ); ?>
                             </p>          
                             <div class="share" data-url="<?php echo get_theme_mod( 'rp_video1_url' ); ?>" data-title="<?php echo get_theme_mod( 'rp_video1_title' ); ?>">

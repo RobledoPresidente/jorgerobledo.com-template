@@ -62,7 +62,7 @@
       <a href="<?php echo get_home_url(); ?>"><img class="biglogo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
     </div>
     <div class="top-colors"></div>
-    <nav class="navbar navbar-toggleable-md navbar-light">
+    <nav class="navbar navbar-expand-md navbar-light">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

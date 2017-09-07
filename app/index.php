@@ -27,7 +27,7 @@ get_header(); ?>
           )); ?>
           <?php if ( $query->have_posts() ) : $query->the_post(); ?>
             <a href="<?php the_permalink(); ?>" class="card card-inverse card-block-img-overlay bottom" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
-              <div class="card-block">
+              <div class="card-body">
                 <h3 class="card-title"><?php the_title(); ?></h3>
                 <p class="card-text"><?php echo get_the_excerpt(); ?></p>
                 <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
@@ -43,8 +43,8 @@ get_header(); ?>
         )); ?>
         <?php if ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="col-md-4 col-lg-3 no-gutters">
-              <a href="<?php the_permalink(); ?>" class="card card-inverse card-primary">
-                <div class="card-block top">
+              <a href="<?php the_permalink(); ?>" class="card card-inverse bg-primary">
+                <div class="card-body top">
                   <h3 class="card-title"><?php the_title(); ?></h3>
                   <p class="card-text"><?php echo get_the_excerpt(); ?></p>
                   <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
@@ -81,7 +81,7 @@ get_header(); ?>
       <div class="mt-3"><?php dynamic_sidebar( 'suscribase' ); ?></div>
     </div>
   </div>
-  <div class="bg-calm bg-inverse" id="bio">
+  <div class="bg-calm bg-dark" id="bio">
     <div class="container">
       <div class="row">
         <div class="col-md-6 p-4 pt-5">
@@ -178,7 +178,7 @@ get_header(); ?>
       </div>
     </div>
   </div>
-   <div class="bg-inverse">
+   <div class="bg-dark">
     <div class="container">
         <div class="section">
             <h2 class="video"><i class="fa fa-video-camera" aria-hidden="true"></i> Videoteca</h2>   
@@ -202,21 +202,21 @@ get_header(); ?>
                 )
             ));
             ?>
-            <div class="row bg-inverse">
+            <div class="row bg-dark">
                 <?php if ($query->have_posts()) : $query->the_post(); ?>
                 <div class="col-lg-8">
                     <?php robledo_presidente_youtube_embed(get_the_content()) ?>
                 </div>
                 <div class="col-lg-4">
-                    <div class="hidden-md-down">
+                    <div class="d-none d-lg-block">
                         <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
                     </div>
-                    <div class="hidden-lg-up pt-3">
+                    <div class="d-lg-none pt-3">
                         <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
                     </div>
                     <div class="highlight-caption text-center">
                         <h5><?php the_title(); ?></h5>
-                            <p class="hidden-md-down">
+                            <p class="d-none d-lg-block">
                                 <?php echo get_the_excerpt(); ?>
                             </p>          
                             <div class="share" data-url="<?php echo get_the_content() ?>" data-title="<?php the_title(); ?>">

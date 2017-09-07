@@ -75,7 +75,7 @@ $(function () {
     })
 });
 </script>
-<div id="family" class="bg-inverse">
+<div id="family" class="bg-dark">
     <div class="container">
         <div class="row pt-5">
             <div class="col-md-6 px-0">
@@ -122,7 +122,7 @@ $(function () {
         </div>
     </div>
 </div>
-<div class="bg-inverse" id="the-professor">
+<div class="bg-dark" id="the-professor">
     <div class="container">
         <div class="row">
             <div class="col-md-5 content">
@@ -150,7 +150,7 @@ $(function () {
         </div>
     </div>
 </div>
-<div class="bg-inverse" id="the-senator">
+<div class="bg-dark" id="the-senator">
     <div class="container">
         <div class="row justify-content-end">
             <div class="col-md-5 content">
@@ -165,7 +165,7 @@ $(function () {
 <div id="the-candidate">
     <div class="container">
     </div>
-    <div class="container content bg-inverse text-center">
+    <div class="container content bg-dark text-center">
         <h2>El Candidato</h2>
         <h3 class="text-uppercase">Candidato a la Presidencia de la República por el Polo.</h3>
         <p>Su proyecto es de convergencia nacional, donde se unan todos los colombianos sin distingos políticos ni sociales, que quieran superar la desigualdad y la grave crisis nacional.</p>

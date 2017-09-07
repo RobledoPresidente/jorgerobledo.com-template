@@ -63,7 +63,7 @@ get_header();
         </div>
     </div>
 </div>
-<div class="bg-inverse">
+<div class="bg-dark">
     <div class="container">
         <div class="section">
             <h2>Videos</h2>

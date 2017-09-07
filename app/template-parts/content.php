@@ -11,10 +11,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="row mb-3">
-		<div class="col-md-5 hidden-lg-up">
+		<div class="col-md-5 d-lg-none">
 			<img class="img-fluid img-thumbnail" src="<?php the_post_thumbnail_url( 'medium_large' ) ?>" alt="Generic placeholder image">
 		</div>
-		<div class="col-md-5 text-right hidden-md-down">
+		<div class="col-md-5 text-right d-none d-lg-block">
 			<img class="img-fluid img-thumbnail" src="<?php the_post_thumbnail_url( 'medium_large' ) ?>" alt="Generic placeholder image">
 		</div>
 		<div class="col-md-7 mt-3">

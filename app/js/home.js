@@ -169,10 +169,13 @@ function handleTweets(tweets) {
             `<div class="col no-gutters card` 
                 + (author.indexOf('https://twitter.com/JERobledo') < 0 ? ' rt' : '') + `">`
                 + (tweets[n].image ? '<img src="' + tweets[n].image + '" class="card-img-top img-fluid">' : '') +
-                    `<div class="card-block">
+                    `<div class="card-body">
                         <div class="user">` + author + `</div>
                         <div class="tweet">` + content + `</div>
-                        <p class="timePosted"><a href="' + tweets[n].permalinkURL + '">` + tweets[n].time + `
+                        <a href="https://twitter.com/intent/reply?tweet_id=${tweets[n].tid}" class="card-link" target="_blank"><i class="fa fa-reply" aria-hidden="true"></i> Responder</a>
+                        <a href="https://twitter.com/intent/retweet?tweet_id=${tweets[n].tid}" class="card-link" target="_blank"><i class="fa fa-retweet" aria-hidden="true"></i> Retweet</a>
+                        <a href="https://twitter.com/intent/favorite?tweet_id=${tweets[n].tid}" class="card-link" target="_blank"><i class="fa fa-heart" aria-hidden="true"></i> Like</a>
+                        <a href="${tweets[n].permalinkURL}" class="card-link" target="_blank">${tweets[n].time}</a></p>
                     </div>
                 </div>
             </div>`

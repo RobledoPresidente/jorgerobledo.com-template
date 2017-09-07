@@ -9,7 +9,7 @@ get_header();
     <div class="mb-3"><?php dynamic_sidebar( 'suscribase' ); ?></div>
 </div>
 
-<div class="bg-inverse">
+<div class="bg-dark">
     <div class="container">
         <div class="section">
             <h2 class="video"><i class="fa fa-video-camera" aria-hidden="true"></i> Videoteca</h2>   
@@ -29,21 +29,21 @@ get_header();
                 )*/ //No se deja porque vuelve e quer raro, empieza a coger sólo los que tiene únicamente la categoría 'videos-destacados'
             ));
             ?>
-            <div class="row bg-inverse">
+            <div class="row bg-dark">
                 <?php if ($query->have_posts()) : $query->the_post(); ?>
                 <div class="col-lg-8">
                     <?php robledo_presidente_youtube_embed(get_the_content()) ?>
                 </div>
                 <div class="col-lg-4">
-                    <div class="hidden-md-down">
+                    <div class="d-none d-lg-block">
                         <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
                     </div>
-                    <div class="hidden-lg-up pt-3">
+                    <div class="d-lg-none pt-3">
                         <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
                     </div>
                     <div class="highlight-caption text-center">
                         <h5><?php the_title(); ?></h5>
-                            <p class="hidden-md-down">
+                            <p class="d-none d-lg-block">
                                 <?php echo get_the_excerpt(); ?>
                             </p>          
                             <div class="share" data-url="<?php echo get_the_content() ?>" data-title="<?php the_title(); ?>">
@@ -126,7 +126,7 @@ get_header();
                     </div>
                     <div class="col-lg-6">
                         <a href="<?php the_permalink(); ?>" class="card">
-                            <div class="card-block top py-0">
+                            <div class="card-body top py-0">
                                 <h4 class="card-title"><?php the_title() ?></h4>
                                 <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
                                 <div class="card-text"><?php echo get_the_excerpt(); ?></div>
@@ -140,7 +140,7 @@ get_header();
             <?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
                 <div class="row">
                     <a href="<?php the_permalink(); ?>" class="card">
-                        <div class="card-block py-0">
+                        <div class="card-body py-0">
                             <h4 class="card-title"><?php the_title() ?></h4>
                             <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
                             <div class="card-text"><?php echo get_the_excerpt(); ?></div>
@@ -195,7 +195,7 @@ get_header();
         <a href="<?php echo get_home_url(); ?>/category/debates" class="more"><i class="fa fa-plus" aria-hidden="true"></i> Ver más...</a>
     </div>
 </div>
-<div class="bg-inverse">
+<div class="bg-dark">
     <div class="container">
         <div class="section">
             <h2><span>Artículo quicenal</span></h2>
@@ -214,7 +214,7 @@ get_header();
                 </div>
                 <div class="col-lg-5 text-center">
                     <h5><?php the_title(); ?></h5>
-                    <p class="hidden-md-down">
+                    <p class="d-none d-lg-block">
                         <?php echo get_the_excerpt(); ?>
                     </p>          
                     <div class="share" data-url="<?php echo the_permalink() ?>" data-title="<?php the_title(); ?>">

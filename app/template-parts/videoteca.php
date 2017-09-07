@@ -9,7 +9,7 @@ get_header();
     <div class="mb-3"><?php dynamic_sidebar( 'suscribase' ); ?></div>
 </div>
 
-<div class="bg-inverse">
+<div class="bg-dark">
     <div class="container">
         <div class="section">
             <h2 class="video"><i class="fa fa-video-camera" aria-hidden="true"></i> Videoteca</h2>   
@@ -27,21 +27,21 @@ get_header();
                 )
             ));
             ?>
-            <div class="row bg-inverse">
+            <div class="row bg-dark">
                 <?php if ($query->have_posts()) : $query->the_post(); ?>
                 <div class="col-lg-8">
                     <?php robledo_presidente_youtube_embed(get_the_content()) ?>
                 </div>
                 <div class="col-lg-4">
-                    <div class="hidden-md-down">
+                    <div class="d-none d-lg-block">
                         <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
                     </div>
-                    <div class="hidden-lg-up pt-3">
+                    <div class="d-lg-none pt-3">
                         <div class="g-ytsubscribe" data-channel="ROBLEDOTELEVISION" data-layout="full" data-theme="dark" data-count="default"></div>
                     </div>
                     <div class="highlight-caption text-center">
                         <h5><?php the_title(); ?></h5>
-                            <p class="hidden-md-down">
+                            <p class="d-none d-lg-block">
                                 <?php echo get_the_excerpt(); ?>
                             </p>          
                             <div class="share" data-url="<?php echo get_the_content() ?>" data-title="<?php the_title(); ?>">
@@ -176,7 +176,7 @@ get_header();
         <a href="<?php echo get_home_url(); ?>/category/debates" class="more"><i class="fa fa-plus" aria-hidden="true"></i> Ver más...</a>
     </div>
 </div>
-<div class="bg-inverse">
+<div class="bg-dark">
     <div class="container">
         <div class="section">
             <h2><span>Artículo quicenal</span></h2>
@@ -195,7 +195,7 @@ get_header();
                 </div>
                 <div class="col-lg-5">
                     <h5><?php the_title(); ?></h5>
-                    <p class="hidden-md-down">
+                    <p class="d-none d-lg-block">
                         <?php echo get_the_excerpt(); ?>
                     </p>          
                     <div class="share" data-url="<?php echo the_permalink() ?>" data-title="<?php the_title(); ?>">

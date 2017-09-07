@@ -15,7 +15,7 @@ $brand-quaternary: #f45d22;
 $brand-facebook: #3b5998;
 $brand-twitter: #1da1f2;
 $brand-google: #e62117;
-$font-secondary: 'Fjalla One', sans-serif;
+$font-secondary: 'Fjalla One', sans-serif; 
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $fa-font-path: "../lib/components-font-awesome/fonts" !default;
@@ -67,7 +67,7 @@ body {
     color: $brand-tertiary !important;
 }
 
-.bg-inverse {
+.bg-dark {
     
     * {
         color: white;
@@ -83,7 +83,7 @@ body {
 
     &.btn-primary {
         background-color: $brand-primary;
-        color: $gray;
+        color: $gray-700;
 
         &:hover {
             background-color: #d5bb00;
@@ -124,7 +124,7 @@ body {
 .list-group-item {
     padding: .2rem 1.25rem;
 
-    .list-group-item-action.bg-inverse {
+    .list-group-item-action.bg-dark {
         color: $brand-calm;
     }
 }

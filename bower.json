@@ -7,11 +7,11 @@
     "codebird-js": "^2.6.0",
     "bower": "*",
     "install": "^1.0.4",
-    "bootstrap": "v4.0.0-alpha.6",
     "components-font-awesome": "^4.7.0",
     "ImageMapster": "imagemapster#*",
     "wScratchPad": "https://github.com/RobledoPresidente/wScratchPad.git#^2.2.3",
     "alertifyjs": "^1.0.11",
-    "alertify": "^0.3.10"
+    "alertify": "^0.3.10",
+    "bootstrap": "v4.0.0-beta"
   }
 }

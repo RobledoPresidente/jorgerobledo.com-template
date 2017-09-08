@@ -102,7 +102,7 @@ $(function () {
 
                 $('#scratchcard').addClass('done');
 
-                location.href = 'http://jorgerobledo.com/el-puente-esta-quebrado-por-que-porque-se-lo-robaron/';
+                location.href = 'aderrotarlacorrupcion';
             }
         }
     });

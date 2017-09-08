@@ -26,7 +26,7 @@ get_header(); ?>
             'posts_per_page' => 1
           )); ?>
           <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-            <a href="<?php the_permalink(); ?>" class="card card-inverse card-block-img-overlay bottom" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
+            <a href="<?php the_permalink(); ?>" class="card card-inverse card-body-img-overlay bottom" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
               <div class="card-body">
                 <h3 class="card-title"><?php the_title(); ?></h3>
                 <p class="card-text"><?php echo get_the_excerpt(); ?></p>
@@ -61,7 +61,7 @@ get_header(); ?>
         <?php if ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="col-lg-3 no-gutters">
               <a href="<?php the_permalink(); ?>" class="card middle">
-                <div class="card-block text-center">
+                <div class="card-body text-center">
                   <h3 class="card-title text-uppercase"><?php the_title(); ?></h3>
                   <h4 class="card-title"><?php $custom = get_post_custom(); echo $custom['hashtag'][0]; ?></h4>
                   <div class="share" data-url="<?php the_permalink(); ?>" data-title="<?php the_title(); ?> <?php echo $custom['hashtag'][0]; ?>">

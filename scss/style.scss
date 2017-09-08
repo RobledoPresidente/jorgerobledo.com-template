@@ -53,7 +53,7 @@
         }
     }
 
-    &.card-block-img-overlay {
+    &.card-body-img-overlay {
 
         &:before {
             content: '';
@@ -65,7 +65,7 @@
             background-color: rgba(0,0,0,.6);
         }
 
-        .card-block {
+        .card-body {
             z-index: 1;
         }
     }
@@ -548,7 +548,7 @@ h4, h5 {
 
             .card {
 
-                .card-block {
+                .card-body {
                     padding: 2rem;
 
                     .card-title {

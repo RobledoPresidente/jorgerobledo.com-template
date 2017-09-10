@@ -55,3 +55,28 @@ gulp.task('open', function(){
 });
  
 gulp.task('default', ['connect', 'watch', 'sass', 'sass-watch', 'open']);
+
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
+
+//script paths
+var jsFiles = [
+  './app/lib/alertifyjs/dist/js/alertify.js',
+  './app/lib/tether/dist/js/tether.min.js',
+  './app/lib/bootstrap/dist/js/bootstrap.min.js',
+  './app/lib/spin.js/spin.min.js',
+  './app/lib/spin.js/jquery.spin.js',
+  './app/js/common.js',
+  './app/js/header.js'
+],
+jsDest = './app/js';
+
+gulp.task('scripts', function() {
+return gulp.src(jsFiles)
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest(jsDest))
+    .pipe(rename('scripts.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(jsDest));
+});

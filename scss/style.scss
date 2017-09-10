@@ -990,6 +990,35 @@ figcaption {
     }
 }
 
+//The Events Calendar
+.widget.tribe-events-list-widget {
+
+    .tribe-list-widget {
+        padding: 0;
+    
+        .tribe-event-featured {
+            background-color: $brand-tertiary;
+        }
+            
+        .tribe-event-image {
+    
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .tribe-events-widget-link {
+        text-align: center;
+
+        a {
+            @extend .btn;
+            @extend .btn-primary;
+        }
+    }
+}
+
 @include media-breakpoint-down(md) {
     
     body {

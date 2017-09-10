@@ -7,7 +7,7 @@
  * @package robledo-presidente
  */
 
-if ( ! is_active_sidebar( 'el-termometro' ) && ! is_active_sidebar( 'suscribase' )  ) {
+if ( ! is_active_sidebar( 'el-termometro' ) && ! is_active_sidebar( 'suscribase' ) && ! is_active_sidebar( 'eventos' )  ) {
 	return;
 }
 ?>

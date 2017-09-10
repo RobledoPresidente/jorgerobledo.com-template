@@ -35,25 +35,25 @@ $(function () {
         });
     }
 
-    mapster();
+    //mapster();
 
-    var doit;
+    // var doit;
 
-    $(window).resize(function() {
+    // $(window).resize(function() {
         
-        //TODO
+    //     //TODO
 
-        clearTimeout(doit);
+    //     clearTimeout(doit);
 
-        doit = setTimeout(function () {
+    //     doit = setTimeout(function () {
 
-            console.log('resize')
+    //         console.log('resize')
 
-            $('#mapster_wrap_0').css('width', '')
+    //         $('#mapster_wrap_0').css('width', '')
 
-            $('#colombia').mapster('resize', $('#mapster_wrap_0').width());
-        }, 200);
-    });
+    //         $('#colombia').mapster('resize', $('#mapster_wrap_0').width());
+    //     }, 200);
+    // });
 
     //Twitter
     var nTweets = 6;

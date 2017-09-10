@@ -153,7 +153,7 @@ get_header(); ?>
           <p class="px-4 text-center">Llegó la hora de transformar a Colombia. Vincúlese a este gran cambio.</p>
         </div>
       </div>
-      <div class="col-md-4" id="colombia-container">
+      <!-- <div class="col-md-4" id="colombia-container">
         <div class="section">
           <h2>Este País Sí Tiene Arreglo</h2>
           <img id="colombia" src="<?php echo get_template_directory_uri(); ?>/img/map.png" alt="" usemap="#colombia-regions" class="img-fluid">
@@ -162,6 +162,12 @@ get_header(); ?>
             <area data-key="center" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="84,135,54,142,35,189,57,289,3,366,68,406,142,319,151,323,148,347,189,357,189,334,268,310,293,313,309,289,376,272,386,201,366,196,319,204,311,184,292,177,261,174,232,179,220,133,208,113,189,149,159,181,105,172,80,172,86,136" />
             <area data-key="south" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="74,410,142,324,146,325,146,355,187,362,193,336,263,316,293,320,313,295,379,276,398,353,359,458,307,526,283,527,299,488,233,493,203,483,127,486" />
           </map>
+        </div>
+      </div> -->
+      <div class="col-md-4">      
+        <div class="section">
+          <h2><i class="fa fa-calendar-check-o" aria-hidden="true"></i> La agenda de Robledo</h2>
+          <?php dynamic_sidebar( 'eventos' ); ?>
         </div>
       </div>
     </div>
@@ -300,7 +306,7 @@ get_header(); ?>
       </div>
     </div>
     </div>
-    <script src="<?php echo get_template_directory_uri(); ?>/lib/ImageMapster/dist/jquery.imagemapster.min.js" type="text/javascript"></script>
+    <!-- <script src="<?php echo get_template_directory_uri(); ?>/lib/ImageMapster/dist/jquery.imagemapster.min.js" type="text/javascript"></script> -->
     <script src="<?php echo get_template_directory_uri(); ?>/lib/wScratchPad/wScratchPad.min.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/home.js" type="text/javascript"></script>   
     <script src="<?php echo get_template_directory_uri(); ?>/js/twitter.js" type="text/javascript"></script> 

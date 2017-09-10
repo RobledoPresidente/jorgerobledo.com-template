@@ -1,9 +1,6 @@
-<?php
-/*
-  Template Name: Robledo Biblioteca
- */
-get_header();
-?>
+<?php /*Template Name: Biblioteca*/
+
+get_header(); ?>
 <div class="container" id="main">
     <h1 class="display-5" id="page-title-origin">Biblioteca de Jorge Enrique Robledo</h1>
     <div class="mb-3"><?php dynamic_sidebar( 'suscribase' ); ?></div>

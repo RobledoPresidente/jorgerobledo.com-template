@@ -68,15 +68,28 @@ get_header();
         <div class="section">
             <h2>Videos</h2>
             <?php
-                $cate = get_queried_object();
-                $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1; 
-                $query = new WP_Query(array(
-                    'orderby' => 'modified',
-                    'order' => 'DESC',
-                    'category_name' => $cate->slug . '+videos',
-                    'posts_per_page' => 5,
-                    'paged' => $paged
-                ));
+                $queried_object = get_queried_object();
+                $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+
+                if (is_category($queried_object->slug))
+                    $query = new WP_Query(array(
+                        'orderby' => 'modified',
+                        'order' => 'DESC',
+                        'category_name' => $queried_object->slug . '+videos',
+                        'posts_per_page' => 5,
+                        'paged' => $paged
+                    ));
+                else if (is_tag($queried_object->slug))
+                    $query = new WP_Query(array(
+                        'orderby' => 'modified',
+                        'order' => 'DESC',
+                        'category_name' => 'videos',
+                        'tag' => $queried_object->slug,
+                        'posts_per_page' => 5,
+                        'paged' => $paged
+                    ));
+                
+                //$videos = get_posts( $query_string . '&category__in =' . $idVideos->term_id );
                 ?>
             <?php if ($query->have_posts()) : ?>
             <div class="row entries">

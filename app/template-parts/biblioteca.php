@@ -196,7 +196,7 @@ get_header(); ?>
     <div class="container">
         <div class="section">
             <h2><span>Artículo quicenal</span></h2>
-            <div class="row">      
+            <div class="row align-items-center">      
                 <?php
                 $query = new WP_Query(array(
                     'category_name' => 'articulo-quincenal',

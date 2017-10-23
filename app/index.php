@@ -14,11 +14,14 @@
 
 get_header(); ?>
   <div class="container over-menu" id="main">
+    <!-- <div class="videoWrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/p3_JxKHj2O4?autoplay=1" frameborder="0" allowfullscreen></iframe>
+    </div> -->
     <div class="section">
       <h2 class="colored m-0"><!--<i class="fa fa-font" aria-hidden="true"></i> -->Primera plana</h2>
       <div class="row highlights justify-content-center">
         <div class="col-md-8 col-lg-6">
-          <div id="scratchcard" class="scratchpad mb-2"></div>
+          <!-- <div id="scratchcard" class="scratchpad mb-2"></div> -->
           <?php $query = new WP_Query (array(
             'category_name' => 'primera-plana-1',
             'orderby' => 'modified',
@@ -26,7 +29,8 @@ get_header(); ?>
             'posts_per_page' => 1
           )); ?>
           <?php if ( $query->have_posts() ) : $query->the_post(); ?>
-            <a href="<?php the_permalink(); ?>" class="card card-inverse card-body-img-overlay bottom" style="background-image: url(<?php the_post_thumbnail_url( 'medium_large' ) ?>)">
+            <?php $custom = get_post_custom(); $image = $custom['imagen'][0]; ?>
+            <a href="<?php the_permalink(); ?>" class="card card-inverse card-body-img-overlay bottom" style="background-image: url(<?php echo !empty($image) ? $image : get_the_post_thumbnail_url( get_the_ID(), 'medium_large' ) ?>)">
               <div class="card-body">
                 <h3 class="card-title"><?php the_title(); ?></h3>
                 <p class="card-text"><?php echo get_the_excerpt(); ?></p>
@@ -34,6 +38,13 @@ get_header(); ?>
               </div>
             </a>
           <?php endif; ?>
+          <!-- <a href="https://letocaacolombia.jorgerobledo.com/">
+            <img src="https://jorgerobledo.com/wp-content/uploads/2017/09/og.png" class="img-fluid">
+            <h2 style="
+    color: #333;
+    text-align: center;
+">Cuéntale a todos, haz clic aquí</h2>
+          </a> -->
         </div>
         <?php $query = new WP_Query (array(
           'category_name' => 'primera-plana-2',

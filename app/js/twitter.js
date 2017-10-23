@@ -51,7 +51,7 @@ function twitt() {
 
     var params = {};
 
-    var m = location.href.indexOf('memes.html') > 0;
+    var m = location.href.indexOf('crea-tu-meme') > 0;
     
     params = { 
         "media": m ? canvas.toDataURL("image/png").replace('data:image/png;base64,', '') : ''
@@ -68,7 +68,7 @@ function twitt() {
                     "statuses_update",
                     { 
                         "media_ids": m ? reply.media_id_string : '',
-                        "status": hashtag + ' ' + $('#meme-text').val() + ' http://jorgerobledo.co/'
+                        "status": hashtag + ' ' + $('#meme-text').val() + ' https://jorgerobledo.com/'
                     },
                     function (reply, rate, err) {
                         
@@ -117,7 +117,7 @@ function oauth_requestToken() {
     
     cb.__call(
         "oauth_requestToken", {
-        oauth_callback: "http://jorgerobledo.com/twitter"
+        oauth_callback: "https://jorgerobledo.com/twitter"
     },
     function (reply, rate, err) {
         

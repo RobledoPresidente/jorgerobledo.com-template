@@ -23,10 +23,10 @@
 				<p class="mb-0"><?php echo get_the_excerpt(); ?></p>
 			</blockquote>
 			<p>
-				<?php $posttags = get_the_tags();; ?>
-				<?php foreach ($posttags as $tag): ?>
+				<?php $posttags = get_the_tags(); ?>
+				<?php if ($posttags): foreach ($posttags as $tag): ?>
 				<a href="<?php echo get_tag_link($tag->term_id); ?>" class="btn btn-small btn-white-border"><i class="fa fa-tag" aria-hidden="true"></i> <?php echo $tag->name; ?></a>
-				<?php endforeach; ?>
+				<?php endforeach; endif; ?>
 			</p>
 			<p class="text-muted"><?php robledo_presidente_posted_on(); ?></p>
 			<div class="share" data-url="<?php echo the_permalink() ?>" data-title="<?php the_title(); ?>">

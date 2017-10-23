@@ -31,7 +31,7 @@
       var homeUrl = '<?php echo get_home_url(); ?>';
 
       var cb = new Codebird;        
-      cb.setConsumerKey("m3QT1gSSXb5mENHuYClFHUVFE", "wHtgKSFmeBtF1LVQ78DioPLrEfxFmbR5Oxtzi4P0XFqQi0w7gf");
+      cb.setConsumerKey("D7YLtH32E2sQIpVM3bW9UExSC", "fdadR5AKN4HYhYOLJUQdInefDZti1jYoEFkzC8KQQxpGRKwKcS");
       //cb.setUseProxy(false);
   </script>
   <script>
@@ -105,7 +105,7 @@
             <a class="nav-link" href="https://twitter.com/jerobledo?lang=es"><img src="<?php echo get_template_directory_uri(); ?>/img/social-twitter.png"></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.instagram.com/jorgerobledo2018/"><img src="<?php echo get_template_directory_uri(); ?>/img/social-instagram.png"></a>
+            <a class="nav-link" href="https://www.instagram.com/jorge_enrique_robledo/"><img src="<?php echo get_template_directory_uri(); ?>/img/social-instagram.png"></a>
           </li>
           <!--<li class="nav-item">
             <a class="nav-link" href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/social-snapchat.png"></a>

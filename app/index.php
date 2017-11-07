@@ -19,7 +19,7 @@ get_header(); ?>
     </div> -->
     <div class="section">
       <h2 class="colored m-0"><!--<i class="fa fa-font" aria-hidden="true"></i> -->Primera plana</h2>
-      <div class="row highlights justify-content-center">
+      <div class="row highlights justify-content-center align-items-center">
         <div class="col-md-8 col-lg-6">
           <!-- <div id="scratchcard" class="scratchpad mb-2"></div> -->
           <?php $query = new WP_Query (array(
@@ -117,6 +117,39 @@ get_header(); ?>
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="section" id="volunteers">
+          <h2><!--<i class="fa fa-hand-peace-o" aria-hidden="true"></i> -->Voluntarios</h2>
+          <div class="link text-center">
+            <a href="/voluntarios">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/voluntarios.png" class="img-fluid">
+              <h3>Sea Voluntario</h3>
+            </a>
+          </div>
+          <p class="px-4 text-center">Llegó la hora de transformar a Colombia. Vincúlese a este gran cambio.</p>
+        </div>
+      </div>
+      <!-- <div class="col-md-4" id="colombia-container">
+        <div class="section">
+          <h2>Este País Sí Tiene Arreglo</h2>
+          <img id="colombia" src="<?php echo get_template_directory_uri(); ?>/img/map.png" alt="" usemap="#colombia-regions" class="img-fluid">
+          <map name="colombia-regions" id="colombia-regions">
+            <area data-key="north" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="3,2,5,76,13,129,84,132,81,170,109,171,132,150,160,179,186,154,185,113,253,104,262,1" />
+            <area data-key="center" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="84,135,54,142,35,189,57,289,3,366,68,406,142,319,151,323,148,347,189,357,189,334,268,310,293,313,309,289,376,272,386,201,366,196,319,204,311,184,292,177,261,174,232,179,220,133,208,113,189,149,159,181,105,172,80,172,86,136" />
+            <area data-key="south" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="74,410,142,324,146,325,146,355,187,362,193,336,263,316,293,320,313,295,379,276,398,353,359,458,307,526,283,527,299,488,233,493,203,483,127,486" />
+          </map>
+        </div>
+      </div> -->
+      <div class="col-md-6">      
+        <div class="section">
+          <h2><i class="fa fa-calendar-check-o" aria-hidden="true"></i> La agenda de Robledo</h2>
+          <?php dynamic_sidebar( 'eventos' ); ?>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="bg-calm">
     <div class="container">
       <div class="section">
@@ -148,40 +181,8 @@ get_header(); ?>
         </div>
       </div>
     </div>
-    </div>
   </div>
   <div class="container">    
-    <div class="row">
-      <div class="col-md-8">
-        <div class="section" id="volunteers">
-          <h2><!--<i class="fa fa-hand-peace-o" aria-hidden="true"></i> -->Voluntarios</h2>
-          <div class="link text-center">
-            <a href="/voluntarios">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/voluntarios.png" class="img-fluid">
-              <h3>Sea Voluntario</h3>
-            </a>
-          </div>
-          <p class="px-4 text-center">Llegó la hora de transformar a Colombia. Vincúlese a este gran cambio.</p>
-        </div>
-      </div>
-      <!-- <div class="col-md-4" id="colombia-container">
-        <div class="section">
-          <h2>Este País Sí Tiene Arreglo</h2>
-          <img id="colombia" src="<?php echo get_template_directory_uri(); ?>/img/map.png" alt="" usemap="#colombia-regions" class="img-fluid">
-          <map name="colombia-regions" id="colombia-regions">
-            <area data-key="north" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="3,2,5,76,13,129,84,132,81,170,109,171,132,150,160,179,186,154,185,113,253,104,262,1" />
-            <area data-key="center" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="84,135,54,142,35,189,57,289,3,366,68,406,142,319,151,323,148,347,189,357,189,334,268,310,293,313,309,289,376,272,386,201,366,196,319,204,311,184,292,177,261,174,232,179,220,133,208,113,189,149,159,181,105,172,80,172,86,136" />
-            <area data-key="south" alt="" title="" href="http://jorgerobledo.com/category/estepaissitienearreglo/" shape="poly" coords="74,410,142,324,146,325,146,355,187,362,193,336,263,316,293,320,313,295,379,276,398,353,359,458,307,526,283,527,299,488,233,493,203,483,127,486" />
-          </map>
-        </div>
-      </div> -->
-      <div class="col-md-4">      
-        <div class="section">
-          <h2><i class="fa fa-calendar-check-o" aria-hidden="true"></i> La agenda de Robledo</h2>
-          <?php dynamic_sidebar( 'eventos' ); ?>
-        </div>
-      </div>
-    </div>
     <div class="section" id="feed">
       <h2 class="twitter">
         <i class="fa fa-twitter" aria-hidden="true"></i> Twitter

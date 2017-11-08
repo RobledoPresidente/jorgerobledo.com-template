@@ -73,7 +73,7 @@
         <!--TODO: Los items de este menú deben ser un Menú de wordpress, aun no tan priopritario ahora-->
         <ul class="navbar-nav m-auto main-menu">
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo get_home_url(); ?>">inicio <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?php echo get_home_url(); ?>"><i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo get_home_url(); ?>/conozcalo">conózcalo</a>
@@ -82,10 +82,13 @@
             <a class="nav-link" href="<?php echo get_home_url(); ?>/biblioteca">biblioteca</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo get_home_url(); ?>/prensa">prensa</a>
+            <a class="nav-link" href="<?php echo get_home_url(); ?>/voluntarios">voluntarios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo get_home_url(); ?>/voluntarios">voluntarios</a>
+            <a class="nav-link" href="<?php echo get_home_url(); ?>/eventos">agenda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo get_home_url(); ?>/prensa">prensa</a>
           </li>
           <!--<li class="nav-item">
             <a class="nav-link" href="<?php echo get_home_url(); ?>/contactenos">contáctenos</a>

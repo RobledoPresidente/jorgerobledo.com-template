@@ -51,6 +51,27 @@
             margin-bottom: 0;
             text-shadow: 2px 2px 10px black;
         }
+
+        &.no-height {
+            height: auto;
+        }
+        
+        &.white-title {
+            &:before {
+                content: initial;
+            }
+
+            .card-content {
+                background: white;
+                width: 85%;
+                padding: .5rem 1rem 0;
+            
+                > h4 {
+                    color: black;
+                    text-shadow: none;
+                }
+            }
+        }
     }
 
     &.card-body-img-overlay {
@@ -530,16 +551,18 @@ h4, h5 {
         &:first-child {
 
             .card {
-                min-height: 16rem;
-
-                @include media-breakpoint-down(xs) {
-
-                    min-height: 18rem;
-                }
 
                 .card-title {
                     font-size: 2.6rem;
-                    line-height: 42px;
+                    line-height: 2.6rem;
+                }
+
+                @include media-breakpoint-down(xs) {
+                    
+                    .card-title {
+                        font-size: 1.6rem;
+                        line-height: 1.6rem;
+                    }
                 }
             }
         }
@@ -710,31 +733,6 @@ h4, h5 {
     }
 }
 
-.news {
-
-    .row {
-
-        > div {
-            padding-bottom: 15px;
-
-            .card {
-
-                .card-title {
-                    font-family: $font-secondary;
-                    text-transform: uppercase;
-                    line-height: 39px;
-                    font-size: 31px;
-                    margin: 0;
-
-                    @include media-breakpoint-down(md) {                    
-                        font-size: 25px;
-                    }
-                }
-            }
-        }
-    }
-}
-
 #feed {
 
     .card {
@@ -846,17 +844,6 @@ h4, h5 {
                 border-left: 2px solid $gray-900;
             }
         }
-    }
-}
-
-.card .card-content.white-title {
-    background: white;
-    width: 85%;
-    padding: .5rem 1rem 0;
-
-    > h4 {
-        color: black;
-        text-shadow: none;
     }
 }
 

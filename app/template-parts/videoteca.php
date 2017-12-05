@@ -217,11 +217,9 @@ get_header(); ?>
             <?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
                     <div class="col-md-4">
                         <a href="<?php the_permalink(); ?>" class="card">
-                            <div class="card-image-header" style="background-image: url(<?php the_post_thumbnail_url('medium') ?>)">
-                                <div class="card-img-overlay">
-                                    <div class="card-content bottom white-title">
-                                        <h4 class="card-title"><?php the_title() ?></h4>
-                                    </div>
+                            <div class="card-image-header white-title" style="background-image: url(<?php the_post_thumbnail_url('medium') ?>)">
+                                <div class="card-content bottom">
+                                    <h4 class="card-title"><?php the_title() ?></h4>
                                 </div>
                             </div>
                             <div class="card-text p-3"><?php echo get_the_excerpt(); ?></div>

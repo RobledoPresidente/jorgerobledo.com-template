@@ -39,7 +39,7 @@
     <div class="content">
         <h1>Jorge Robledo</h1>
         <p class="highlighted">HOMBRE HONESTO Y TRABAJADOR. ARQUITECTO DE PROFESIÓN, DOCENTE POR VOCACIÓN Y POLÍTICO POR CONVICCIÓN.</p>
-        <p>Reconocido en los últimos cinco años como "El mejor senador de Colombia".</p>
+        <p>Reconocido en los últimos seis años como "El mejor senador de Colombia".</p>
         <p>En 2014 obtuvo la mayor votación individual al senado</p>
         <p>Aspira a ser elegido Presidente de la República en 2018.</p>
         <button id="infografia-button" class="btn btn-white-border mt-3">

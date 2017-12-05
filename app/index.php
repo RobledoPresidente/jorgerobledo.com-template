@@ -30,11 +30,12 @@ get_header(); ?>
           )); ?>
           <?php if ( $query->have_posts() ) : $query->the_post(); ?>
             <?php $custom = get_post_custom(); $image = $custom['imagen'][0]; ?>
-            <a href="<?php the_permalink(); ?>" class="card card-inverse card-body-img-overlay bottom" style="background-image: url(<?php echo !empty($image) ? $image : get_the_post_thumbnail_url( get_the_ID(), 'medium_large' ) ?>)">
-              <div class="card-body">
-                <h3 class="card-title"><?php the_title(); ?></h3>
-                <p class="card-text"><?php echo get_the_excerpt(); ?></p>
-                <p class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></p>
+            <a href="<?php the_permalink(); ?>" class="card">
+              <div class="card-image-header white-title no-height">
+                <img class="card-img-top" src="<?php echo !empty($image) ? $image : get_the_post_thumbnail_url( get_the_ID(), 'medium_large' ) ?>" alt="<?php the_title(); ?>">
+                <div class="card-content bottom">
+                  <h4 class="card-title"><?php the_title(); ?></h4>
+                </div>
               </div>
             </a>
           <?php endif; ?>
@@ -282,15 +283,13 @@ get_header(); ?>
         <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
         <div class="col-md-4">
           <a href="<?php the_permalink(); ?>" class="card">
-            <div class="card-image-header" style="background-image: url(<?php the_post_thumbnail_url( 'medium' ) ?>)">
-              <div class="card-img-overlay">
-                <div class="card-content bottom">
-                  <h4 class="card-title"><?php the_title() ?></h4>
-                </div>
+            <div class="card-image-header white-title" style="background-image: url(<?php the_post_thumbnail_url('medium') ?>)">
+              <div class="card-content bottom">
+                <h4 class="card-title"><?php the_title() ?></h4>
               </div>
             </div>
             <div class="card-text"><small class="text-muted"><?php robledo_presidente_posted_on(); ?></small></div>
-            <div class="card-text"><?php echo get_the_excerpt(); ?></div>
+            <div class="card-text p-3"><?php echo get_the_excerpt(); ?></div>
           </a>
         </div>
         <?php $i++; endwhile; endif;?>

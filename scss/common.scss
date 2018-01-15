@@ -55,7 +55,7 @@ $font-secondary: 'Fjalla One', sans-serif;
 $fa-font-path: "../lib/components-font-awesome/fonts" !default;
 
 @import "app/lib/components-font-awesome/scss/font-awesome";
-@import "app/lib/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap";
 @import "fonts";
 
 body {

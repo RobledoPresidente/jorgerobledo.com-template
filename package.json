@@ -40,9 +40,16 @@
     "build-task:autoprefixer": "postcss app/css/*.css --use autoprefixer -d app/css",
     "build-task:cleancss-style": "cleancss app/css/style.css -o app/css/style.min.css",
     "build-task:cleancss2-conozcalo": "cleancss app/css/conozcalo.css -o app/css/conozcalo.min.css",
-    "sass:build": "npm-run-all -p build-task:*",
+    "build-task:lib-boostrap": "cp node_modules/boostrap/dist/js/*.min.js app/js/lib/boostrap",
+    "sass:build": "npm-run-all build-task:*",
     "sass:watch": "chokidar 'app/scss/**/*.scss' -c 'npm run sass:build'",
     "dev": "npm-run-all -p sass:*"
   },
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "copyfiles": "^1.2.0",
+    "cp": "^0.2.0",
+    "cp-cli": "^1.1.0",
+    "cpx": "^1.5.0"
+  }
 }

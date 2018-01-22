@@ -36,12 +36,12 @@
   },
   "scripts": {
     "update-index-async": "node -e \"var fs=require('fs'),indexFile='app/index-async.html',loaderFile='app/bower_components/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\"",
-    "build-task:scss-compile": "node-sass-chokidar --source-map true scss -o app/css",
-    "build-task:autoprefixer": "postcss app/css/*.css --use autoprefixer -d app/css",
-    "build-task:cleancss-style": "cleancss app/css/style.css -o app/css/style.min.css",
+    "build-sass-task:scss-compile": "node-sass-chokidar --source-map true scss -o app/css",
+    "build-sass-task:autoprefixer": "postcss app/css/*.css --use autoprefixer -d app/css",
+    "build-sass-task:cleancss-style": "cleancss app/css/style.css -o app/css/style.min.css",
     "build-task:cleancss2-conozcalo": "cleancss app/css/conozcalo.css -o app/css/conozcalo.min.css",
     "build-task:lib-boostrap": "cp node_modules/boostrap/dist/js/*.min.js app/js/lib/boostrap",
-    "sass:build": "npm-run-all build-task:*",
+    "sass:build": "npm-run-all build-sass-task:*",
     "sass:watch": "chokidar 'app/scss/**/*.scss' -c 'npm run sass:build'",
     "dev": "npm-run-all -p sass:*"
   },

@@ -49,8 +49,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h1>Jorge Robledo</h1>
         <p class="highlighted">HOMBRE HONESTO Y TRABAJADOR. ARQUITECTO DE PROFESIÓN, DOCENTE POR VOCACIÓN Y POLÍTICO POR CONVICCIÓN.</p>
         <p>Reconocido en los últimos seis años como "El mejor senador de Colombia".</p>
-        <p>En 2014 obtuvo la mayor votación individual al senado</p>
-        <p>Aspira a ser elegido Presidente de la República en 2018.</p>
+        <p>En 2014 obtuvo la mayor votación individual al Senado</p>
+        <p>Aspira a ser elegido Senador de la República en 2018.</p>
         <button id="infografia-button" class="btn btn-white-border mt-3">
             <i class="fa fa-chevron-down" aria-hidden="true"></i>
             <i class="fa fa-chevron-up" aria-hidden="true"></i> 
@@ -174,9 +174,9 @@ $(function () {
     <div class="container">
     </div>
     <div class="container content bg-dark text-center">
-        <h2>El Candidato</h2>
-        <h3 class="text-uppercase">Candidato a la Presidencia de la República por el Polo.</h3>
-        <p>Su proyecto es de convergencia nacional, donde se unan todos los colombianos sin distingos políticos ni sociales, que quieran superar la desigualdad y la grave crisis nacional.</p>
+        <h2>Coalición Colombia y Sergio Fajardo</h2>
+        <h3 class="text-uppercase">CANDIDATO AL SENADO POR EL POLO #1</h3>
+        <p>Robledo hace lo que cree mejor para el país. Desde el Polo y junto al Partido Verde y Compromiso Ciudadano, puso todo su esfuerzo para construir la Coalición Colombia. Declinó su candidatura presidencial en favor de la de Sergio Fajardo, la única que puede derrotar a los mismos con las mismas. Vuelve al Senado a seguir apoyando a la gente y a buscar la unión de los colombianos y las colombianas porque Este País Sí Tiene Arreglo.</p>
     </div>
 </div>
 

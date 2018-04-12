@@ -112,5 +112,5 @@ get_header();
 
 <?php
 /* get_sidebar(); */
-the_posts_navigation();
+the_posts_navigation(array('prev_text' => 'Más antiguos', 'next_text' => 'Más recientes'));
 get_footer();

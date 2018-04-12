@@ -118,6 +118,59 @@ get_header(); ?>
       </div>
     </div>
   </div>
+  <div class="bg-calm" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag-map_of_Colombia.svg);
+    background-position-x: right;
+    background-size: contain;
+    background-repeat: no-repeat;">
+    <div class="container">
+      <div class="section">
+        <h2><!--<i class="fa fa-users" aria-hidden="true"></i> -->Participe</h2>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card bg-calm">
+              <div>
+                <!-- <h3>El Termómetro</h3> -->
+                <!--TODO: Acá debe ir espacio para un widget del plugin de encuestas-->
+                <!--div>
+                  <div id="qp_all996896" style="width:100%;"><link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'><STYLE>#qp_main996896 .qp_btna:hover input {background: rgb(0, 53, 95)!important} #qp_all996896 {max-width:815px; margin:0 auto;}</STYLE><div id="qp_main996896" fp='984f4af0-42' results=0 cmt=0 style="border-radius: 0px;margin: 0px auto;padding: 0.43em 0.79em;background: rgb(255, 255, 255);font-family: 'Open Sans', sans-serif, Arial;color: rgb(0, 0, 0);border: 0px none rgb(219, 217, 217);max-width: 815px;box-sizing: border-box;font-weight: bold"><div style="font-size: 1.2em;background-color: rgb(0, 53, 95);color: rgb(255, 255, 255);font-family: 'Open Sans', sans-serif, Arial"><div style="padding: 0.8em;line-height: 1.3em">¿Cree usted que el fiscal Nestro H. Martínez debe apartarse del caso de Odebrecht?</div></div><form id="qp_form996896" action="//www.poll-maker.com/results996896x984f4af0-42" method="post" target="_blank" style="display: inline;margin: 0px;padding: 0px"><div style="padding: 0px"><input type=hidden name="qp_d996896" value="42793.9512152752-42793.9512140011"><div style="color: rgb(107, 107, 107);font-family: 'Open Sans', sans-serif, Arial;font-size: 1.1em;line-height: 1.5;padding: 13px 8px 11px;margin: 10px 0px;clear: both" class="qp_a" onClick="var c=this.getElementsByTagName('INPUT')[0]; if((!event.target?event.srcElement:event.target).tagName!='INPUT'){c.checked=(c.type=='radio'?true:!c.checked)};var i=this.parentNode.parentNode.parentNode.getElementsByTagName('INPUT');for(var k=0;k!=i.length;k=k+1){i[k].parentNode.parentNode.setAttribute('sel',i[k].checked?1:0)}"><span style="display: block;padding-left: 30px;cursor: inherit"><input style="float: left;width: 20px;margin-left: -25px;margin-top: 2px;padding: 0px;height: 20px;-webkit-appearance:radio;" name="qp_v996896" type="radio" value="1" />Sí</span></div><div style="color: rgb(107, 107, 107);font-family: 'Open Sans', sans-serif, Arial;font-size: 1.1em;line-height: 1.5;padding: 13px 8px 11px;margin: 10px 0px;clear: both" class="qp_a" onClick="var c=this.getElementsByTagName('INPUT')[0]; if((!event.target?event.srcElement:event.target).tagName!='INPUT'){c.checked=(c.type=='radio'?true:!c.checked)};var i=this.parentNode.parentNode.parentNode.getElementsByTagName('INPUT');for(var k=0;k!=i.length;k=k+1){i[k].parentNode.parentNode.setAttribute('sel',i[k].checked?1:0)}"><span style="display: block;padding-left: 30px;cursor: inherit"><input style="float: left;width: 20px;margin-left: -25px;margin-top: 2px;padding: 0px;height: 20px;-webkit-appearance:radio;" name="qp_v996896" type="radio" value="2" />No</span></div></div><div style="padding-left: 0px;clear: both;text-align: left;margin: 1em auto"><a style="box-sizing: border-box;padding-right: 5px;text-decoration: none" class="qp_btna" href="#"><input name="qp_b996896" style="min-width: 7.8em;padding: 0.5em;background-color: rgb(11, 121, 211);font-family: 'Open Sans', sans-serif, Arial;font-size: 16px;color: rgb(255, 255, 255);cursor: pointer;border: 0px;-webkit-appearance: none;border-radius: 0px" type="submit" btype="v" value="Votar" /></a><a style="box-sizing: border-box;padding-left: 5px;text-decoration: none" class="qp_btna" href="#"><input name="qp_b996896" style="min-width: 7.8em;padding: 0.5em;background-color: rgb(11, 121, 211);font-family: 'Open Sans', sans-serif, Arial;font-size: 16px;color: rgb(255, 255, 255);cursor: pointer;border: 0px;-webkit-appearance: none;border-radius: 0px" type="submit" btype="r" value="Resultados" /></a></div><a id="qp_a996896" style="float:right;font-family:Arial;font-size:10px;color:rgb(0,0,0);text-decoration:none" href="http://www.poll-maker.com">Poll Maker</a></form><div style="display:none"><div id="qp_rp996896" style="font-size: 14px;width: 5ex;text-align: right;overflow: hidden;position: absolute;right: 5px;height: 1.5em;line-height: 1.5em"></div><div id="qp_rv996896" style="font-size: 14px;line-height: 1.5em;width: 0%;text-align: right;color: rgb(255, 255, 255);box-sizing: border-box;padding-right: 3px"></div><div id="qp_rb996896" style="font-size: 14px;line-height: 1.5em;color: rgb(255, 255, 255);display: block"></div><div id="qp_rva996896" style="background: rgb(0, 111, 185);border-color: rgb(0, 111, 185)"></div><div id="qp_rvb996896" style="background: rgb(22, 52, 99);border-color: rgb(22, 52, 99)"></div><div id="qp_rvc996896" style="background: rgb(91, 207, 252);border-color: rgb(20, 129, 171)"></div></div></div></div><script src="//scripts.poll-maker.com/3012/scpolls.js" language="javascript"></script>
+                </div-->
+                <?php dynamic_sidebar( 'el-termometro' ); ?>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 px-3 py-2" style="    background: rgba(255,255,255,.5);
+    border-radius: 5px;
+">
+            <!-- <div class="card bg-calm"> -->
+              <!--<h3><?php //echo get_theme_mod( 'rp_custom_hashtag' ); ?> ... <span class="badge badge-secondary">¡Nuevo!</span></h3>
+              <div class="form-group">
+                <textarea id="meme-text" class="form-control" placeholder="Comparta sus pensamientos ahora que Robledo volverá a ser le mejor senador :)"></textarea>
+              </div>
+              <div>
+                <button class="btn btn-secondary" id="share-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Trinar</button>
+                <button class="btn btn-tertiary" id="meme"><i class="fa fa-camera-retro" aria-hidden="true"></i> Haga su meme</button>
+              </div>-->
+              <h3>Encuentra tu candidato a la Cámara <span class="badge badge-secondary">¡Nuevo!</span></h3>
+              <div class="ui-widget"><input id="departamentos" type="text" class="form-control" placeholder="Escribe tu departamento: " /></div>
+              <h5 id="candidatos" class="mt-3">Si tu departamento no aparece, te invitamos a marcar sólo el logo del POLO</h5>
+<script>
+  $(function() {
+    $( "#departamentos" ).autocomplete({
+      source: availableTags,
+select: function( event, ui ) {
+$('#candidatos').text(ui.item.candidatos.join(' - '));
+}, change: function( event, ui ) {
+$('#candidatos').text('Si tu departamento no aparece, te invitamos a marcar sólo el logo del POLO');
+}
+    });
+  } );
+</script>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-md-7">
@@ -147,39 +200,6 @@ get_header(); ?>
         <div class="section">
           <h2><i class="fa fa-calendar-check-o" aria-hidden="true"></i> La agenda de Robledo</h2>
           <?php dynamic_sidebar( 'eventos' ); ?>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="bg-calm">
-    <div class="container">
-      <div class="section">
-        <h2><!--<i class="fa fa-users" aria-hidden="true"></i> -->Participe</h2>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card bg-calm">
-              <div>
-                <h3>El Termómetro</h3>
-                <!--TODO: Acá debe ir espacio para un widget del plugin de encuestas-->
-                <!--div>
-                  <div id="qp_all996896" style="width:100%;"><link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'><STYLE>#qp_main996896 .qp_btna:hover input {background: rgb(0, 53, 95)!important} #qp_all996896 {max-width:815px; margin:0 auto;}</STYLE><div id="qp_main996896" fp='984f4af0-42' results=0 cmt=0 style="border-radius: 0px;margin: 0px auto;padding: 0.43em 0.79em;background: rgb(255, 255, 255);font-family: 'Open Sans', sans-serif, Arial;color: rgb(0, 0, 0);border: 0px none rgb(219, 217, 217);max-width: 815px;box-sizing: border-box;font-weight: bold"><div style="font-size: 1.2em;background-color: rgb(0, 53, 95);color: rgb(255, 255, 255);font-family: 'Open Sans', sans-serif, Arial"><div style="padding: 0.8em;line-height: 1.3em">¿Cree usted que el fiscal Nestro H. Martínez debe apartarse del caso de Odebrecht?</div></div><form id="qp_form996896" action="//www.poll-maker.com/results996896x984f4af0-42" method="post" target="_blank" style="display: inline;margin: 0px;padding: 0px"><div style="padding: 0px"><input type=hidden name="qp_d996896" value="42793.9512152752-42793.9512140011"><div style="color: rgb(107, 107, 107);font-family: 'Open Sans', sans-serif, Arial;font-size: 1.1em;line-height: 1.5;padding: 13px 8px 11px;margin: 10px 0px;clear: both" class="qp_a" onClick="var c=this.getElementsByTagName('INPUT')[0]; if((!event.target?event.srcElement:event.target).tagName!='INPUT'){c.checked=(c.type=='radio'?true:!c.checked)};var i=this.parentNode.parentNode.parentNode.getElementsByTagName('INPUT');for(var k=0;k!=i.length;k=k+1){i[k].parentNode.parentNode.setAttribute('sel',i[k].checked?1:0)}"><span style="display: block;padding-left: 30px;cursor: inherit"><input style="float: left;width: 20px;margin-left: -25px;margin-top: 2px;padding: 0px;height: 20px;-webkit-appearance:radio;" name="qp_v996896" type="radio" value="1" />Sí</span></div><div style="color: rgb(107, 107, 107);font-family: 'Open Sans', sans-serif, Arial;font-size: 1.1em;line-height: 1.5;padding: 13px 8px 11px;margin: 10px 0px;clear: both" class="qp_a" onClick="var c=this.getElementsByTagName('INPUT')[0]; if((!event.target?event.srcElement:event.target).tagName!='INPUT'){c.checked=(c.type=='radio'?true:!c.checked)};var i=this.parentNode.parentNode.parentNode.getElementsByTagName('INPUT');for(var k=0;k!=i.length;k=k+1){i[k].parentNode.parentNode.setAttribute('sel',i[k].checked?1:0)}"><span style="display: block;padding-left: 30px;cursor: inherit"><input style="float: left;width: 20px;margin-left: -25px;margin-top: 2px;padding: 0px;height: 20px;-webkit-appearance:radio;" name="qp_v996896" type="radio" value="2" />No</span></div></div><div style="padding-left: 0px;clear: both;text-align: left;margin: 1em auto"><a style="box-sizing: border-box;padding-right: 5px;text-decoration: none" class="qp_btna" href="#"><input name="qp_b996896" style="min-width: 7.8em;padding: 0.5em;background-color: rgb(11, 121, 211);font-family: 'Open Sans', sans-serif, Arial;font-size: 16px;color: rgb(255, 255, 255);cursor: pointer;border: 0px;-webkit-appearance: none;border-radius: 0px" type="submit" btype="v" value="Votar" /></a><a style="box-sizing: border-box;padding-left: 5px;text-decoration: none" class="qp_btna" href="#"><input name="qp_b996896" style="min-width: 7.8em;padding: 0.5em;background-color: rgb(11, 121, 211);font-family: 'Open Sans', sans-serif, Arial;font-size: 16px;color: rgb(255, 255, 255);cursor: pointer;border: 0px;-webkit-appearance: none;border-radius: 0px" type="submit" btype="r" value="Resultados" /></a></div><a id="qp_a996896" style="float:right;font-family:Arial;font-size:10px;color:rgb(0,0,0);text-decoration:none" href="http://www.poll-maker.com">Poll Maker</a></form><div style="display:none"><div id="qp_rp996896" style="font-size: 14px;width: 5ex;text-align: right;overflow: hidden;position: absolute;right: 5px;height: 1.5em;line-height: 1.5em"></div><div id="qp_rv996896" style="font-size: 14px;line-height: 1.5em;width: 0%;text-align: right;color: rgb(255, 255, 255);box-sizing: border-box;padding-right: 3px"></div><div id="qp_rb996896" style="font-size: 14px;line-height: 1.5em;color: rgb(255, 255, 255);display: block"></div><div id="qp_rva996896" style="background: rgb(0, 111, 185);border-color: rgb(0, 111, 185)"></div><div id="qp_rvb996896" style="background: rgb(22, 52, 99);border-color: rgb(22, 52, 99)"></div><div id="qp_rvc996896" style="background: rgb(91, 207, 252);border-color: rgb(20, 129, 171)"></div></div></div></div><script src="//scripts.poll-maker.com/3012/scpolls.js" language="javascript"></script>
-                </div-->
-                <?php dynamic_sidebar( 'el-termometro' ); ?>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card bg-calm">
-              <h3><?php echo get_theme_mod( 'rp_custom_hashtag' ); ?> ... <span class="badge badge-secondary">¡Nuevo!</span></h3>
-              <div class="form-group">
-                <textarea id="meme-text" class="form-control" placeholder="Comparta sus pensamientos ahora que Robledo es el PRIMER candidato presidencial :)"></textarea>
-              </div>
-              <div>
-                <button class="btn btn-secondary" id="share-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Trinar</button>
-                <button class="btn btn-tertiary" id="meme"><i class="fa fa-camera-retro" aria-hidden="true"></i> Haga su meme</button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

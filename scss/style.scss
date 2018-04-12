@@ -35,6 +35,7 @@
         max-height: 400px;
         background-size: cover;
         background-position: center center;
+        overflow: hidden;
         
         &:before {
             content: '';
@@ -273,21 +274,21 @@ body {
 
         #header-img {
             background-color: #fcd033;
-            background-image: url(../img/header-new.png);
+            background-image: url(../img/header-new.jpg);
             //background-image: url(../img/header-new.png), linear-gradient(to right, $brand-primary 0%,$brand-primary 50%, $brand-secondary 50%,$brand-secondary 75%, $brand-tertiary 75%,$brand-tertiary 100%);
             background-position: center center;
-            background-size: contain;
-            height: 10rem;
+            background-size: cover;
+            height: 15rem;
             position: relative;
 
             img.biglogo {
                 margin: 0;
                 position: absolute;
                 bottom: 0;
-                left: 50%;
-                margin-right: -50%;
-                transform: translate(-50%, 0);
-                height: 10rem;
+                // left: 50%;
+                // margin-right: -50%;
+                // transform: translate(-50%, 0);
+                height: 8rem;
                 margin-top: .5vw;
             }
         }
@@ -938,6 +939,45 @@ figcaption {
     }
 }
 
+nav.navigation.posts-navigation {
+    margin: 10px;
+    text-align: center;
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        > div {
+    
+            > a {
+                @extend .btn;
+                @extend .btn-primary;
+            }
+    
+            &.nav-prev {
+                order: 2;
+
+                > a:before {
+                    content: '>';
+                    margin-right: 5px;
+                    font-weight: bold;
+                }
+            }
+    
+            &.nav-next {
+                order: 1;
+
+                > a:after {
+                    content: '<';
+                    margin-left: 5px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
 //WP-Poll
 .widget_polls-widget {
 
@@ -1080,7 +1120,7 @@ figcaption {
 
             #header-img {
                 height: 10rem;
-                background-image: url(../img/header-new-s.png);
+                background-image: url(../img/header-new-s.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
 

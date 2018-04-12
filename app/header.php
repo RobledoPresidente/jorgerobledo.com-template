@@ -22,6 +22,9 @@
   <?php wp_head(); ?>
   <link href="<?php echo get_template_directory_uri(); ?>/lib/alertifyjs/dist/css/alertify.css" rel="stylesheet" type="text/css">
   <link href="<?php echo get_template_directory_uri(); ?>/css/style.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo get_template_directory_uri(); ?>/css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+  <link href="<?php echo get_template_directory_uri(); ?>/css/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/lib/codebird-js/codebird.js"></script>
   <script>
       var hashtag = '<?php echo get_theme_mod( 'rp_custom_hashtag', 'default_value' ); ?>';
@@ -42,13 +45,118 @@
     ga('create', 'UA-46114492-1', 'auto');
     ga('send', 'pageview');
   </script>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-W3X636P');</script>
-  <!-- End Google Tag Manager -->
+  <script>
+    var availableTags = [
+{
+        label: "Bogotá",
+        candidatos: ['Germán Navas Talero, Polo # 101','Sergio Fernández, Polo # 102','María E. Botero, Polo # 111']
+      },
+{
+        label: "Amazonas",
+        candidatos: ['Yohana Alexandra Pantevis, Polo # 101','Raul Paima, Polo # 102','Heliodoro Pérez # Polo 103']
+      },
+{
+        label: "Antioquia",
+        candidatos: ['Jorge Alberto Gómez Gallego, Polo # 101','Cindy Borrero Velasquez, Polo # 106','Reinaldo Spitaletta, Polo # 108','Gabriel Hernán Gaviria, Polo # 110','Sandra Eugenia Arboleda, Polo # 114','Luis Fernando López, Polo # 115']
+      },
+{
+        label: "Atlántico",
+        candidatos: ['Rony Muñóz, Polo # 103']
+      },
+{
+        label: "Bolívar",
+        candidatos: ['Luis Carlos Fuentes Peréz, Polo # 104','Sergio Muñoz, Polo # 106']
+      },
+{
+        label: "Boyacá",
+        candidatos: ['Claudia Polindara, Polo # 101','Germán Suárez, Polo # 106']
+      },
+{
+        label: "Caldas",
+        candidatos: ['Dario Arenas, Polo # 101','Alvaro Quintero González, Polo # 104','Catalina Guaqueta, Polo # 105']
+      },
+{
+        label: "Caquetá",
+        candidatos: ['Oscar Conde Ortiz, Polo # 101','Cesar Augusto Cadena, Polo # 102','Gloria Galiendo Dávila, Polo # 103']
+      },
+{
+        label: "Cauca",
+        candidatos: ['Luis Alonso Osorio, Polo #101']
+      },
+{
+        label: "Cesar",
+        candidatos: ['Carlos Peñaloza, Polo # 104']
+      },
+{
+        label: "Córdoba",
+        candidatos: ['Ramón Barrios, Polo # 105']
+      },
+{
+        label: "Cundinamarca",
+        candidatos: ['Yeilor Espinel, Polo # 101','María Del Pilar Garcia, Polo # 104']
+      },
+{
+        label: "Huila",
+        candidatos: ['John Freddy Tapia Cruz, Polo # 104']
+      },
+{
+        label: "La Guajira",
+        candidatos: ['Jazmin Romero Epiayu, Polo # 101','Henry Peñalver Herrera, Polo # 102']
+      },
+{
+        label: "Magdalena",
+        candidatos: ['Nicolás Senior, Polo # 105']
+      },
+{
+        label: "Meta",
+        candidatos: ['Esperanza Vargas, Polo # 103']
+      },
+{
+        label: "Nariño",
+        candidatos: ['Raúl Delgado, Polo # 101']
+      },
+{
+        label: "Norte de Santander",
+        candidatos: ['Miriam Tamara, Polo # 103']
+      },
+{
+        label: "Putumayo",
+        candidatos: ['Carlos Gonzalo Coral, Polo # 101','Franco Armando Guerrero, Polo # 103']
+      },
+{
+        label: "Quindío",
+        candidatos: ['José Vicente Young, Polo # 103']
+      },
+{
+        label: "Risaralda",
+        candidatos: ['Adriana Gónzalez, Polo # 101']
+      },
+{
+        label: "San Andrés, Providencia y Santa Catalina ",
+        candidatos: ['Sissy Angus Mitchell, Polo # 103']
+      },
+{
+        label: "Santander",
+        candidatos: ['Roberto Schmalbach, Polo # 107']
+      },
+{
+        label: "Tolima",
+        candidatos: ['Julián Rodríguez, Polo # 102','Nury Yamile Cortes, Polo # 106']
+      },
+{
+        label: "Valle del Cauca",
+        candidatos: ['Fanny Moreno, Polo # 102','Henry Calvo, Polo # 104','Jhonson Torres,  Polo # 105','Franklin Garcia, Polo # 110','Humberto Hurtado, Polo # 113']
+      },
+{
+        label: "Vichada",
+        candidatos: ['Marixtela Mejía Manchola, Polo # 101']
+      },
+{
+        label: "Internacional",
+        candidatos: ['Freddy Castiblanco, Polo # 402']
+      }
+];
+  </script>
 </head>
 
 <body <?php body_class(); ?>>

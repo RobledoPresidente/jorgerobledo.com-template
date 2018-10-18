@@ -177,7 +177,7 @@
   <!--Header-->
   <header>
     <div id="header-img">
-      <a href="<?php echo get_home_url(); ?>"><img class="biglogo" src="<?php echo get_template_directory_uri(); ?>/img/logo-new.png"></a>
+      <a href="<?php echo get_home_url(); ?>"><img class="biglogo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
     </div>
     <!-- <div class="top-colors"></div> -->
     <nav class="navbar navbar-expand-md navbar-light">

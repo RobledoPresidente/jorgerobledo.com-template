@@ -261,7 +261,7 @@ textarea.form-control {
 //Custom styles
 
 body {
-    padding-top: 11.6rem;
+    padding-top: 12.6rem;
     
     > header {
         background-color: white;
@@ -274,21 +274,21 @@ body {
 
         #header-img {
             background-color: #fcd033;
-            background-image: url(../img/header-new.jpg);
-            //background-image: url(../img/header-new.png), linear-gradient(to right, $brand-primary 0%,$brand-primary 50%, $brand-secondary 50%,$brand-secondary 75%, $brand-tertiary 75%,$brand-tertiary 100%);
+            background-image: url(../img/header.jpg);
+            //background-image: url(../img/header.png), linear-gradient(to right, $brand-primary 0%,$brand-primary 50%, $brand-secondary 50%,$brand-secondary 75%, $brand-tertiary 75%,$brand-tertiary 100%);
             background-position: center center;
             background-size: cover;
-            height: 15rem;
+            height: 10rem;
             position: relative;
 
             img.biglogo {
                 margin: 0;
                 position: absolute;
-                bottom: 0;
-                // left: 50%;
-                // margin-right: -50%;
-                // transform: translate(-50%, 0);
-                height: 8rem;
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -50%);
+                height: 6rem;
                 margin-top: .5vw;
             }
         }
@@ -476,11 +476,6 @@ h4, h5 {
 }
 
 #main {
-    margin-top: 1rem;
-
-    @include media-breakpoint-down(sm) {
-        margin-top: 2rem;
-    }
 
     .widget.jetpack_subscription_widget {
         margin-bottom: 0;
@@ -1065,18 +1060,7 @@ nav.navigation.posts-navigation {
     
     body {
 
-        &.home {
-            padding-top: 8rem;
-        }
-
-        > header {    
-
-            #header-img {
-
-                img.biglogo {
-                    height: 9rem;
-                }
-            }
+        > header {
 
             .navbar {  
 
@@ -1110,22 +1094,16 @@ nav.navigation.posts-navigation {
     }
     
     body {
-        padding-top: 13.6rem;
-
-        &.home {
-            padding-top: 10rem;
-        }
 
         > header { 
 
             #header-img {
                 height: 10rem;
-                background-image: url(../img/header-new-s.jpg);
-                background-repeat: no-repeat;
-                background-size: cover;
+                background-image: url(../img/header-s.jpg);
+                background-repeat: contain;
 
                 img.biglogo {
-                    display: none;
+                    height: 30vw;
                 }
             }
 

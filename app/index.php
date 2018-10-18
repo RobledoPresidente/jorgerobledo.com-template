@@ -118,10 +118,7 @@ get_header(); ?>
       </div>
     </div>
   </div>
-  <div class="bg-calm" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag-map_of_Colombia.svg);
-    background-position-x: right;
-    background-size: contain;
-    background-repeat: no-repeat;">
+  <div class="bg-calm">
     <div class="container">
       <div class="section">
         <h2><!--<i class="fa fa-users" aria-hidden="true"></i> -->Participe</h2>
@@ -138,19 +135,18 @@ get_header(); ?>
               </div>
             </div>
           </div>
-          <div class="col-sm-6 px-3 py-2" style="    background: rgba(255,255,255,.5);
-    border-radius: 5px;
-">
-            <!-- <div class="card bg-calm"> -->
-              <!--<h3><?php //echo get_theme_mod( 'rp_custom_hashtag' ); ?> ... <span class="badge badge-secondary">¡Nuevo!</span></h3>
+          <div class="col-sm-6 px-3 py-2">
+            <div class="card bg-calm">
+              <h3><?php echo get_theme_mod( 'rp_custom_hashtag' ); ?> ... <span class="badge badge-secondary">¡Nuevo!</span></h3>
               <div class="form-group">
                 <textarea id="meme-text" class="form-control" placeholder="Comparta sus pensamientos ahora que Robledo volverá a ser le mejor senador :)"></textarea>
               </div>
               <div>
                 <button class="btn btn-secondary" id="share-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Trinar</button>
                 <button class="btn btn-tertiary" id="meme"><i class="fa fa-camera-retro" aria-hidden="true"></i> Haga su meme</button>
-              </div>-->
-              <h3>Encuentra tu candidato a la Cámara <span class="badge badge-secondary">¡Nuevo!</span></h3>
+              </div>
+            </div>
+              <!-- <h3>Encuentra tu candidato a la Cámara <span class="badge badge-secondary">¡Nuevo!</span></h3>
               <div class="ui-widget"><input id="departamentos" type="text" class="form-control" placeholder="Escribe tu departamento: " /></div>
               <h5 id="candidatos" class="mt-3">Si tu departamento no aparece, te invitamos a marcar sólo el logo del POLO</h5>
 <script>
@@ -164,8 +160,7 @@ $('#candidatos').text('Si tu departamento no aparece, te invitamos a marcar sól
 }
     });
   } );
-</script>
-            <!-- </div> -->
+</script> -->
           </div>
         </div>
       </div>

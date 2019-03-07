@@ -13,6 +13,6 @@
     "alertifyjs": "^1.0.11",
     "alertify": "^0.3.10",
     "bootstrap": "v4.0.0-beta",
-    "twitter-fetcher": "^17.0.3"
+    "twitter-fetcher": "^18.0.2"
   }
 }

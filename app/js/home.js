@@ -168,7 +168,7 @@ function handleTweets(tweets) {
         row.append(
             `<div class="col no-gutters card` 
                 + (author.indexOf('https://twitter.com/JERobledo') < 0 ? ' rt' : '') + `">`
-                + (tweets[n].image ? '<img src="' + tweets[n].image + '" class="card-img-top img-fluid">' : '') +
+                + (tweets[n].image ? ('<a href="' + tweets[n].permalinkURL + '" target="_blank"><div class="t-video-preview"><i class="fa fa-play-circle-o fa-4x' + (tweets[n].image.indexOf('video') > 0 ? '' : 'd-none') + '"></i><img src="' + tweets[n].image + '" class="card-img-top img-fluid t-video"></div></a>') : '') +
                     `<div class="card-body">
                         <div class="user">` + author + `</div>
                         <div class="tweet">` + content + `</div>

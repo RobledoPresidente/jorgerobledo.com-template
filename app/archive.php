@@ -33,7 +33,6 @@ get_header();
                             <ul>
                                 <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
                                 <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                                <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
                                 <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
                                 <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
                             </ul>

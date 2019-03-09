@@ -21,11 +21,6 @@ $(function () {
                     u: dataParent.url
                 });
                 break;
-            case 'google':
-                popup('https://plus.google.com/share', {
-                    url: dataParent.url
-                });
-                break;
             case 'email':
                 popup('mailto:', {
                     subject: dataParent.title + ' | jorgerobledo.co',

@@ -12,7 +12,7 @@
     "wScratchPad": "https://github.com/RobledoPresidente/wScratchPad.git#^2.2.3",
     "alertifyjs": "^1.0.11",
     "alertify": "^0.3.10",
-    "bootstrap": "v4.0.0-beta",
+    "bootstrap": "^v4.1.0",
     "twitter-fetcher": "^18.0.2"
   }
 }

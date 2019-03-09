@@ -47,7 +47,6 @@ get_header(); ?>
                                 <ul>
                                     <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
                                     <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                                    <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
                                     <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
                                     <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
                                 </ul>
@@ -76,28 +75,48 @@ get_header(); ?>
     <div class="section" id="topics">
         <h2><span>Temas</span></h2>
         <div class="text-center">
-            <div class="row justify-content-between">
+            <div class="row justify-content-between py-3">
                 <div class="col-4">
-                    <a href="<?php echo get_home_url(); ?>/category/temas/economia">Economía</a>
+                    <a href="<?php echo get_home_url(); ?>/category/temas/salud">Salud 🏥</a>
                 </div>
-                <div class="col-4">
-                    <a href="<?php echo get_home_url(); ?>/category/temas/internacional">Internacional</a>
+                <div class="col-3">
+                    <a href="<?php echo get_home_url(); ?>/category/temas/corrupcion">Corrupción 💸</a>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-4">
-                    <a href="<?php echo get_home_url(); ?>/category/temas/ambiente">Ambiente</a>
-                </div>
-                <div class="col-4">
-                    <a href="<?php echo get_home_url(); ?>/category/temas/politica">Política</a>
+                <div class="col-3">
+                    <a href="<?php echo get_home_url(); ?>/category/temas/economia">Economía 📉</a>
                 </div>
             </div>
-            <div class="row justify-content-end">
-                <div class="col-4">
-                    <a href="<?php echo get_home_url(); ?>/category/temas/regiones">Regiones</a>
+            <div class="row justify-content-center py-3">
+                <div class="col-2">
+                    <a href="<?php echo get_home_url(); ?>/category/temas/agro">Agro 👩🏼‍🌾</a>
                 </div>
                 <div class="col-4">
-                    <a href="<?php echo get_home_url(); ?>/category/temas/social">Social</a>
+                    <a href="<?php echo get_home_url(); ?>/category/temas/educacion">Educación y ciencia 👩🏻‍🏫</a>
+                </div>
+                <div class="col-3">
+                    <a href="<?php echo get_home_url(); ?>/category/temas/industria">Industria 🏭</a>
+                </div>
+            </div>
+            <div class="row justify-content-end py-3">
+                <div class="col-4">
+                    <a href="<?php echo get_home_url(); ?>/category/temas/internacional">Internacional 🌎</a>
+                </div>
+                <div class="col-3">
+                    <a href="<?php echo get_home_url(); ?>/category/temas/trabajo">Trabajo 👷‍</a>
+                </div>
+                <div class="col-3">
+                    <a href="<?php echo get_home_url(); ?>/category/temas/ambiente">Ambiente 🌳</a>
+                </div>
+            </div>
+            <div class="row justify-content-between py-3">
+                <div class="col-3">
+                    <a href="<?php echo get_home_url(); ?>/category/temas/mujeres">Mujeres ♀️</a>
+                </div>
+                <div class="col-3">
+                    <a href="<?php echo get_home_url(); ?>/category/temas/regiones">Regiones 🇨🇴</a>
+                </div>
+                <div class="col-4">
+                    <a href="<?php echo get_home_url(); ?>/category/temas/bogota">Bogotá 🌆</a>
                 </div>
             </div>
         </div>
@@ -218,7 +237,6 @@ get_header(); ?>
                         <ul>
                             <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
                             <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                            <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
                             <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
                             <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
                         </ul>

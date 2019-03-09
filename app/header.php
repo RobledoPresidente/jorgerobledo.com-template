@@ -197,11 +197,25 @@
           <li class="nav-item">
             <a class="nav-link" href="<?php echo get_home_url(); ?>/conozcalo">conózcalo</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item dropdown">
             <a class="nav-link" href="<?php echo get_home_url(); ?>/biblioteca">biblioteca</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo get_home_url(); ?>/voluntarios">voluntarios</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="<?php echo get_home_url(); ?>/biblioteca" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">temas</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item font-weight-bold" href="<?php echo get_home_url(); ?>/category/temas/salud">Salud 🏥</a>
+              <a class="dropdown-item font-weight-bold" href="<?php echo get_home_url(); ?>/category/temas/corrupcion">Corrupción 💸</a>
+              <a class="dropdown-item font-weight-bold" href="<?php echo get_home_url(); ?>/category/temas/economia">Economía 📉</a>
+              <a class="dropdown-item font-weight-bold" href="<?php echo get_home_url(); ?>/category/temas/agro">Agro 👩🏼‍🌾</a>
+              <a class="dropdown-item font-weight-bold" href="<?php echo get_home_url(); ?>/category/temas/educacion">Educación y ciencia 👩🏻‍🏫</a>
+              <a class="dropdown-item font-weight-bold" href="<?php echo get_home_url(); ?>/category/temas/industria">Industria 🏭</a>
+              <a class="dropdown-item font-weight-bold" href="<?php echo get_home_url(); ?>/category/temas/internacional">Internacional 🌎</a>
+              <a class="dropdown-item font-weight-bold" href="<?php echo get_home_url(); ?>/category/temas/trabajo">Trabajo 👷‍</a>
+              <a class="dropdown-item font-weight-bold" href="<?php echo get_home_url(); ?>/category/temas/ambiente">Ambiente 🌳</a>
+              <a class="dropdown-item font-weight-bold" href="<?php echo get_home_url(); ?>/category/temas/mujeres">Mujeres ♀️</a>
+              <a class="dropdown-item font-weight-bold" href="<?php echo get_home_url(); ?>/category/temas/regiones">Regiones 🇨🇴</a>
+              <a class="dropdown-item font-weight-bold" href="<?php echo get_home_url(); ?>/category/temas/bogota">Bogotá 🌆</a>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo get_home_url(); ?>/eventos">agenda</a>

@@ -80,7 +80,6 @@ get_header(); ?>
                     <ul>
                       <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
                       <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                      <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
                       <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
                       <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
                     </ul>
@@ -108,7 +107,6 @@ get_header(); ?>
               <ul>
                 <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
                 <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
                 <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
                 <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
               </ul>
@@ -177,7 +175,6 @@ get_header(); ?>
                                 <ul>
                                     <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
                                     <li class="share-twitter" data-network="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                                    <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
                                     <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
                                     <li class="share-whatsapp" data-network="whatsapp"><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
                                 </ul>
@@ -233,16 +230,16 @@ get_header(); ?>
     <div class="section">
       <h2 class="colored"><i class="fa fa-share-alt" aria-hidden="true"></i> En redes</h2>
         <div class="row">
-          <div class="col">
+          <div class="col-md-4">
             <div class="fb-page" data-href="https://www.facebook.com/jorge.robledo.castillo" data-height="450" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/jorge.robledo.castillo" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/jorge.robledo.castillo">Jorge Enrique Robledo Castillo</a></blockquote></div>
           </div>
-          <div class="col text-center">
+          <div class="col-md-4 text-center">
             <!-- SnapWidget -->
-            <!-- <script src="https://snapwidget.com/js/snapwidget.js"></script>
-            <iframe src="https://snapwidget.com/embed/669218" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
-            <div style="font:10px/14px 'Roboto','Helvetica Neue',Arial,Helvetica,sans-serif;font-weight:400;width:100%;text-align:right"><a href="https://snapwidget.com" style="color:#777;text-decoration:none;">SnapWidget · Instagram Widget</a></div> -->
+            <script src="https://snapwidget.com/js/snapwidget.js"></script>
+            <iframe src="https://snapwidget.com/embed/670035" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+            <div style="font:10px/14px 'Roboto','Helvetica Neue',Arial,Helvetica,sans-serif;font-weight:400;width:100%;text-align:right"><a href="https://snapwidget.com" style="color:#777;text-decoration:none;">SnapWidget · Instagram Widget</a></div>
           </div>
-          <div class="col">
+          <div class="col-md-4">
             <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/151219963&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
           </div>
         </div>

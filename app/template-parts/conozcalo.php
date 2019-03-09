@@ -58,7 +58,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="share" data-url="<?php echo get_template_directory_uri(); ?>/img/biografia/infografia.jpg" data-title="Infografía | Jorge Robledo">
             <ul>
                 <li class="share-facebook" data-network="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
-                <li class="share-google" data-network="google"><i class="fa fa-google-plus" aria-hidden="true"></i></li>
                 <li class="share-email" data-network="email"><i class="fa fa-envelope" aria-hidden="true"></i></li>
                 <li class="share-download"><a href="<?php echo get_template_directory_uri(); ?>/img/biografia/infografia.jpg" download="inforgrafia-robledo"><i class="fa fa-download" aria-hidden="true"></i></a></li>
             </ul>

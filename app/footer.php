@@ -56,7 +56,11 @@
           </div>
         </div>
         <div class="col-lg-2 text-center">
-          <p>Todos los derechos reservados © 2017</p>
+          <div class="list-group">
+            <a href="<?php echo get_home_url(); ?>/politicadedatos/" class="list-group-item list-group-item-action bg-dark border-0"><i class="fa fa-info-circle" aria-hidden="true"></i> Política datos personales</a>
+          </div>
+          <br>
+          <p>Todos los derechos reservados © <?php echo date('Y') ?></p>
           <small><i class="fa fa-code" aria-hidden="true"></i> Desarrollado como un <a href="https://github.com/RobledoPresidente/WebCandidato" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> proyecto de código abierto</a> bajo GNU GENERAL PUBLIC LICENSE</small>
         </div>
       </div>

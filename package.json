@@ -10,7 +10,7 @@
     "bower": "^1.8.8",
     "chokidar-cli": "^1.2.2",
     "clean-css-cli": "^4.2.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
     "gulp-minify-css": "^1.2.4",
@@ -49,6 +49,8 @@
     "copyfiles": "^1.2.0",
     "cp": "^0.2.0",
     "cp-cli": "^1.1.2",
-    "cpx": "^1.5.0"
+    "cpx": "^1.5.0",
+    "gulp-sass": "^4.1.0",
+    "natives": "^1.1.6"
   }
 }

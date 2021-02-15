@@ -55,7 +55,7 @@ get_header(); ?>
         )); ?>
         <?php if ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="col-md-4 col-lg-3 no-gutters">
-              <a href="<?php the_permalink(); ?>" class="card card-inverse bg-primary">
+              <a href="<?php the_permalink(); ?>" class="card card-inverse bg-secondary">
                 <div class="card-body top">
                   <h3 class="card-title"><?php the_title(); ?></h3>
                   <p class="card-text"><?php echo get_the_excerpt(); ?></p>

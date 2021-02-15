@@ -1,4 +1,4 @@
-$white:  #fff;
+$white: #fff;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
@@ -8,47 +8,47 @@ $gray-600: #868e96;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
-$black:  #000;
+$black: #000;
 
-$blue:    #007bff;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    #e83e8c;
-$red:     #dc3545;
-$orange:  #fd7e14;
-$yellow:  #ffc107;
-$green:   #28a745;
-$teal:    #20c997;
-$cyan:    #17a2b8;
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
 
-$brand-primary: #fcd033;
-$brand-calm: #F2F2F2;
+$brand-primary: #660678;
+$brand-calm: #f2f2f2;
 
 //Bootstrap variables overrides
 
 $theme-colors: (
-    primary: $brand-primary,
-    secondary: $gray-600,
-    success: $green,
-    info: $cyan,
-    warning: $yellow,
-    danger: $red,
-    light: $gray-100,
-    dark: $gray-800
-  ) !default;
+  primary: $brand-primary,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800,
+) !default;
 
 $border-radius: 0;
 $card-border-width: 0;
 $input-btn-border-width: 2px;
 
 //Custom variables
-$brand-secondary: #012b60;
+$brand-secondary: #ff7419;
 $brand-tertiary: #e91b2e;
-$brand-quaternary: #f45d22;
+$brand-quaternary: #fcd033;
 $brand-facebook: #3b5998;
 $brand-twitter: #1da1f2;
 $brand-google: #e62117;
-$font-secondary: 'Fjalla One', sans-serif; 
+$font-secondary: "Fjalla One", sans-serif;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $fa-font-path: "../lib/components-font-awesome/fonts" !default;
@@ -58,161 +58,171 @@ $fa-font-path: "../lib/components-font-awesome/fonts" !default;
 @import "fonts";
 
 body {
-    font-family: 'aaux_next_regularregular';
+  font-family: "aaux_next_regularregular";
 
-    button,input,optgroup,select,textarea {
-        font-family: 'aaux_next_regularregular';
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: "aaux_next_regularregular";
+  }
+
+  > header {
+    .top-colors {
+      height: 5px;
+      background-image: url(../img/header-line.png);
+      background-image: url(../img/header-line.png),
+        linear-gradient(
+          to right,
+          $brand-primary 0%,
+          $brand-primary 50%,
+          $brand-secondary 50%,
+          $brand-secondary 75%,
+          $brand-tertiary 75%,
+          $brand-tertiary 100%
+        );
+      background-repeat: no-repeat;
+      background-size: 100%;
     }
+  }
 
-    > header {        
-
-        .top-colors {
-            height: 5px;          
-            background-image: url(../img/header-line.png);
-            background-image: url(../img/header-line.png), linear-gradient(to right, $brand-primary 0%,$brand-primary 50%, $brand-secondary 50%,$brand-secondary 75%, $brand-tertiary 75%,$brand-tertiary 100%);
-            background-repeat: no-repeat;
-            background-size: 100%;
-        }
+  > footer {
+    clear: both;
+    a {
+      color: white;
     }
-
-    > footer { 
-        clear: both;
-        a {
-            color: white;
-        }
-    }
+  }
 }
 
 .font-secondary {
-    font-family: $font-secondary;
+  font-family: $font-secondary;
 }
 
 .bg-secondary {
-    background-color: $brand-secondary !important;
+  background-color: $brand-secondary !important;
 }
 .bg-tertiary {
-    background-color: $brand-tertiary !important;
+  background-color: $brand-tertiary !important;
 }
 .text-secondary {
-    color: $brand-secondary !important;
+  color: $brand-secondary !important;
 }
 .text-tertiary {
-    color: $brand-tertiary !important;
+  color: $brand-tertiary !important;
 }
 
 .bg-dark {
-    
-    * {
-        color: white;
-    }
+  * {
+    color: white;
+  }
 }
 
 .btn {
-    cursor: pointer;
-    font-family: 'aaux_nextsemibold';
-    font-size: 18px;
-    margin-right: .5rem;
-    border: none;
-    text-transform: capitalize;
+  cursor: pointer;
+  font-family: "aaux_nextsemibold";
+  font-size: 18px;
+  margin-right: 0.5rem;
+  border: none;
+  text-transform: capitalize;
 
-    &.btn-primary {
-        background-color: $brand-primary;
-        color: $gray-700;
+  &.btn-primary {
+    background-color: $brand-primary;
+    color: $gray-700;
 
-        &:hover {
-            background-color: #d5bb00;
-        }
+    &:hover {
+      background-color: #d5bb00;
     }
+  }
 
-    &.btn-secondary {
-        background-color: $brand-secondary;
-        color: white;
+  &.btn-secondary {
+    background-color: $brand-secondary;
+    color: white;
 
-        &:hover {
-            color: white;
-            background-color: #003bae;
-        }
+    &:hover {
+      color: white;
+      background-color: #003bae;
     }
+  }
 
-    &.btn-tertiary {
-        background-color: $brand-tertiary;
-        color: white !important;
+  &.btn-tertiary {
+    background-color: $brand-tertiary;
+    color: white !important;
 
-        &:hover {
-            background-color: #a80900;
-        }
+    &:hover {
+      background-color: #a80900;
     }
+  }
 
-    &.btn-white-border {
-        background-color: transparent;
-        border: 2px solid white;
-        color: white;
-        background: rgba(0, 0, 0,.3);
+  &.btn-white-border {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
 
-        &:hover {
-            background: rgba(0, 0, 0,.8);
-        }
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
     }
+  }
 
-    &.btn-small {
-        padding: .25rem .5rem;
-        font-size: 16px;
-    }
+  &.btn-small {
+    padding: 0.25rem 0.5rem;
+    font-size: 16px;
+  }
 }
 
 .list-group-item {
-    padding: .2rem 1.25rem;
+  padding: 0.2rem 1.25rem;
 
-    .list-group-item-action.bg-dark {
-        color: $brand-calm;
-    }
+  .list-group-item-action.bg-dark {
+    color: $brand-calm;
+  }
 }
 
 .share {
-    border-top: 1px solid $brand-calm;
-    display: inline-block;
+  border-top: 1px solid $brand-calm;
+  display: inline-block;
 
-    ul {
-        padding: 0;
-        margin: 0;
-        display: table;
+  ul {
+    padding: 0;
+    margin: 0;
+    display: table;
 
-        li {
-            display: table-cell;
-            padding: .8rem 1rem;
-            cursor: pointer;
-            color: #333;
+    li {
+      display: table-cell;
+      padding: 0.8rem 1rem;
+      cursor: pointer;
+      color: #333;
 
-            &.share-facebook {
-                color: #3b5998;
-            }
+      &.share-facebook {
+        color: #3b5998;
+      }
 
-            &.share-twitter {
-                color: $brand-twitter;
-            }
+      &.share-twitter {
+        color: $brand-twitter;
+      }
 
-            &.share-google {
-                color: $brand-google;
-            }
+      &.share-google {
+        color: $brand-google;
+      }
 
-            &.share-whatsapp {
-                color: #09d261;
+      &.share-whatsapp {
+        color: #09d261;
 
-                @include media-breakpoint-up(lg) {
-                    display: none;
-                }
-            }
-
-            &.share-download {
-
-                a {
-                    color: $brand-quaternary;
-                }
-            }
-
-            &:hover {
-                opacity: .7;
-            }
+        @include media-breakpoint-up(lg) {
+          display: none;
         }
+      }
+
+      &.share-download {
+        a {
+          color: $brand-quaternary;
+        }
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
+  }
 }

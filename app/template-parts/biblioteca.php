@@ -190,7 +190,7 @@ get_header(); ?>
             <?php $i = 0; ?>
             <?php if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
                     <div class="col-md-4">
-                        <a href="<?php the_permalink(); ?>" class="card <?php echo ($i == 0 ? 'bg-primary' : ($i == 2 ? 'card-inverse bg-secondary' : ($i == 4 ? 'card-inverse bg-tertiary' : 'bg-calm'))) ?>">
+                        <a href="<?php the_permalink(); ?>" class="card <?php echo ($i == 0 ? 'bg-secondary' : ($i == 2 ? 'card-inverse bg-primary' : ($i == 4 ? 'card-inverse bg-tertiary' : 'bg-calm'))) ?>">
                             <div class="card-image-header" style="background-image: url(<?php the_post_thumbnail_url('medium') ?>)">
                                 <div class="card-img-overlay">
                                     <div class="card-content bottom">

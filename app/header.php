@@ -176,7 +176,7 @@
   <!---->
   <!--Header-->
   <header>
-    <div id="header-img">
+    <div id="header-img" class="container">
       <a href="<?php echo get_home_url(); ?>"><img class="biglogo" src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></a>
     </div>
     <!-- <div class="top-colors"></div> -->
@@ -229,7 +229,7 @@
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <div class="input-group">
-            <span class="input-group-addon bg-calm"><i class="fa fa-search" aria-hidden="true"></i></span>
+            <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
             <input type="text" class="form-control mr-sm-2" placeholder="Encuentre..." name="s">
           </div>
         </form>

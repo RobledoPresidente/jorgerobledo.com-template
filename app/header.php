@@ -181,6 +181,7 @@
     </div>
     <!-- <div class="top-colors"></div> -->
     <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -262,6 +263,7 @@
             <a class="nav-link" href="https://www.linkedin.com/in/jorge-robledo/"><img src="<?php echo get_template_directory_uri(); ?>/img/social-linkedin.png"></a>
           </li>
         </ul>        
+      </div>
       </div>
     </nav>
   </header>

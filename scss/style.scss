@@ -401,6 +401,7 @@ body {
 
       #page-title {
         display: initial;
+        color: white;
       }
 
       @include media-breakpoint-up(lg) {
@@ -450,6 +451,7 @@ body {
             border-color: $brand-secondary;
             border-left-width: 0;
             background: $brand-primary;
+            color: white;
           }
         }
 

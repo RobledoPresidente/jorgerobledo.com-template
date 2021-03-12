@@ -228,7 +228,7 @@
             <a class="nav-link" href="<?php echo get_home_url(); ?>/contactenos">contáctenos</a>
           </li>-->
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline my-2 my-lg-0" action="/">
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-search" aria-hidden="true"></i></span>
             <input type="text" class="form-control mr-sm-2" placeholder="Encuentre..." name="s">

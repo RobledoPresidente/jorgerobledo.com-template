@@ -41,9 +41,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="content">
         <h1>Jorge Robledo</h1>
         <p class="highlighted">HOMBRE HONESTO Y TRABAJADOR. ARQUITECTO DE PROFESIÓN, DOCENTE POR VOCACIÓN Y POLÍTICO POR CONVICCIÓN.</p>
-        <p>Reconocido en los últimos seis años como "El mejor senador de Colombia".</p>
-        <p>En 2014 obtuvo la mayor votación individual al Senado</p>
-        <p>Aspira a ser elegido Senador de la República en 2018.</p>
+        <p>Reconocido diez veces consecutivas como "El mejor senador de Colombia".</p>
+        <p>Autor de cien proyectos de ley y más de 200 debates de control político. </p>
+        <p>Aspira a ser elegido candidato presidencial en la Coalición Centro Esperanza, en la consulta del 13 de marzo de 2022</p>
         <button id="infografia-button" class="btn btn-white-border mt-3">
             <i class="fa fa-chevron-down" aria-hidden="true"></i>
             <i class="fa fa-chevron-up" aria-hidden="true"></i> 
@@ -91,7 +91,7 @@ $(function () {
             <div class="col-md-6 px-0 content-block">
                 <h2>El hombre de familia</h2>
                 <p>
-                    Felizmente casado hace cuarenta y dos años con su novia de la universidad, Carmen Escobar. Tienen dos hijos, Natalia y Julián. Nunca pierde oportunidad para compartir en familia y jugar con su nieta Alicia.
+                    Estoy felizmente casado hace más de cuarenta años con mi novia de la universidad, Carmen Escobar. Tengo dos hijos, Natalia y Julián y nunca pierde oportunidad para compartir en familia y jugar con mis nietas, Alicia y Lucía.
                 </p>
             </div>
         </div>
@@ -102,9 +102,9 @@ $(function () {
     </div>
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6 col-xl-5 px-5 content">
-            <h2>Su Juventud</h2>
-            <p>Nació en Ibagué el 11 de febrero de 1950. En 1968 ingresó a la Universidad de los Andes y antes de graduarse de arquitecto decidió dedicar su vida a transformar a Colombia.</p>
-            <p>Se vinculó al proyecto de voluntariado pies descalzos, actividad que consistía en ayudar a la gente en las regiones a encontrar el camino para resolver sus problemas.</p>
+            <h2>Mi Juventud</h2>
+            <p>Nací en Ibagué el 11 de febrero de 1950. En 1968 ingresé a la Universidad de los Andes y antes de graduarme de arquitecto decidí dedicar mi vida a transformar a Colombia.</p>
+            <p>Me vinculé al proyecto de voluntariado pies descalzos, actividad que consistía en ayudar a la gente en las regiones a encontrar el camino para resolver sus problemas.</p>
         </div>
     </div>
 </div>
@@ -112,12 +112,12 @@ $(function () {
     <div class="row justify-content-end">
         <div class="col-md-5 content">
             <h2>El Dirigente social</h2>
-            <h3>En Manizales, alternó su vocación de profesor de arquitectura con la de dirigente social.</h3>
+            <h3>En Manizales, alterné mi vocación de profesor de arquitectura con la de dirigente social.</h3>
             <p>
-                Cofundador y dirigente de <i>Unidad Cafetera y Salvación Agropecuaria</i>, ambas organizaciones de productores agropecuarios que se defendían de las importaciones.
+               Fui cofundador y dirigente de <i>Unidad Cafetera y Salvación Agropecuaria</i>, ambas organizaciones de productores agropecuarios que se defendían de las importaciones.
             </p>
             <p>
-                En 1995, ayudó a la condonación de las deudas bancarias de más de cien mil familias cafeteras.
+                En 1995 ayudé, mediante la organización y la movilización masiva y democrática, a la condonación de las deudas bancarias de más de cien mil familias cafeteras.
             <p>
         </div>
     </div>
@@ -128,11 +128,11 @@ $(function () {
             <div class="col-md-5 content">
                 <h2>El Profesor</h2>
                 <p>
-                    Durante 26 años fue profesor de tiempo completo de la Universidad Nacional de Colombia, Sede Manizales. Institución que le concedió las distinciones <i>Medalla al Mérito, Maestro Universitario y Orden Gerardo Molina.</i>
+                    Durante 26 años fui profesor de tiempo completo de la Universidad Nacional de Colombia, Sede Manizales. Institución que me concedió las distinciones <i>Medalla al Mérito, Maestro Universitario y Orden Gerardo Molina.</i>
                 </p>
-                <p>Ha publicado 15 libros sobre historia, arquitectura, vivienda, economía, agricultura, política y Tratados de Libre Comercio.</p>
-                <p>Reconocido columnista de <i>La Patria</i>, donde ha publicado más de 1.300 artículos.</p>
-                <p>En 1997 ganó la XVII Bienal Colombiana de Arquitectura en la categoría Teoría, Historia y Crítica.</p>
+                <p>He publicado 15 libros sobre historia, arquitectura, vivienda, economía, agricultura, política y Tratados de Libre Comercio.</p>
+                <p>He sido columnista de La Patria de Manizales, El Nuevo Día de Ibagué, el portal Kien&Ke y otros medios nacionales e internacionales, donde he publicado más de 1.500 artículos de coyuntura y análisis.</p>
+                <p>En 1997 gané la XVII Bienal Colombiana de Arquitectura en la categoría Teoría, Historia y Crítica.</p>
             </div>
             <div class="col-md-7">
                 <div class="row">
@@ -155,9 +155,9 @@ $(function () {
         <div class="row justify-content-end">
             <div class="col-md-5 content">
                 <h2>El Senador</h2>
-                <p>Llegó al Senado en 2002, desde entonces ha realizado más de 150 debates de control político.</p>
-                <p>Con su labor parlamentaria, ha ayudado a comprender y solucionar los temas de la política nacional, convirtiéndose en el congresista que más debates ha realizado en la historia del Congreso.</p>
-                <p><i>“Vivo con sueldo de profesor y el resto lo dono a las causas que considero justas”</i></p>
+                <p>Llegué al Senado en 2002, y desde entonces he sido autor de cien proyectos de ley y he hecho más de 200 debates de control político. </p>
+                <p>Con mi labor parlamentaria, he ayudado a comprender y solucionar los temas de la política nacional y me he convertido en un referente de la lucha anticorrupción al desentrañar escándalos como el de Agro Ingreso Seguro, Saludcoop, Odebrecht-Grupo Aval, Ley Urrutia-Zidres, entre otros.</p>
+                <p><i>Esta labor ha sido reconocida por más de 2.500 líderes y lideresas de opinión, al concederme el titulo de “Mejor Senador de Colombia” por diez veces consecutivas.</i></p>
             </div>
         </div>
     </div>
@@ -166,9 +166,11 @@ $(function () {
     <div class="container">
     </div>
     <div class="container content bg-dark text-center">
-        <h2>Coalición Colombia y Sergio Fajardo</h2>
-        <h3 class="text-uppercase">CANDIDATO AL SENADO POR EL POLO #1</h3>
-        <p>Robledo hace lo que cree mejor para el país. Desde el Polo y junto al Partido Verde y Compromiso Ciudadano, puso todo su esfuerzo para construir la Coalición Colombia. Declinó su candidatura presidencial en favor de la de Sergio Fajardo, la única que puede derrotar a los mismos con las mismas. Vuelve al Senado a seguir apoyando a la gente y a buscar la unión de los colombianos y las colombianas porque Este País Sí Tiene Arreglo.</p>
+        <h2>Robledo: el Presidente de la Dignidad y la Esperanza</h2>
+        <h3 class="text-uppercase">PRECANDIDATO PRESIDENCIAL EN LA CONSULTA CENTRO ESPERANZA</h3>
+        <p>Desde el 2020, soy cofundador del Partido DIGNIDAD, un nuevo partido político con personas de diversos orígenes, de carácter amplio y democrático. DIGNIDAD cuenta con gente que trabaja día a día para conseguir las transformaciones que necesita Colombia. </p>
+        <p>En el Primer Congreso de DIGNIDAD, fui proclamado como su Candidato Presidencial para 2022 y con esa nominación he puesto todos mis esfuerzos en consolidar la Coalición Centro Esperanza, un proyecto de largo aliento alejado de los extremos, comprometido con el cambio y con las reformas que pongan a Colombia en el camino del progreso.</p>
+        <p>Busco ser hoy el Presidente que construya un Gran Acuerdo Nacional y de una vez por todas cambie el rumbo de la nación, atienda los reclamos sociales y produzca empleo y generación de riqueza. Quiero ser el Presidente que le devuelva la DIGNIDAD a Colombia.</p>
     </div>
 </div>
 
